@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "project_number": "1016347653502",
+    "project_id": "al-ukhuwah",
+    "storage_bucket": "al-ukhuwah.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1016347653502:android:5bfb89139eb93040aaef2f",
+        "android_client_info": {
+          "package_name": "com.muslimdeveloper.alukhuwah"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1016347653502-am1uojllnklvrhbpfsk4eqjechbnt1ca.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyxA6v8e8Q9ZSNhuzq_kVl4awah8pP-6Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1016347653502-am1uojllnklvrhbpfsk4eqjechbnt1ca.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1016347653502:android:ceaa2f548381bbd0aaef2f",
+        "android_client_info": {
+          "package_name": "id.alukhuwahapp.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1016347653502-ur1p7vvqvv751j4oq2l5vhu8l8patuq0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.alukhuwahapp.android",
+            "certificate_hash": "6ac665b76699e437901c55638ebb5294cb23777c"
+          }
+        },
+        {
+          "client_id": "1016347653502-am1uojllnklvrhbpfsk4eqjechbnt1ca.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyxA6v8e8Q9ZSNhuzq_kVl4awah8pP-6Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1016347653502-am1uojllnklvrhbpfsk4eqjechbnt1ca.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
