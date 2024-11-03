@@ -158,6 +158,8 @@ class SearchMedicineRequestProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin SearchMedicineRequestRef
     on AutoDisposeFutureProviderRef<List<Transaction>> {
   /// The parameter `key` of this provider.
@@ -332,6 +334,8 @@ class HistoryMedicineRequestProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin HistoryMedicineRequestRef
     on AutoDisposeFutureProviderRef<List<HistoryTransaction>> {
   /// The parameter `key` of this provider.
@@ -493,6 +497,8 @@ class DetailMedicineRequestProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin DetailMedicineRequestRef
     on AutoDisposeFutureProviderRef<DetailTransaction> {
   /// The parameter `key` of this provider.
@@ -642,6 +648,8 @@ class TimelineMedicineRequestProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin TimelineMedicineRequestRef on AutoDisposeFutureProviderRef<DetailsJob> {
   /// The parameter `key` of this provider.
   String get key;
@@ -800,6 +808,8 @@ class FetchAllMedicineProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchAllMedicineRef on AutoDisposeFutureProviderRef<List<Product>> {
   /// The parameter `key` of this provider.
   String get key;
@@ -939,6 +949,8 @@ class FetchAllUnitProvider extends AutoDisposeFutureProvider<List<Unit>> {
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchAllUnitRef on AutoDisposeFutureProviderRef<List<Unit>> {
   /// The parameter `key` of this provider.
   String get key;
@@ -1069,6 +1081,8 @@ class FetchAllMedicineDataProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchAllMedicineDataRef on AutoDisposeFutureProviderRef<List<DataObat>> {
   /// The parameter `key` of this provider.
   String get key;
@@ -1221,6 +1235,8 @@ class SearchMedicineProvider extends AutoDisposeFutureProvider<List<Product>> {
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin SearchMedicineRef on AutoDisposeFutureProviderRef<List<Product>> {
   /// The parameter `key` of this provider.
   String get key;
@@ -1263,4 +1279,4 @@ final medicineControllerProvider =
 
 typedef _$MedicineController = AutoDisposeAsyncNotifier<void>;
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

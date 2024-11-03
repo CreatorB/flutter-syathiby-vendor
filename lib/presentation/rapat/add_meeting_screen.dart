@@ -107,7 +107,7 @@ class AddMeetingScreen extends HookConsumerWidget {
                     ),
                     validator: FormBuilderValidators.compose(
                       [
-                        FormBuilderValidators.dateString(),
+                        FormBuilderValidators.date(),
                         FormBuilderValidators.required(),
                       ],
                     ),

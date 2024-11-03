@@ -14,9 +14,9 @@ abstract class NilaiRestInterface {
   @GET('nilai.php')
   Future<List<Nilai>> getNilai(
     @Query('key') String key,
-    @Query('id_kelas') String id_kelas,
-    @Query('id_mapel') String id_mapel,
-    @Query('id_jenis_penilaian') String id_jenis_penilaian,
+    @Query('id_kelas') String idKelas,
+    @Query('id_mapel') String idMapel,
+    @Query('id_jenis_penilaian') String idJenisPenilaian,
   );
 
   @GET('typenilai.php')
@@ -28,31 +28,31 @@ abstract class NilaiRestInterface {
   @GET('nilaisantri.php')
   Future<List<Nilai>> getNilaiSantri(
     @Query('key') String key,
-    @Query('id_kelas') String id_kelas,
-    @Query('id_mapel') String id_mapel,
+    @Query('id_kelas') String idKelas,
+    @Query('id_mapel') String idMapel,
     @Query('nis') String nis,
-    @Query('id_jenis_penilaian') String id_jenis_penilaian,
+    @Query('id_jenis_penilaian') String idJenisPenilaian,
   );
 
   @GET('detailnilaisantri.php')
   Future<List<Nilai>> getDetailNilaiSantri(
     @Query('key') String key,
-    @Query('id_kelas') String id_kelas,
-    @Query('id_mapel') String id_mapel,
+    @Query('id_kelas') String idKelas,
+    @Query('id_mapel') String idMapel,
     @Query('nis') String nis,
-    @Query('id_jenis_penilaian') String id_jenis_penilaian,
+    @Query('id_jenis_penilaian') String idJenisPenilaian,
   );
 
   @FormUrlEncoded()
   @POST('updatenilai.php')
   Future<Message> addNilai(
     @Field('key') String key,
-    @Field('id_kelas') String id_kelas,
-    @Field('id_mapel') String id_mapel,
+    @Field('id_kelas') String idKelas,
+    @Field('id_mapel') String idMapel,
     @Field('nilai') String nilai,
     @Field('date') String date,
     @Field('nis') String nis,
     @Field('note') String note,
-    @Field('id_jenis_penilaian') String id_jenis_penilaian,
+    @Field('id_jenis_penilaian') String idJenisPenilaian,
   );
 }

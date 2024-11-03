@@ -19,6 +19,8 @@ final loggerProvider = Provider<Logger>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef LoggerRef = ProviderRef<Logger>;
 String _$loggingInterceptorHash() =>
     r'8e4b00b0a5ff0417eae79f654711008d6e572d5c';
@@ -35,6 +37,8 @@ final loggingInterceptorProvider = Provider<LoggingInterceptor>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef LoggingInterceptorRef = ProviderRef<LoggingInterceptor>;
 String _$getCurrentUserHash() => r'328c5b209a4a6b59ca43e8fffb74dbb5099bb656';
 
@@ -50,6 +54,8 @@ final getCurrentUserProvider = AutoDisposeProvider<Login?>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef GetCurrentUserRef = AutoDisposeProviderRef<Login?>;
 String _$dioHash() => r'1f14a2a3119e440001637c0b6195e81a71209659';
 
@@ -64,6 +70,8 @@ final dioProvider = Provider<Dio>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef DioRef = ProviderRef<Dio>;
 String _$firebaseMessagingHash() => r'b0389720fafcd3af5d5ed65ac5666f6ba9b42050';
 
@@ -79,6 +87,8 @@ final firebaseMessagingProvider = Provider<FirebaseMessaging>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef FirebaseMessagingRef = ProviderRef<FirebaseMessaging>;
 String _$sharedPreferencesHash() => r'3a9f8412df34c1653d08100c9826aa2125b80f7f';
 
@@ -94,6 +104,8 @@ final sharedPreferencesProvider = Provider<SharedPreferences>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef SharedPreferencesRef = ProviderRef<SharedPreferences>;
 String _$sharedPreferencesHelperHash() =>
     r'd8c11b551a13d50e111b660cd2f9bea692100aaf';
@@ -111,6 +123,8 @@ final sharedPreferencesHelperProvider =
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef SharedPreferencesHelperRef = ProviderRef<SharedPreferencesHelper>;
 String _$audioPlayerHash() => r'e54ce7e5ba2cd12db0f50d7caaf550952480c971';
 
@@ -125,6 +139,8 @@ final audioPlayerProvider = Provider<AudioPlayer>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef AudioPlayerRef = ProviderRef<AudioPlayer>;
 String _$parseDateTimeHash() => r'1a4b17de39dc8cf931f4b7f0a92fb599a8e1ffb6';
 
@@ -262,6 +278,8 @@ class ParseDateTimeProvider extends AutoDisposeProvider<DateTime?> {
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin ParseDateTimeRef on AutoDisposeProviderRef<DateTime?> {
   /// The parameter `dateString` of this provider.
   String get dateString;
@@ -402,6 +420,8 @@ class FormatTimeProvider extends AutoDisposeProvider<String?> {
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FormatTimeRef on AutoDisposeProviderRef<String?> {
   /// The parameter `timeString` of this provider.
   String? get timeString;
@@ -535,6 +555,8 @@ class FormatCurrencyProvider extends AutoDisposeProvider<String> {
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FormatCurrencyRef on AutoDisposeProviderRef<String> {
   /// The parameter `number` of this provider.
   dynamic get number;
@@ -675,6 +697,8 @@ class FormatDateProvider extends AutoDisposeProvider<String?> {
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FormatDateRef on AutoDisposeProviderRef<String?> {
   /// The parameter `dateString` of this provider.
   String get dateString;
@@ -810,6 +834,8 @@ class FormatTimeFromDateProvider extends AutoDisposeProvider<String?> {
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FormatTimeFromDateRef on AutoDisposeProviderRef<String?> {
   /// The parameter `dateString` of this provider.
   String? get dateString;
@@ -838,6 +864,8 @@ final getCurrentLocationProvider = AutoDisposeFutureProvider<Position>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef GetCurrentLocationRef = AutoDisposeFutureProviderRef<Position>;
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

@@ -6,12 +6,13 @@ part of 'health_service.dart';
 // RetrofitGenerator
 // **************************************************************************
 
-// ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers
+// ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers,unused_element,unnecessary_string_interpolations
 
 class _KesehatanRestInterface implements KesehatanRestInterface {
   _KesehatanRestInterface(
     this._dio, {
     this.baseUrl,
+    this.errorLogger,
   }) {
     baseUrl ??= 'kesehatan/';
   }
@@ -19,6 +20,8 @@ class _KesehatanRestInterface implements KesehatanRestInterface {
   final Dio _dio;
 
   String? baseUrl;
+
+  final ParseErrorLogger? errorLogger;
 
   @override
   Future<List<Kesehatan>> get(
@@ -33,27 +36,33 @@ class _KesehatanRestInterface implements KesehatanRestInterface {
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch<List<dynamic>>(_setStreamType<List<Kesehatan>>(Options(
+    final _options = _setStreamType<List<Kesehatan>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              'list.php',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    var value = _result.data!
-        .map((dynamic i) => Kesehatan.fromJson(i as Map<String, dynamic>))
-        .toList();
-    return value;
+        .compose(
+          _dio.options,
+          'list.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<List<dynamic>>(_options);
+    late List<Kesehatan> _value;
+    try {
+      _value = _result.data!
+          .map((dynamic i) => Kesehatan.fromJson(i as Map<String, dynamic>))
+          .toList();
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
@@ -68,27 +77,33 @@ class _KesehatanRestInterface implements KesehatanRestInterface {
     };
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch<List<dynamic>>(_setStreamType<List<Kesehatan>>(Options(
+    final _options = _setStreamType<List<Kesehatan>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              'detailsantri.php',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    var value = _result.data!
-        .map((dynamic i) => Kesehatan.fromJson(i as Map<String, dynamic>))
-        .toList();
-    return value;
+        .compose(
+          _dio.options,
+          'detailsantri.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<List<dynamic>>(_options);
+    late List<Kesehatan> _value;
+    try {
+      _value = _result.data!
+          .map((dynamic i) => Kesehatan.fromJson(i as Map<String, dynamic>))
+          .toList();
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
@@ -107,25 +122,31 @@ class _KesehatanRestInterface implements KesehatanRestInterface {
     };
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch<Map<String, dynamic>>(_setStreamType<Message>(Options(
+    final _options = _setStreamType<Message>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              'confirm.php',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    final value = Message.fromJson(_result.data!);
-    return value;
+        .compose(
+          _dio.options,
+          'confirm.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late Message _value;
+    try {
+      _value = Message.fromJson(_result.data!);
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
@@ -134,27 +155,33 @@ class _KesehatanRestInterface implements KesehatanRestInterface {
     final queryParameters = <String, dynamic>{r'key': key};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch<List<dynamic>>(_setStreamType<List<Kesehatan>>(Options(
+    final _options = _setStreamType<List<Kesehatan>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              'type.php',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    var value = _result.data!
-        .map((dynamic i) => Kesehatan.fromJson(i as Map<String, dynamic>))
-        .toList();
-    return value;
+        .compose(
+          _dio.options,
+          'type.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<List<dynamic>>(_options);
+    late List<Kesehatan> _value;
+    try {
+      _value = _result.data!
+          .map((dynamic i) => Kesehatan.fromJson(i as Map<String, dynamic>))
+          .toList();
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
@@ -163,27 +190,33 @@ class _KesehatanRestInterface implements KesehatanRestInterface {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch<List<dynamic>>(_setStreamType<List<Diagnosa>>(Options(
+    final _options = _setStreamType<List<Diagnosa>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              'diagnosa.php',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    var value = _result.data!
-        .map((dynamic i) => Diagnosa.fromJson(i as Map<String, dynamic>))
-        .toList();
-    return value;
+        .compose(
+          _dio.options,
+          'diagnosa.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<List<dynamic>>(_options);
+    late List<Diagnosa> _value;
+    try {
+      _value = _result.data!
+          .map((dynamic i) => Diagnosa.fromJson(i as Map<String, dynamic>))
+          .toList();
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
@@ -194,10 +227,10 @@ class _KesehatanRestInterface implements KesehatanRestInterface {
     String date,
     String hour,
     String penanganan,
-    String nama_siswa,
-    String id_kelas,
+    String namaSiswa,
+    String idKelas,
     String dijemput,
-    String info_ortu,
+    String infoOrtu,
     String istirahat, {
     File? img,
   }) async {
@@ -232,11 +265,11 @@ class _KesehatanRestInterface implements KesehatanRestInterface {
     ));
     _data.fields.add(MapEntry(
       'nama_siswa',
-      nama_siswa,
+      namaSiswa,
     ));
     _data.fields.add(MapEntry(
       'id_kelas',
-      id_kelas,
+      idKelas,
     ));
     _data.fields.add(MapEntry(
       'dijemput',
@@ -244,41 +277,49 @@ class _KesehatanRestInterface implements KesehatanRestInterface {
     ));
     _data.fields.add(MapEntry(
       'info_ortu',
-      info_ortu,
+      infoOrtu,
     ));
     _data.fields.add(MapEntry(
       'istirahat',
       istirahat,
     ));
     if (img != null) {
-      _data.files.add(MapEntry(
-        'img',
-        MultipartFile.fromFileSync(
-          img.path,
-          filename: img.path.split(Platform.pathSeparator).last,
-        ),
-      ));
+      if (img != null) {
+        _data.files.add(MapEntry(
+          'img',
+          MultipartFile.fromFileSync(
+            img.path,
+            filename: img.path.split(Platform.pathSeparator).last,
+          ),
+        ));
+      }
     }
-    final _result =
-        await _dio.fetch<Map<String, dynamic>>(_setStreamType<Message>(Options(
+    final _options = _setStreamType<Message>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
       contentType: 'multipart/form-data',
     )
-            .compose(
-              _dio.options,
-              'insert.php',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    final value = Message.fromJson(_result.data!);
-    return value;
+        .compose(
+          _dio.options,
+          'insert.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late Message _value;
+    try {
+      _value = Message.fromJson(_result.data!);
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   RequestOptions _setStreamType<T>(RequestOptions requestOptions) {

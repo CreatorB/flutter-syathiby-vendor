@@ -19,6 +19,8 @@ final localAuthProvider = Provider<LocalAuthentication>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef LocalAuthRef = ProviderRef<LocalAuthentication>;
 String _$isDeviceSupportBiometricsHash() =>
     r'4716d7f6a0e427566ecf2f3bd91845cc5d7a0122';
@@ -36,6 +38,8 @@ final isDeviceSupportBiometricsProvider =
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef IsDeviceSupportBiometricsRef = AutoDisposeFutureProviderRef<bool>;
 String _$isBiometricsFaceIdHash() =>
     r'10cd53672b9edfdf934ce4836cacf31555b0efac';
@@ -52,6 +56,8 @@ final isBiometricsFaceIdProvider = AutoDisposeFutureProvider<bool>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef IsBiometricsFaceIdRef = AutoDisposeFutureProviderRef<bool>;
 String _$isBiometricsFingerprintHash() =>
     r'29e52ec12a998f1bebf3ad6c8f3da9c8d7c5b1a0';
@@ -69,6 +75,8 @@ final isBiometricsFingerprintProvider =
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef IsBiometricsFingerprintRef = AutoDisposeFutureProviderRef<bool>;
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

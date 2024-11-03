@@ -51,8 +51,12 @@ mixin _$Kesehatan {
   @JsonKey(name: 'info_ortu')
   String? get info_ortu => throw _privateConstructorUsedError;
 
+  /// Serializes this Kesehatan to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Kesehatan
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KesehatanCopyWith<Kesehatan> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -90,6 +94,8 @@ class _$KesehatanCopyWithImpl<$Res, $Val extends Kesehatan>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Kesehatan
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -208,6 +214,8 @@ class __$$KesehatanImplCopyWithImpl<$Res>
       _$KesehatanImpl _value, $Res Function(_$KesehatanImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Kesehatan
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -395,7 +403,7 @@ class _$KesehatanImpl implements _Kesehatan {
                 other.info_ortu == info_ortu));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -415,7 +423,9 @@ class _$KesehatanImpl implements _Kesehatan {
       istirahat,
       info_ortu);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Kesehatan
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$KesehatanImplCopyWith<_$KesehatanImpl> get copyWith =>
@@ -495,8 +505,11 @@ abstract class _Kesehatan implements Kesehatan {
   @override
   @JsonKey(name: 'info_ortu')
   String? get info_ortu;
+
+  /// Create a copy of Kesehatan
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$KesehatanImplCopyWith<_$KesehatanImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

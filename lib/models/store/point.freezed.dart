@@ -24,8 +24,12 @@ mixin _$Point {
   String? get latitude => throw _privateConstructorUsedError;
   String? get longitude => throw _privateConstructorUsedError;
 
+  /// Serializes this Point to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Point
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PointCopyWith<Point> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -47,6 +51,8 @@ class _$PointCopyWithImpl<$Res, $Val extends Point>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Point
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -89,6 +95,8 @@ class __$$PointImplCopyWithImpl<$Res>
       _$PointImpl _value, $Res Function(_$PointImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Point
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -146,11 +154,13 @@ class _$PointImpl implements _Point {
                 other.longitude == longitude));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, location, latitude, longitude);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Point
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PointImplCopyWith<_$PointImpl> get copyWith =>
@@ -178,8 +188,11 @@ abstract class _Point implements Point {
   String? get latitude;
   @override
   String? get longitude;
+
+  /// Create a copy of Point
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PointImplCopyWith<_$PointImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

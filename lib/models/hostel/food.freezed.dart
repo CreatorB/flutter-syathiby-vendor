@@ -47,8 +47,12 @@ mixin _$Makan {
   @JsonKey(name: 'tidakabsenmalam')
   int? get tidakAbsenMalam => throw _privateConstructorUsedError;
 
+  /// Serializes this Makan to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Makan
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MakanCopyWith<Makan> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -83,6 +87,8 @@ class _$MakanCopyWithImpl<$Res, $Val extends Makan>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Makan
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -188,6 +194,8 @@ class __$$MakanImplCopyWithImpl<$Res>
       _$MakanImpl _value, $Res Function(_$MakanImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Makan
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -358,7 +366,7 @@ class _$MakanImpl implements _Makan {
                 other.tidakAbsenMalam == tidakAbsenMalam));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -376,7 +384,9 @@ class _$MakanImpl implements _Makan {
       absenMalam,
       tidakAbsenMalam);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Makan
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MakanImplCopyWith<_$MakanImpl> get copyWith =>
@@ -448,8 +458,11 @@ abstract class _Makan implements Makan {
   @override
   @JsonKey(name: 'tidakabsenmalam')
   int? get tidakAbsenMalam;
+
+  /// Create a copy of Makan
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MakanImplCopyWith<_$MakanImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

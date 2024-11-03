@@ -1,4 +1,3 @@
-import 'package:al_ukhuwah/models/place/inventaris.dart';
 import 'package:al_ukhuwah/models/service_injection.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 

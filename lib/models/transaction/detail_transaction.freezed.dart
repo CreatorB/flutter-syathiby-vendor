@@ -24,8 +24,12 @@ mixin _$DetailTransaction {
   @JsonKey(name: 'data')
   List<TransactionData>? get data => throw _privateConstructorUsedError;
 
+  /// Serializes this DetailTransaction to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DetailTransaction
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DetailTransactionCopyWith<DetailTransaction> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$DetailTransactionCopyWithImpl<$Res, $Val extends DetailTransaction>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DetailTransaction
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -69,6 +75,8 @@ class _$DetailTransactionCopyWithImpl<$Res, $Val extends DetailTransaction>
     ) as $Val);
   }
 
+  /// Create a copy of DetailTransaction
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $StrukCopyWith<$Res>? get struk {
@@ -104,6 +112,8 @@ class __$$DetailTransactionImplCopyWithImpl<$Res>
       $Res Function(_$DetailTransactionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DetailTransaction
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -160,12 +170,14 @@ class _$DetailTransactionImpl implements _DetailTransaction {
             const DeepCollectionEquality().equals(other._data, _data));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, struk, const DeepCollectionEquality().hash(_data));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DetailTransaction
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DetailTransactionImplCopyWith<_$DetailTransactionImpl> get copyWith =>
@@ -194,8 +206,11 @@ abstract class _DetailTransaction implements DetailTransaction {
   @override
   @JsonKey(name: 'data')
   List<TransactionData>? get data;
+
+  /// Create a copy of DetailTransaction
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DetailTransactionImplCopyWith<_$DetailTransactionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -279,8 +294,12 @@ mixin _$Struk {
   @JsonKey(name: 'waktu')
   String? get waktu => throw _privateConstructorUsedError;
 
+  /// Serializes this Struk to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Struk
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $StrukCopyWith<Struk> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -338,6 +357,8 @@ class _$StrukCopyWithImpl<$Res, $Val extends Struk>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Struk
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -581,6 +602,8 @@ class __$$StrukImplCopyWithImpl<$Res>
       _$StrukImpl _value, $Res Function(_$StrukImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Struk
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -991,7 +1014,7 @@ class _$StrukImpl implements _Struk {
             (identical(other.waktu, waktu) || other.waktu == waktu));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -1033,7 +1056,9 @@ class _$StrukImpl implements _Struk {
         waktu
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Struk
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$StrukImplCopyWith<_$StrukImpl> get copyWith =>
@@ -1196,8 +1221,11 @@ abstract class _Struk implements Struk {
   @override
   @JsonKey(name: 'waktu')
   String? get waktu;
+
+  /// Create a copy of Struk
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$StrukImplCopyWith<_$StrukImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1237,8 +1265,12 @@ mixin _$TransactionData {
   @JsonKey(name: 'unit')
   String? get unit => throw _privateConstructorUsedError;
 
+  /// Serializes this TransactionData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of TransactionData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $TransactionDataCopyWith<TransactionData> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1276,6 +1308,8 @@ class _$TransactionDataCopyWithImpl<$Res, $Val extends TransactionData>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of TransactionData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1388,6 +1422,8 @@ class __$$TransactionDataImplCopyWithImpl<$Res>
       _$TransactionDataImpl _value, $Res Function(_$TransactionDataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of TransactionData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1564,7 +1600,7 @@ class _$TransactionDataImpl implements _TransactionData {
             (identical(other.unit, unit) || other.unit == unit));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1583,7 +1619,9 @@ class _$TransactionDataImpl implements _TransactionData {
       note,
       unit);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of TransactionData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TransactionDataImplCopyWith<_$TransactionDataImpl> get copyWith =>
@@ -1660,8 +1698,11 @@ abstract class _TransactionData implements TransactionData {
   @override
   @JsonKey(name: 'unit')
   String? get unit;
+
+  /// Create a copy of TransactionData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TransactionDataImplCopyWith<_$TransactionDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -22,8 +22,12 @@ BookNawawiResponse _$BookNawawiResponseFromJson(Map<String, dynamic> json) {
 mixin _$BookNawawiResponse {
   List<BookNawawi> get data => throw _privateConstructorUsedError;
 
+  /// Serializes this BookNawawiResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BookNawawiResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $BookNawawiResponseCopyWith<BookNawawiResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$BookNawawiResponseCopyWithImpl<$Res, $Val extends BookNawawiResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of BookNawawiResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,6 +86,8 @@ class __$$BookNawawiResponseImplCopyWithImpl<$Res>
       $Res Function(_$BookNawawiResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BookNawawiResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -124,12 +132,14 @@ class _$BookNawawiResponseImpl implements _BookNawawiResponse {
             const DeepCollectionEquality().equals(other._data, _data));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_data));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BookNawawiResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$BookNawawiResponseImplCopyWith<_$BookNawawiResponseImpl> get copyWith =>
@@ -153,8 +163,11 @@ abstract class _BookNawawiResponse implements BookNawawiResponse {
 
   @override
   List<BookNawawi> get data;
+
+  /// Create a copy of BookNawawiResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$BookNawawiResponseImplCopyWith<_$BookNawawiResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -170,8 +183,12 @@ mixin _$BookNawawi {
   String get judul => throw _privateConstructorUsedError;
   String get no => throw _privateConstructorUsedError;
 
+  /// Serializes this BookNawawi to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BookNawawi
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $BookNawawiCopyWith<BookNawawi> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -195,6 +212,8 @@ class _$BookNawawiCopyWithImpl<$Res, $Val extends BookNawawi>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of BookNawawi
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -243,6 +262,8 @@ class __$$BookNawawiImplCopyWithImpl<$Res>
       _$BookNawawiImpl _value, $Res Function(_$BookNawawiImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BookNawawi
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -309,11 +330,13 @@ class _$BookNawawiImpl implements _BookNawawi {
             (identical(other.no, no) || other.no == no));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, arab, indo, judul, no);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BookNawawi
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$BookNawawiImplCopyWith<_$BookNawawiImpl> get copyWith =>
@@ -345,8 +368,11 @@ abstract class _BookNawawi implements BookNawawi {
   String get judul;
   @override
   String get no;
+
+  /// Create a copy of BookNawawi
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$BookNawawiImplCopyWith<_$BookNawawiImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

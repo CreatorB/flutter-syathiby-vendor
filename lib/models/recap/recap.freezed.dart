@@ -38,8 +38,12 @@ mixin _$Recap {
   String? get izin => throw _privateConstructorUsedError;
   String? get kabag => throw _privateConstructorUsedError;
 
+  /// Serializes this Recap to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Recap
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RecapCopyWith<Recap> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -76,6 +80,8 @@ class _$RecapCopyWithImpl<$Res, $Val extends Recap>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Recap
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -193,6 +199,8 @@ class __$$RecapImplCopyWithImpl<$Res>
       _$RecapImpl _value, $Res Function(_$RecapImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Recap
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -363,7 +371,7 @@ class _$RecapImpl implements _Recap {
             (identical(other.kabag, kabag) || other.kabag == kabag));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -383,7 +391,9 @@ class _$RecapImpl implements _Recap {
       izin,
       kabag);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Recap
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RecapImplCopyWith<_$RecapImpl> get copyWith =>
@@ -449,8 +459,11 @@ abstract class _Recap implements Recap {
   String? get izin;
   @override
   String? get kabag;
+
+  /// Create a copy of Recap
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RecapImplCopyWith<_$RecapImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

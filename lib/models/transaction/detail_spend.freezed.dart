@@ -23,8 +23,12 @@ mixin _$DetailSpend {
   Struk? get info => throw _privateConstructorUsedError;
   List<Data>? get data => throw _privateConstructorUsedError;
 
+  /// Serializes this DetailSpend to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DetailSpend
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DetailSpendCopyWith<DetailSpend> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$DetailSpendCopyWithImpl<$Res, $Val extends DetailSpend>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DetailSpend
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -68,6 +74,8 @@ class _$DetailSpendCopyWithImpl<$Res, $Val extends DetailSpend>
     ) as $Val);
   }
 
+  /// Create a copy of DetailSpend
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $StrukCopyWith<$Res>? get info {
@@ -103,6 +111,8 @@ class __$$DetailSpendImplCopyWithImpl<$Res>
       _$DetailSpendImpl _value, $Res Function(_$DetailSpendImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DetailSpend
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -156,12 +166,14 @@ class _$DetailSpendImpl implements _DetailSpend {
             const DeepCollectionEquality().equals(other._data, _data));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, info, const DeepCollectionEquality().hash(_data));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DetailSpend
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DetailSpendImplCopyWith<_$DetailSpendImpl> get copyWith =>
@@ -186,8 +198,11 @@ abstract class _DetailSpend implements DetailSpend {
   Struk? get info;
   @override
   List<Data>? get data;
+
+  /// Create a copy of DetailSpend
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DetailSpendImplCopyWith<_$DetailSpendImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -206,8 +221,12 @@ mixin _$Struk {
   String? get totalNominal => throw _privateConstructorUsedError;
   String? get img => throw _privateConstructorUsedError;
 
+  /// Serializes this Struk to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Struk
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $StrukCopyWith<Struk> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -234,6 +253,8 @@ class _$StrukCopyWithImpl<$Res, $Val extends Struk>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Struk
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -291,6 +312,8 @@ class __$$StrukImplCopyWithImpl<$Res>
       _$StrukImpl _value, $Res Function(_$StrukImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Struk
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -370,12 +393,14 @@ class _$StrukImpl implements _Struk {
             (identical(other.img, img) || other.img == img));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, oleh, noInvoice, date, totalNominal, img);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Struk
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$StrukImplCopyWith<_$StrukImpl> get copyWith =>
@@ -411,8 +436,11 @@ abstract class _Struk implements Struk {
   String? get totalNominal;
   @override
   String? get img;
+
+  /// Create a copy of Struk
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$StrukImplCopyWith<_$StrukImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -428,8 +456,12 @@ mixin _$Data {
   String? get nominal => throw _privateConstructorUsedError;
   String? get note => throw _privateConstructorUsedError;
 
+  /// Serializes this Data to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Data
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DataCopyWith<Data> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -454,6 +486,8 @@ class _$DataCopyWithImpl<$Res, $Val extends Data>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Data
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -498,6 +532,8 @@ class __$$DataImplCopyWithImpl<$Res>
   __$$DataImplCopyWithImpl(_$DataImpl _value, $Res Function(_$DataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Data
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -557,11 +593,13 @@ class _$DataImpl implements _Data {
             (identical(other.note, note) || other.note == note));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, nameSpending, nominal, note);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Data
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DataImplCopyWith<_$DataImpl> get copyWith =>
@@ -590,8 +628,11 @@ abstract class _Data implements Data {
   String? get nominal;
   @override
   String? get note;
+
+  /// Create a copy of Data
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DataImplCopyWith<_$DataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

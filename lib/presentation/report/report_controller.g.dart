@@ -168,6 +168,8 @@ class FetchDetailPresenceReportProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchDetailPresenceReportRef
     on AutoDisposeFutureProviderRef<List<Absent>> {
   /// The parameter `key` of this provider.
@@ -334,6 +336,8 @@ class FetchAttendanceRecapProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchAttendanceRecapRef on AutoDisposeFutureProviderRef<List<Report>> {
   /// The parameter `key` of this provider.
   String get key;
@@ -499,6 +503,8 @@ class FetchReportStudentFastingProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchReportStudentFastingRef
     on AutoDisposeFutureProviderRef<List<Puasa>> {
   /// The parameter `key` of this provider.
@@ -542,4 +548,4 @@ final reportControllerProvider =
 
 typedef _$ReportController = AutoDisposeAsyncNotifier<void>;
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

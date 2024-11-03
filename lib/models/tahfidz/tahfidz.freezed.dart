@@ -38,8 +38,12 @@ mixin _$Tahfidz {
   String? get nilai => throw _privateConstructorUsedError;
   String? get jumlah => throw _privateConstructorUsedError;
 
+  /// Serializes this Tahfidz to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Tahfidz
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $TahfidzCopyWith<Tahfidz> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -78,6 +82,8 @@ class _$TahfidzCopyWithImpl<$Res, $Val extends Tahfidz>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Tahfidz
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -207,6 +213,8 @@ class __$$TahfidzImplCopyWithImpl<$Res>
       _$TahfidzImpl _value, $Res Function(_$TahfidzImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Tahfidz
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -396,7 +404,7 @@ class _$TahfidzImpl implements _Tahfidz {
             (identical(other.jumlah, jumlah) || other.jumlah == jumlah));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -418,7 +426,9 @@ class _$TahfidzImpl implements _Tahfidz {
       nilai,
       jumlah);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Tahfidz
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TahfidzImplCopyWith<_$TahfidzImpl> get copyWith =>
@@ -488,8 +498,11 @@ abstract class _Tahfidz implements Tahfidz {
   String? get nilai;
   @override
   String? get jumlah;
+
+  /// Create a copy of Tahfidz
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TahfidzImplCopyWith<_$TahfidzImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

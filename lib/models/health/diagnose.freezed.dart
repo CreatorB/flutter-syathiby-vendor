@@ -25,8 +25,12 @@ mixin _$Diagnosa {
   @JsonKey(name: 'name_diagnosa')
   String? get name_diagnosa => throw _privateConstructorUsedError;
 
+  /// Serializes this Diagnosa to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Diagnosa
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DiagnosaCopyWith<Diagnosa> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$DiagnosaCopyWithImpl<$Res, $Val extends Diagnosa>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Diagnosa
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -91,6 +97,8 @@ class __$$DiagnosaImplCopyWithImpl<$Res>
       _$DiagnosaImpl _value, $Res Function(_$DiagnosaImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Diagnosa
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -143,11 +151,13 @@ class _$DiagnosaImpl implements _Diagnosa {
                 other.name_diagnosa == name_diagnosa));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id_diagnosa, name_diagnosa);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Diagnosa
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DiagnosaImplCopyWith<_$DiagnosaImpl> get copyWith =>
@@ -176,8 +186,11 @@ abstract class _Diagnosa implements Diagnosa {
   @override
   @JsonKey(name: 'name_diagnosa')
   String? get name_diagnosa;
+
+  /// Create a copy of Diagnosa
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DiagnosaImplCopyWith<_$DiagnosaImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -57,8 +57,12 @@ mixin _$Penjemputan {
   @JsonKey(name: 'pengantar')
   String? get pengantar => throw _privateConstructorUsedError;
 
+  /// Serializes this Penjemputan to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Penjemputan
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PenjemputanCopyWith<Penjemputan> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -100,6 +104,8 @@ class _$PenjemputanCopyWithImpl<$Res, $Val extends Penjemputan>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Penjemputan
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -236,6 +242,8 @@ class __$$PenjemputanImplCopyWithImpl<$Res>
       _$PenjemputanImpl _value, $Res Function(_$PenjemputanImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Penjemputan
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -451,7 +459,7 @@ class _$PenjemputanImpl implements _Penjemputan {
                 other.pengantar == pengantar));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -474,7 +482,9 @@ class _$PenjemputanImpl implements _Penjemputan {
       diantar,
       pengantar);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Penjemputan
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PenjemputanImplCopyWith<_$PenjemputanImpl> get copyWith =>
@@ -566,8 +576,11 @@ abstract class _Penjemputan implements Penjemputan {
   @override
   @JsonKey(name: 'pengantar')
   String? get pengantar;
+
+  /// Create a copy of Penjemputan
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PenjemputanImplCopyWith<_$PenjemputanImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

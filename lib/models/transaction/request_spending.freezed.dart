@@ -26,8 +26,12 @@ mixin _$RequestSpending {
   String? get img => throw _privateConstructorUsedError;
   List<BarangSpending>? get spending => throw _privateConstructorUsedError;
 
+  /// Serializes this RequestSpending to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RequestSpending
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RequestSpendingCopyWith<RequestSpending> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -56,6 +60,8 @@ class _$RequestSpendingCopyWithImpl<$Res, $Val extends RequestSpending>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RequestSpending
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -114,6 +120,8 @@ class __$$RequestSpendingImplCopyWithImpl<$Res>
       _$RequestSpendingImpl _value, $Res Function(_$RequestSpendingImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RequestSpending
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -198,12 +206,14 @@ class _$RequestSpendingImpl implements _RequestSpending {
             const DeepCollectionEquality().equals(other._spending, _spending));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, key, amount, date, img,
       const DeepCollectionEquality().hash(_spending));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RequestSpending
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RequestSpendingImplCopyWith<_$RequestSpendingImpl> get copyWith =>
@@ -239,8 +249,11 @@ abstract class _RequestSpending implements RequestSpending {
   String? get img;
   @override
   List<BarangSpending>? get spending;
+
+  /// Create a copy of RequestSpending
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RequestSpendingImplCopyWith<_$RequestSpendingImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -257,8 +270,12 @@ mixin _$BarangSpending {
   num? get nominal => throw _privateConstructorUsedError;
   String? get note => throw _privateConstructorUsedError;
 
+  /// Serializes this BarangSpending to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BarangSpending
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $BarangSpendingCopyWith<BarangSpending> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -286,6 +303,8 @@ class _$BarangSpendingCopyWithImpl<$Res, $Val extends BarangSpending>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of BarangSpending
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -338,6 +357,8 @@ class __$$BarangSpendingImplCopyWithImpl<$Res>
       _$BarangSpendingImpl _value, $Res Function(_$BarangSpendingImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BarangSpending
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -406,11 +427,13 @@ class _$BarangSpendingImpl implements _BarangSpending {
             (identical(other.note, note) || other.note == note));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, nameSpending, nominal, note);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BarangSpending
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$BarangSpendingImplCopyWith<_$BarangSpendingImpl> get copyWith =>
@@ -444,8 +467,11 @@ abstract class _BarangSpending implements BarangSpending {
   num? get nominal;
   @override
   String? get note;
+
+  /// Create a copy of BarangSpending
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$BarangSpendingImplCopyWith<_$BarangSpendingImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

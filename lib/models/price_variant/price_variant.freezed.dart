@@ -29,8 +29,12 @@ mixin _$PriceVariant {
   String? get minimal => throw _privateConstructorUsedError;
   String? get price => throw _privateConstructorUsedError;
 
+  /// Serializes this PriceVariant to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PriceVariant
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PriceVariantCopyWith<PriceVariant> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -60,6 +64,8 @@ class _$PriceVariantCopyWithImpl<$Res, $Val extends PriceVariant>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PriceVariant
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -124,6 +130,8 @@ class __$$PriceVariantImplCopyWithImpl<$Res>
       _$PriceVariantImpl _value, $Res Function(_$PriceVariantImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PriceVariant
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -212,12 +220,14 @@ class _$PriceVariantImpl implements _PriceVariant {
             (identical(other.price, price) || other.price == price));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, idPriceVariant, idProduct, name, detail, minimal, price);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PriceVariant
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PriceVariantImplCopyWith<_$PriceVariantImpl> get copyWith =>
@@ -257,8 +267,11 @@ abstract class _PriceVariant implements PriceVariant {
   String? get minimal;
   @override
   String? get price;
+
+  /// Create a copy of PriceVariant
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PriceVariantImplCopyWith<_$PriceVariantImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

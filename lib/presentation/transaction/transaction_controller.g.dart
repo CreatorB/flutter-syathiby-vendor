@@ -181,6 +181,8 @@ class FetchHistoryTransactionProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchHistoryTransactionRef
     on AutoDisposeFutureProviderRef<List<HistoryTransaction>> {
   /// The parameter `key` of this provider.
@@ -327,6 +329,8 @@ class FetchRequestItemsProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchRequestItemsRef on AutoDisposeFutureProviderRef<List<Transaction>> {
   /// The parameter `key` of this provider.
   String get key;
@@ -474,6 +478,8 @@ class FetchDetailRequestTransactionProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchDetailRequestTransactionRef
     on AutoDisposeFutureProviderRef<DetailTransaction> {
   /// The parameter `key` of this provider.
@@ -629,6 +635,8 @@ class FetchDetailRequestTransactionTimelineProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchDetailRequestTransactionTimelineRef
     on AutoDisposeFutureProviderRef<DetailsJob> {
   /// The parameter `key` of this provider.
@@ -800,6 +808,8 @@ class FetchAllItemProvider extends AutoDisposeFutureProvider<List<Product>> {
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchAllItemRef on AutoDisposeFutureProviderRef<List<Product>> {
   /// The parameter `key` of this provider.
   String get key;
@@ -946,6 +956,8 @@ class FetchAllAllocationProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchAllAllocationRef on AutoDisposeFutureProviderRef<List<Allocation>> {
   /// The parameter `key` of this provider.
   String get key;
@@ -1079,6 +1091,8 @@ class FetchAllTransactionTypeProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchAllTransactionTypeRef
     on AutoDisposeFutureProviderRef<List<Allocation>> {
   /// The parameter `key` of this provider.
@@ -1112,4 +1126,4 @@ final transactionControllerProvider =
 
 typedef _$TransactionController = AutoDisposeAsyncNotifier<void>;
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

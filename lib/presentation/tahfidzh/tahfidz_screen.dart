@@ -191,7 +191,7 @@ class TahfidzScreen extends HookConsumerWidget {
     final dialogResult = await showOkCancelAlertDialog(
       context: context,
       title: 'Hapus Data Ini?',
-      message: '$studentName',
+      message: studentName,
     );
     if (dialogResult == OkCancelResult.cancel) return;
 

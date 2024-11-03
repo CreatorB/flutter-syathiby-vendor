@@ -28,8 +28,12 @@ mixin _$PrayerTime {
   double get lng => throw _privateConstructorUsedError;
   List<Time> get times => throw _privateConstructorUsedError;
 
+  /// Serializes this PrayerTime to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PrayerTime
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PrayerTimeCopyWith<PrayerTime> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -60,6 +64,8 @@ class _$PrayerTimeCopyWithImpl<$Res, $Val extends PrayerTime>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PrayerTime
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -130,6 +136,8 @@ class __$$PrayerTimeImplCopyWithImpl<$Res>
       _$PrayerTimeImpl _value, $Res Function(_$PrayerTimeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PrayerTime
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -232,12 +240,14 @@ class _$PrayerTimeImpl implements _PrayerTime {
             const DeepCollectionEquality().equals(other._times, _times));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, province, city, latitude,
       longitude, lat, lng, const DeepCollectionEquality().hash(_times));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PrayerTime
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PrayerTimeImplCopyWith<_$PrayerTimeImpl> get copyWith =>
@@ -278,8 +288,11 @@ abstract class _PrayerTime implements PrayerTime {
   double get lng;
   @override
   List<Time> get times;
+
+  /// Create a copy of PrayerTime
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PrayerTimeImplCopyWith<_$PrayerTimeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -302,8 +315,12 @@ mixin _$Time {
   String get hijri => throw _privateConstructorUsedError;
   int get timestamp => throw _privateConstructorUsedError;
 
+  /// Serializes this Time to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Time
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $TimeCopyWith<Time> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -336,6 +353,8 @@ class _$TimeCopyWithImpl<$Res, $Val extends Time>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Time
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -428,6 +447,8 @@ class __$$TimeImplCopyWithImpl<$Res>
   __$$TimeImplCopyWithImpl(_$TimeImpl _value, $Res Function(_$TimeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Time
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -559,12 +580,14 @@ class _$TimeImpl implements _Time {
                 other.timestamp == timestamp));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, imsak, fajr, sunset, dhuha,
       dhuhr, asr, maghrib, isha, gregorian, hijri, timestamp);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Time
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TimeImplCopyWith<_$TimeImpl> get copyWith =>
@@ -616,8 +639,11 @@ abstract class _Time implements Time {
   String get hijri;
   @override
   int get timestamp;
+
+  /// Create a copy of Time
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TimeImplCopyWith<_$TimeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

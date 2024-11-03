@@ -23,8 +23,12 @@ mixin _$ReportDaily {
   Info? get info => throw _privateConstructorUsedError;
   List<Daily>? get dailyReport => throw _privateConstructorUsedError;
 
+  /// Serializes this ReportDaily to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ReportDaily
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ReportDailyCopyWith<ReportDaily> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$ReportDailyCopyWithImpl<$Res, $Val extends ReportDaily>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ReportDaily
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -68,6 +74,8 @@ class _$ReportDailyCopyWithImpl<$Res, $Val extends ReportDaily>
     ) as $Val);
   }
 
+  /// Create a copy of ReportDaily
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $InfoCopyWith<$Res>? get info {
@@ -103,6 +111,8 @@ class __$$ReportDailyImplCopyWithImpl<$Res>
       _$ReportDailyImpl _value, $Res Function(_$ReportDailyImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ReportDaily
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -158,12 +168,14 @@ class _$ReportDailyImpl implements _ReportDaily {
                 .equals(other._dailyReport, _dailyReport));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, info, const DeepCollectionEquality().hash(_dailyReport));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ReportDaily
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ReportDailyImplCopyWith<_$ReportDailyImpl> get copyWith =>
@@ -188,8 +200,11 @@ abstract class _ReportDaily implements ReportDaily {
   Info? get info;
   @override
   List<Daily>? get dailyReport;
+
+  /// Create a copy of ReportDaily
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ReportDailyImplCopyWith<_$ReportDailyImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -205,8 +220,12 @@ mixin _$Info {
   String? get date => throw _privateConstructorUsedError;
   String? get total => throw _privateConstructorUsedError;
 
+  /// Serializes this Info to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Info
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $InfoCopyWith<Info> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -231,6 +250,8 @@ class _$InfoCopyWithImpl<$Res, $Val extends Info>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Info
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -275,6 +296,8 @@ class __$$InfoImplCopyWithImpl<$Res>
   __$$InfoImplCopyWithImpl(_$InfoImpl _value, $Res Function(_$InfoImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Info
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -332,11 +355,13 @@ class _$InfoImpl implements _Info {
             (identical(other.total, total) || other.total == total));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, nameStore, date, total);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Info
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InfoImplCopyWith<_$InfoImpl> get copyWith =>
@@ -365,8 +390,11 @@ abstract class _Info implements Info {
   String? get date;
   @override
   String? get total;
+
+  /// Create a copy of Info
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InfoImplCopyWith<_$InfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -395,8 +423,12 @@ mixin _$Daily {
   String? get nameStore => throw _privateConstructorUsedError;
   String? get date => throw _privateConstructorUsedError;
 
+  /// Serializes this Daily to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Daily
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DailyCopyWith<Daily> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -429,6 +461,8 @@ class _$DailyCopyWithImpl<$Res, $Val extends Daily>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Daily
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -522,6 +556,8 @@ class __$$DailyImplCopyWithImpl<$Res>
       _$DailyImpl _value, $Res Function(_$DailyImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Daily
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -664,7 +700,7 @@ class _$DailyImpl implements _Daily {
             (identical(other.date, date) || other.date == date));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -680,7 +716,9 @@ class _$DailyImpl implements _Daily {
       nameStore,
       date);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Daily
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DailyImplCopyWith<_$DailyImpl> get copyWith =>
@@ -738,8 +776,11 @@ abstract class _Daily implements Daily {
   String? get nameStore;
   @override
   String? get date;
+
+  /// Create a copy of Daily
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DailyImplCopyWith<_$DailyImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

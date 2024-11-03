@@ -27,8 +27,12 @@ mixin _$Days {
   String? get dates => throw _privateConstructorUsedError;
   String? get today => throw _privateConstructorUsedError;
 
+  /// Serializes this Days to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Days
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DaysCopyWith<Days> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -56,6 +60,8 @@ class _$DaysCopyWithImpl<$Res, $Val extends Days>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Days
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -118,6 +124,8 @@ class __$$DaysImplCopyWithImpl<$Res>
   __$$DaysImplCopyWithImpl(_$DaysImpl _value, $Res Function(_$DaysImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Days
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -205,7 +213,7 @@ class _$DaysImpl implements _Days {
             (identical(other.today, today) || other.today == today));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -216,7 +224,9 @@ class _$DaysImpl implements _Days {
       dates,
       today);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Days
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DaysImplCopyWith<_$DaysImpl> get copyWith =>
@@ -253,8 +263,11 @@ abstract class _Days implements Days {
   String? get dates;
   @override
   String? get today;
+
+  /// Create a copy of Days
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DaysImplCopyWith<_$DaysImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

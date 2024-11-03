@@ -156,6 +156,8 @@ class FetchStudentHealthProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchStudentHealthRef on AutoDisposeFutureProviderRef<List<Kesehatan>> {
   /// The parameter `key` of this provider.
   String get key;
@@ -291,6 +293,8 @@ class FetchHealthTypeProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchHealthTypeRef on AutoDisposeFutureProviderRef<List<Diagnosa>> {
   /// The parameter `key` of this provider.
   String get key;
@@ -436,6 +440,8 @@ class FetchDetailStudentHealthProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchDetailStudentHealthRef
     on AutoDisposeFutureProviderRef<List<Kesehatan>> {
   /// The parameter `key` of this provider.
@@ -475,4 +481,4 @@ final studentHealthControllerProvider =
 
 typedef _$StudentHealthController = AutoDisposeAsyncNotifier<void>;
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

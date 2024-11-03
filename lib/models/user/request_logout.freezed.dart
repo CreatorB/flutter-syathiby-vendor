@@ -28,8 +28,12 @@ mixin _$RequestLogout {
   String? get device => throw _privateConstructorUsedError;
   String? get lokasi => throw _privateConstructorUsedError;
 
+  /// Serializes this RequestLogout to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RequestLogout
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RequestLogoutCopyWith<RequestLogout> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -60,6 +64,8 @@ class _$RequestLogoutCopyWithImpl<$Res, $Val extends RequestLogout>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RequestLogout
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -130,6 +136,8 @@ class __$$RequestLogoutImplCopyWithImpl<$Res>
       _$RequestLogoutImpl _value, $Res Function(_$RequestLogoutImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RequestLogout
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -225,12 +233,14 @@ class _$RequestLogoutImpl implements _RequestLogout {
             (identical(other.lokasi, lokasi) || other.lokasi == lokasi));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, key, token, latitude, longitude, mock, device, lokasi);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RequestLogout
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RequestLogoutImplCopyWith<_$RequestLogoutImpl> get copyWith =>
@@ -271,8 +281,11 @@ abstract class _RequestLogout implements RequestLogout {
   String? get device;
   @override
   String? get lokasi;
+
+  /// Create a copy of RequestLogout
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RequestLogoutImplCopyWith<_$RequestLogoutImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

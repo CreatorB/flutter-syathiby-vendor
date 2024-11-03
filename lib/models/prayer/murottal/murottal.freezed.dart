@@ -32,8 +32,12 @@ mixin _$Murottal {
   String get extension => throw _privateConstructorUsedError;
   List<Reciter> get reciters => throw _privateConstructorUsedError;
 
+  /// Serializes this Murottal to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Murottal
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MurottalCopyWith<Murottal> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -64,6 +68,8 @@ class _$MurottalCopyWithImpl<$Res, $Val extends Murottal>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Murottal
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -140,6 +146,8 @@ class __$$MurottalImplCopyWithImpl<$Res>
       _$MurottalImpl _value, $Res Function(_$MurottalImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Murottal
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -255,7 +263,7 @@ class _$MurottalImpl implements _Murottal {
             const DeepCollectionEquality().equals(other._reciters, _reciters));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -268,7 +276,9 @@ class _$MurottalImpl implements _Murottal {
       extension,
       const DeepCollectionEquality().hash(_reciters));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Murottal
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MurottalImplCopyWith<_$MurottalImpl> get copyWith =>
@@ -315,8 +325,11 @@ abstract class _Murottal implements Murottal {
   String get extension;
   @override
   List<Reciter> get reciters;
+
+  /// Create a copy of Murottal
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MurottalImplCopyWith<_$MurottalImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -336,8 +349,12 @@ mixin _$Reciter {
   String? get country => throw _privateConstructorUsedError;
   String? get biography => throw _privateConstructorUsedError;
 
+  /// Serializes this Reciter to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Reciter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ReciterCopyWith<Reciter> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -364,6 +381,8 @@ class _$ReciterCopyWithImpl<$Res, $Val extends Reciter>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Reciter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -421,6 +440,8 @@ class __$$ReciterImplCopyWithImpl<$Res>
       _$ReciterImpl _value, $Res Function(_$ReciterImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Reciter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -503,12 +524,14 @@ class _$ReciterImpl implements _Reciter {
                 other.biography == biography));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, reciterName, endPoint, photoUrl, country, biography);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Reciter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ReciterImplCopyWith<_$ReciterImpl> get copyWith =>
@@ -545,8 +568,11 @@ abstract class _Reciter implements Reciter {
   String? get country;
   @override
   String? get biography;
+
+  /// Create a copy of Reciter
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ReciterImplCopyWith<_$ReciterImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

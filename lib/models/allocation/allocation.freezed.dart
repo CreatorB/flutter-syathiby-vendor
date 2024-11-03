@@ -25,8 +25,12 @@ mixin _$Allocation {
   @JsonKey(name: 'name_alokasi')
   String? get allocationName => throw _privateConstructorUsedError;
 
+  /// Serializes this Allocation to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Allocation
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AllocationCopyWith<Allocation> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -52,6 +56,8 @@ class _$AllocationCopyWithImpl<$Res, $Val extends Allocation>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Allocation
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -92,6 +98,8 @@ class __$$AllocationImplCopyWithImpl<$Res>
       _$AllocationImpl _value, $Res Function(_$AllocationImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Allocation
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -144,11 +152,13 @@ class _$AllocationImpl implements _Allocation {
                 other.allocationName == allocationName));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, allocationId, allocationName);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Allocation
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AllocationImplCopyWith<_$AllocationImpl> get copyWith =>
@@ -177,8 +187,11 @@ abstract class _Allocation implements Allocation {
   @override
   @JsonKey(name: 'name_alokasi')
   String? get allocationName;
+
+  /// Create a copy of Allocation
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AllocationImplCopyWith<_$AllocationImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

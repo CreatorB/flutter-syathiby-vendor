@@ -5,8 +5,6 @@ import 'package:al_ukhuwah/models/user/request_logout.dart';
 import 'package:al_ukhuwah/models/user/user.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-import '../../models/schedule/schedule.dart';
-
 part 'fetch_presence_controller.g.dart';
 
 @riverpod

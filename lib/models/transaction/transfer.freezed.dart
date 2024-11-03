@@ -32,8 +32,12 @@ mixin _$Transfer {
   String? get status => throw _privateConstructorUsedError;
   String? get type => throw _privateConstructorUsedError;
 
+  /// Serializes this Transfer to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Transfer
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $TransferCopyWith<Transfer> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -67,6 +71,8 @@ class _$TransferCopyWithImpl<$Res, $Val extends Transfer>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Transfer
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -161,6 +167,8 @@ class __$$TransferImplCopyWithImpl<$Res>
       _$TransferImpl _value, $Res Function(_$TransferImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Transfer
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -294,12 +302,14 @@ class _$TransferImpl implements _Transfer {
             (identical(other.type, type) || other.type == type));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, name_product, name_store, img,
       no_invoice, date, payment, totalorder, nominal, by, status, type);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Transfer
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TransferImplCopyWith<_$TransferImpl> get copyWith =>
@@ -352,8 +362,11 @@ abstract class _Transfer implements Transfer {
   String? get status;
   @override
   String? get type;
+
+  /// Create a copy of Transfer
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TransferImplCopyWith<_$TransferImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -40,7 +40,7 @@ class ItemPerformanceWidget extends StatelessWidget {
                       Visibility(
                         visible: formattedDate != null,
                         child: Text(
-                          '${formattedDate} ${performance.hour}',
+                          '$formattedDate ${performance.hour}',
                           style: TextStyle(
                             color: context.colorOnSurface.withOpacity(0.6),
                             fontSize: 14.0,

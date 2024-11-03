@@ -19,6 +19,8 @@ final userServiceProvider = Provider<UserService>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef UserServiceRef = ProviderRef<UserService>;
 String _$hostelServiceHash() => r'70a6d79b4eccdffd9a41d9c439041601ece72ea0';
 
@@ -34,6 +36,8 @@ final hostelServiceProvider = Provider<AsramaRestInterface>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef HostelServiceRef = ProviderRef<AsramaRestInterface>;
 String _$newsServiceHash() => r'7fdba0f6f83012a5ee134199679f3e73aae9bb67';
 
@@ -48,6 +52,8 @@ final newsServiceProvider = Provider<NewsRestInterface>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef NewsServiceRef = ProviderRef<NewsRestInterface>;
 String _$staffServiceHash() => r'ef3c785914f5ddc2c2445b59539782886f4d8710';
 
@@ -62,6 +68,8 @@ final staffServiceProvider = Provider<StaffRestInterface>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef StaffServiceRef = ProviderRef<StaffRestInterface>;
 String _$storeServiceHash() => r'5113d350b477e292809bec9315943d64eca219bd';
 
@@ -76,6 +84,8 @@ final storeServiceProvider = Provider<StoreRestInterface>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef StoreServiceRef = ProviderRef<StoreRestInterface>;
 String _$permitServiceHash() => r'b99bcde9b003af843ff229b89ef9c0f79134626b';
 
@@ -91,6 +101,8 @@ final permitServiceProvider = Provider<PermitRestInterface>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef PermitServiceRef = ProviderRef<PermitRestInterface>;
 String _$jobServiceHash() => r'9623eb9c16741c2900680b3b72f16e97879aa603';
 
@@ -105,6 +117,8 @@ final jobServiceProvider = Provider<JobRestInterface>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef JobServiceRef = ProviderRef<JobRestInterface>;
 String _$teachingScheduleServiceHash() =>
     r'abc153528d37ea0ad4bdb139468a02eb93cb7bf6';
@@ -121,6 +135,8 @@ final teachingScheduleServiceProvider = Provider<JadwalRestInterface>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef TeachingScheduleServiceRef = ProviderRef<JadwalRestInterface>;
 String _$studentServiceHash() => r'1015bdcac5aaa43a2949b9f32a1aa1f2cb4c9748';
 
@@ -136,6 +152,8 @@ final studentServiceProvider = Provider<SiswaRestInterface>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef StudentServiceRef = ProviderRef<SiswaRestInterface>;
 String _$slipServiceHash() => r'7b8bf3e20d3399fe7bfc24f8c14aca3c1d40647f';
 
@@ -150,6 +168,8 @@ final slipServiceProvider = Provider<SlipRestInterface>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef SlipServiceRef = ProviderRef<SlipRestInterface>;
 String _$violationServiceHash() => r'b587678cdd8fb5ad01a794f722770e7c90c658bb';
 
@@ -165,6 +185,8 @@ final violationServiceProvider = Provider<PelanggaranRestInterface>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef ViolationServiceRef = ProviderRef<PelanggaranRestInterface>;
 String _$healthServiceHash() => r'7c53566d41afd34544f6a1e42892915b91f891e9';
 
@@ -180,6 +202,8 @@ final healthServiceProvider = Provider<KesehatanRestInterface>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef HealthServiceRef = ProviderRef<KesehatanRestInterface>;
 String _$tahfidzServiceHash() => r'7ba823a8c057a28ad26f09cba41ad13f7d519890';
 
@@ -195,6 +219,8 @@ final tahfidzServiceProvider = Provider<TahfidzRestInterface>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef TahfidzServiceRef = ProviderRef<TahfidzRestInterface>;
 String _$meetingServiceHash() => r'7e0d3ccb9db78e30660c30d1cc7a7f002b255c24';
 
@@ -210,6 +236,8 @@ final meetingServiceProvider = Provider<RapatRestInterface>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef MeetingServiceRef = ProviderRef<RapatRestInterface>;
 String _$scoreServiceHash() => r'd2b310eb10c0e563ba0706275e0c0c6e12463011';
 
@@ -224,6 +252,8 @@ final scoreServiceProvider = Provider<NilaiRestInterface>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef ScoreServiceRef = ProviderRef<NilaiRestInterface>;
 String _$teachingPlannerServiceHash() =>
     r'd3da041dc5068681a16005928f2e49aea4831629';
@@ -240,6 +270,8 @@ final teachingPlannerServiceProvider = Provider<RppRestInterface>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef TeachingPlannerServiceRef = ProviderRef<RppRestInterface>;
 String _$eventServiceHash() => r'9fcd13c36809ae0ad0a1a2dacacc4c63baeb326f';
 
@@ -254,6 +286,8 @@ final eventServiceProvider = Provider<EventRestInterface>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef EventServiceRef = ProviderRef<EventRestInterface>;
 String _$reportCardServiceHash() => r'1b6dc88746c22a03e81a2beb2c6f662c611b1031';
 
@@ -269,6 +303,8 @@ final reportCardServiceProvider = Provider<ReportCardRestInterface>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef ReportCardServiceRef = ProviderRef<ReportCardRestInterface>;
 String _$fastingServiceHash() => r'cd8c2fba84a90d213c353bef4c0e6d9eb984e160';
 
@@ -284,6 +320,8 @@ final fastingServiceProvider = Provider<PuasaService>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef FastingServiceRef = ProviderRef<PuasaService>;
 String _$recipeServiceHash() => r'c6f8e48e43e5543f0dd923488a55a6a9d6200ce5';
 
@@ -299,6 +337,8 @@ final recipeServiceProvider = Provider<RecipeRestInterface>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef RecipeServiceRef = ProviderRef<RecipeRestInterface>;
 String _$rawMaterialServiceHash() =>
     r'a8d9b39c2cd5fab0ce47d42e1b650912f5d9176e';
@@ -315,6 +355,8 @@ final rawMaterialServiceProvider = Provider<RawMaterialRestInterface>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef RawMaterialServiceRef = ProviderRef<RawMaterialRestInterface>;
 String _$pickupServiceHash() => r'f54e0868c5b2163f733c32becea232937ba1765f';
 
@@ -330,6 +372,8 @@ final pickupServiceProvider = Provider<PenjemputanRestInterface>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef PickupServiceRef = ProviderRef<PenjemputanRestInterface>;
 String _$transactionServiceHash() =>
     r'8f10be1a2028ef548ed694d88fa02f1af268cdfc';
@@ -346,6 +390,8 @@ final transactionServiceProvider = Provider<TransactionService>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef TransactionServiceRef = ProviderRef<TransactionService>;
 String _$productServiceHash() => r'0c7243eb410e5ae55940d09c459320cd603ec073';
 
@@ -361,6 +407,8 @@ final productServiceProvider = Provider<ProductRestInterface>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef ProductServiceRef = ProviderRef<ProductRestInterface>;
 String _$medicineServiceHash() => r'8f16cadf2b6135260bcabdb7fceb7907d4614e03';
 
@@ -376,6 +424,8 @@ final medicineServiceProvider = Provider<DataObatRestInterface>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef MedicineServiceRef = ProviderRef<DataObatRestInterface>;
 String _$unitServiceHash() => r'04885c53f922a3dd4a2170133e8bce89465dfcc1';
 
@@ -390,6 +440,8 @@ final unitServiceProvider = Provider<UnitService>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef UnitServiceRef = ProviderRef<UnitService>;
 String _$placeServiceHash() => r'e0542625f689dfa29a437dfa49c4e69bec70be4f';
 
@@ -404,6 +456,8 @@ final placeServiceProvider = Provider<TempatRestInterface>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef PlaceServiceRef = ProviderRef<TempatRestInterface>;
 String _$expanseServiceHash() => r'09c9998ff0db7990464b082186e316568ec77f70';
 
@@ -419,6 +473,8 @@ final expanseServiceProvider = Provider<CategoryExpenseRestInterface>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef ExpanseServiceRef = ProviderRef<CategoryExpenseRestInterface>;
 String _$allocationServiceHash() => r'c01ec892579ddeb835845950b7f551465890bd19';
 
@@ -434,6 +490,8 @@ final allocationServiceProvider = Provider<AlokasiRestInterface>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef AllocationServiceRef = ProviderRef<AlokasiRestInterface>;
 String _$changeScheduleServiceHash() =>
     r'a61fb93f5728636a0a143864b0aa1b6e75d6f59a';
@@ -450,6 +508,8 @@ final changeScheduleServiceProvider = Provider<ChangeScheduleService>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef ChangeScheduleServiceRef = ProviderRef<ChangeScheduleService>;
 String _$recapServiceHash() => r'5dd52a807e2a78503584ce4680a09b21a5791329';
 
@@ -464,6 +524,8 @@ final recapServiceProvider = Provider<RecapRestInterface>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef RecapServiceRef = ProviderRef<RecapRestInterface>;
 String _$scheduleServiceHash() => r'c61af088cd6218ac5ae78f3c971efd6125477c6b';
 
@@ -479,6 +541,8 @@ final scheduleServiceProvider = Provider<DaysRestInterface>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef ScheduleServiceRef = ProviderRef<DaysRestInterface>;
 String _$cartServiceHash() => r'cc097feae4a501c62f4194390c4c8af2409bc6d1';
 
@@ -493,6 +557,8 @@ final cartServiceProvider = Provider<CartRestInterface>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef CartServiceRef = ProviderRef<CartRestInterface>;
 String _$quranServiceHash() => r'1460a1c6c2f54f236fd7606a5a249b9378d50310';
 
@@ -507,6 +573,8 @@ final quranServiceProvider = Provider<QuranService>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef QuranServiceRef = ProviderRef<QuranService>;
 String _$hadithServiceHash() => r'e4658b52619f1a500f613b816a268d097275ee12';
 
@@ -522,6 +590,8 @@ final hadithServiceProvider = Provider<HadithService>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef HadithServiceRef = ProviderRef<HadithService>;
 String _$prayerTimeServiceHash() => r'825848221e7607c7a03e909f3ac7b62cdcfdfd3f';
 
@@ -537,6 +607,8 @@ final prayerTimeServiceProvider = Provider<PrayerTimeService>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef PrayerTimeServiceRef = ProviderRef<PrayerTimeService>;
 String _$dhikrServiceHash() => r'c3bf2b187cfba2db34d0cd2d39f2b45ce1f56660';
 
@@ -551,6 +623,8 @@ final dhikrServiceProvider = Provider<DhikrService>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef DhikrServiceRef = ProviderRef<DhikrService>;
 String _$murottalServiceHash() => r'68e3dae21f4b987b4e70b9ee35dafad3d072bada';
 
@@ -566,6 +640,8 @@ final murottalServiceProvider = Provider<MurottalService>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef MurottalServiceRef = ProviderRef<MurottalService>;
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

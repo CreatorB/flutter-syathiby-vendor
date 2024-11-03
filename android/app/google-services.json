@@ -7,6 +7,35 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:1016347653502:android:1a1b815288240108aaef2f",
+        "android_client_info": {
+          "package_name": "com.muslimdeveloper.al_ukhuwah"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1016347653502-am1uojllnklvrhbpfsk4eqjechbnt1ca.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyxA6v8e8Q9ZSNhuzq_kVl4awah8pP-6Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1016347653502-am1uojllnklvrhbpfsk4eqjechbnt1ca.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:1016347653502:android:5bfb89139eb93040aaef2f",
         "android_client_info": {
           "package_name": "com.muslimdeveloper.alukhuwah"

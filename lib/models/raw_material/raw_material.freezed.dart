@@ -32,8 +32,12 @@ mixin _$RawMaterial {
   String? get description => throw _privateConstructorUsedError;
   bool? get posisi => throw _privateConstructorUsedError;
 
+  /// Serializes this RawMaterial to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RawMaterial
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RawMaterialCopyWith<RawMaterial> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -67,6 +71,8 @@ class _$RawMaterialCopyWithImpl<$Res, $Val extends RawMaterial>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RawMaterial
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -155,6 +161,8 @@ class __$$RawMaterialImplCopyWithImpl<$Res>
       _$RawMaterialImpl _value, $Res Function(_$RawMaterialImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RawMaterial
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -278,7 +286,7 @@ class _$RawMaterialImpl implements _RawMaterial {
             (identical(other.posisi, posisi) || other.posisi == posisi));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -293,7 +301,9 @@ class _$RawMaterialImpl implements _RawMaterial {
       description,
       posisi);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RawMaterial
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RawMaterialImplCopyWith<_$RawMaterialImpl> get copyWith =>
@@ -344,8 +354,11 @@ abstract class _RawMaterial implements RawMaterial {
   String? get description;
   @override
   bool? get posisi;
+
+  /// Create a copy of RawMaterial
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RawMaterialImplCopyWith<_$RawMaterialImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -25,8 +25,12 @@ mixin _$ResponseEntity {
   String get msg => throw _privateConstructorUsedError;
   String get errCode => throw _privateConstructorUsedError;
 
+  /// Serializes this ResponseEntity to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ResponseEntity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ResponseEntityCopyWith<ResponseEntity> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$ResponseEntityCopyWithImpl<$Res, $Val extends ResponseEntity>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ResponseEntity
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -98,6 +104,8 @@ class __$$ResponseEntityImplCopyWithImpl<$Res>
       _$ResponseEntityImpl _value, $Res Function(_$ResponseEntityImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ResponseEntity
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -164,12 +172,14 @@ class _$ResponseEntityImpl implements _ResponseEntity {
             (identical(other.errCode, errCode) || other.errCode == errCode));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType,
       const DeepCollectionEquality().hash(data), status, msg, errCode);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ResponseEntity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ResponseEntityImplCopyWith<_$ResponseEntityImpl> get copyWith =>
@@ -202,8 +212,11 @@ abstract class _ResponseEntity implements ResponseEntity {
   String get msg;
   @override
   String get errCode;
+
+  /// Create a copy of ResponseEntity
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ResponseEntityImplCopyWith<_$ResponseEntityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

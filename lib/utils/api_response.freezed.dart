@@ -21,7 +21,9 @@ mixin _$VeganItemTagV2<T> {
   String get msg => throw _privateConstructorUsedError;
   String get errCode => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of VeganItemTagV2
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $VeganItemTagV2CopyWith<T, VeganItemTagV2<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -45,6 +47,8 @@ class _$VeganItemTagV2CopyWithImpl<T, $Res, $Val extends VeganItemTagV2<T>>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of VeganItemTagV2
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -93,6 +97,8 @@ class __$$VeganItemTagImplCopyWithImpl<T, $Res>
       _$VeganItemTagImpl<T> _value, $Res Function(_$VeganItemTagImpl<T>) _then)
       : super(_value, _then);
 
+  /// Create a copy of VeganItemTagV2
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -161,7 +167,9 @@ class _$VeganItemTagImpl<T> extends _VeganItemTag<T> {
   int get hashCode => Object.hash(runtimeType,
       const DeepCollectionEquality().hash(data), status, msg, errCode);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of VeganItemTagV2
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$VeganItemTagImplCopyWith<T, _$VeganItemTagImpl<T>> get copyWith =>
@@ -185,8 +193,11 @@ abstract class _VeganItemTag<T> extends VeganItemTagV2<T> {
   String get msg;
   @override
   String get errCode;
+
+  /// Create a copy of VeganItemTagV2
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$VeganItemTagImplCopyWith<T, _$VeganItemTagImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -203,9 +214,13 @@ mixin _$ResponseWrapper<T> {
   String get errCode => throw _privateConstructorUsedError;
   T? get data => throw _privateConstructorUsedError;
 
+  /// Serializes this ResponseWrapper to a JSON map.
   Map<String, dynamic> toJson(Object? Function(T) toJsonT) =>
       throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ResponseWrapper
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ResponseWrapperCopyWith<T, ResponseWrapper<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -229,6 +244,8 @@ class _$ResponseWrapperCopyWithImpl<T, $Res, $Val extends ResponseWrapper<T>>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ResponseWrapper
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -277,6 +294,8 @@ class __$$ResponseWrapperImplCopyWithImpl<T, $Res>
       $Res Function(_$ResponseWrapperImpl<T>) _then)
       : super(_value, _then);
 
+  /// Create a copy of ResponseWrapper
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -344,12 +363,14 @@ class _$ResponseWrapperImpl<T> implements _ResponseWrapper<T> {
             const DeepCollectionEquality().equals(other.data, data));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, status, msg, errCode,
       const DeepCollectionEquality().hash(data));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ResponseWrapper
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ResponseWrapperImplCopyWith<T, _$ResponseWrapperImpl<T>> get copyWith =>
@@ -381,8 +402,11 @@ abstract class _ResponseWrapper<T> implements ResponseWrapper<T> {
   String get errCode;
   @override
   T? get data;
+
+  /// Create a copy of ResponseWrapper
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ResponseWrapperImplCopyWith<T, _$ResponseWrapperImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }

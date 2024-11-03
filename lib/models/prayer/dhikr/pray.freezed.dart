@@ -25,8 +25,12 @@ mixin _$Pray {
   String get judul => throw _privateConstructorUsedError;
   String get source => throw _privateConstructorUsedError;
 
+  /// Serializes this Pray to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Pray
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PrayCopyWith<Pray> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -48,6 +52,8 @@ class _$PrayCopyWithImpl<$Res, $Val extends Pray>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Pray
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -94,6 +100,8 @@ class __$$PrayImplCopyWithImpl<$Res>
   __$$PrayImplCopyWithImpl(_$PrayImpl _value, $Res Function(_$PrayImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Pray
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -160,11 +168,13 @@ class _$PrayImpl implements _Pray {
             (identical(other.source, source) || other.source == source));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, arab, indo, judul, source);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Pray
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PrayImplCopyWith<_$PrayImpl> get copyWith =>
@@ -195,8 +205,11 @@ abstract class _Pray implements Pray {
   String get judul;
   @override
   String get source;
+
+  /// Create a copy of Pray
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PrayImplCopyWith<_$PrayImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

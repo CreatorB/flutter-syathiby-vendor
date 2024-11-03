@@ -18,14 +18,14 @@ abstract class TempatRestInterface {
   @GET('inventaris.php')
   Future<List<Inventaris>> getInventaris(
     @Query('key') String key,
-    @Query('id_tempat') String id_tempat,
+    @Query('id_tempat') String idTempat,
   );
 
   @POST('updateinventaris.php')
   @FormUrlEncoded()
   Future<Message> getUpdateInventaris(
     @Field('key') String key,
-    @Field('id_inventaris') String id_inventaris,
+    @Field('id_inventaris') String idInventaris,
     @Field('status') String status,
   );
 
@@ -62,7 +62,7 @@ abstract class TempatRestInterface {
   @MultiPart()
   Future<Message> addInventaris(
     @Part(name: 'key') String key,
-    @Part(name: 'id_tempat') String id_tempat,
+    @Part(name: 'id_tempat') String idTempat,
     @Part(name: 'name') String name,
     @Part(name: 'unit') String unit,
     @Part(name: 'code') String code,
@@ -76,7 +76,7 @@ abstract class TempatRestInterface {
   Future<List<Tempat>> getKelas(
     @Query('key') String key,
     @Query('id') String id,
-    @Query('id_jenis_asrama') String id_jenis_asrama,
+    @Query('id_jenis_asrama') String idJenisAsrama,
   );
 
   @GET('tempat.php')

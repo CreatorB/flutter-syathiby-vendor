@@ -3,6 +3,8 @@ import 'package:al_ukhuwah/models/hostel/food.dart';
 import 'package:al_ukhuwah/models/hostel/hostel.dart';
 import 'package:retrofit/retrofit.dart';
 
+import '../staff/kinerja.dart';
+
 part 'hostel_service.g.dart';
 
 @RestApi() // Ubah URL sesuai kebutuhan Anda
@@ -27,6 +29,40 @@ abstract class AsramaRestInterface {
     @Query("key") String key,
     @Query("id_jenis_asrama") String idJenisAsrama,
   );
+
+  @GET("kelas/listpresensi.php")
+  Future<List<Asrama>> getDataPresenceList(
+      @Query("key") String key,
+      @Query("awal") String startDate,
+      @Query("akhir") String endDate,
+      @Query("divisi") String division,
+      );
+
+  @GET("attendance/listpresensi.php")
+  Future<List<Kinerja>> getPresenceFilter(
+      @Query("key") String key,
+      @Query("awal") String startDate,
+      @Query("akhir") String endDate,
+      @Query("id") String id,
+      @Query("value") String value,
+      );
+
+  @GET("attendance/listizin.php")
+  Future<List<Kinerja>> getPermitAttendance(
+      @Query("key") String key,
+      @Query("awal") String startDate,
+      @Query("akhir") String endDate,
+      @Query("id") String id,
+      );
+
+  @GET("attendance/listpresensigroup.php")
+  Future<List<Kinerja>> getPresenceGroup(
+      @Query("key") String key,
+      @Query("awal") String startDate,
+      @Query("akhir") String endDate,
+      @Query("id") String id,
+      );
+
 
   @GET("kelas/listgedung.php")
   Future<List<Asrama>> getGedung(

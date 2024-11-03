@@ -28,8 +28,12 @@ mixin _$Dhikr {
   String? get faedah => throw _privateConstructorUsedError;
   String? get reference => throw _privateConstructorUsedError;
 
+  /// Serializes this Dhikr to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Dhikr
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DhikrCopyWith<Dhikr> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -58,6 +62,8 @@ class _$DhikrCopyWithImpl<$Res, $Val extends Dhikr>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Dhikr
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -127,6 +133,8 @@ class __$$DhikrImplCopyWithImpl<$Res>
       _$DhikrImpl _value, $Res Function(_$DhikrImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Dhikr
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -223,12 +231,14 @@ class _$DhikrImpl implements _Dhikr {
                 other.reference == reference));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, title, arabic, transliteration,
       translation, count, faedah, reference);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Dhikr
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DhikrImplCopyWith<_$DhikrImpl> get copyWith =>
@@ -268,8 +278,11 @@ abstract class _Dhikr implements Dhikr {
   String? get faedah;
   @override
   String? get reference;
+
+  /// Create a copy of Dhikr
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DhikrImplCopyWith<_$DhikrImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

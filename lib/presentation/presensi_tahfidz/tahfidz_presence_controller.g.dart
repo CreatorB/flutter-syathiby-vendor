@@ -144,6 +144,8 @@ class FetchTahfidzDateNowProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchTahfidzDateNowRef on AutoDisposeFutureProviderRef<List<Tahfidz>> {
   /// The parameter `key` of this provider.
   String get key;
@@ -288,6 +290,8 @@ class FetchScheduleTahfidzTimeProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchScheduleTahfidzTimeRef
     on AutoDisposeFutureProviderRef<List<Tahfidz>> {
   /// The parameter `key` of this provider.
@@ -448,6 +452,8 @@ class FetchScheduleTahfidzProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchScheduleTahfidzRef on AutoDisposeFutureProviderRef<List<Siswa>> {
   /// The parameter `key` of this provider.
   String get key;
@@ -614,6 +620,8 @@ class FetchTeacherTahfidzScheduleProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchTeacherTahfidzScheduleRef
     on AutoDisposeFutureProviderRef<List<Siswa>> {
   /// The parameter `key` of this provider.
@@ -801,6 +809,8 @@ class FetchTeacherPresenceTahfidzProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchTeacherPresenceTahfidzRef on AutoDisposeFutureProviderRef<Message> {
   /// The parameter `key` of this provider.
   String get key;
@@ -853,4 +863,4 @@ final tahfidzPresenceControllerProvider =
 
 typedef _$TahfidzPresenceController = AutoDisposeAsyncNotifier<void>;
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

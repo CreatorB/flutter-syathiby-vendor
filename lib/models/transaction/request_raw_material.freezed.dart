@@ -27,8 +27,12 @@ mixin _$RequestRawMaterial {
   int? get totalOrder => throw _privateConstructorUsedError;
   List<BarangRaw>? get product => throw _privateConstructorUsedError;
 
+  /// Serializes this RequestRawMaterial to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RequestRawMaterial
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RequestRawMaterialCopyWith<RequestRawMaterial> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -56,6 +60,8 @@ class _$RequestRawMaterialCopyWithImpl<$Res, $Val extends RequestRawMaterial>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RequestRawMaterial
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -108,6 +114,8 @@ class __$$RequestRawMaterialImplCopyWithImpl<$Res>
       $Res Function(_$RequestRawMaterialImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RequestRawMaterial
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -187,12 +195,14 @@ class _$RequestRawMaterialImpl implements _RequestRawMaterial {
             const DeepCollectionEquality().equals(other._product, _product));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, key, paymentType, totalOrder,
       const DeepCollectionEquality().hash(_product));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RequestRawMaterial
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RequestRawMaterialImplCopyWith<_$RequestRawMaterialImpl> get copyWith =>
@@ -227,8 +237,11 @@ abstract class _RequestRawMaterial implements RequestRawMaterial {
   int? get totalOrder;
   @override
   List<BarangRaw>? get product;
+
+  /// Create a copy of RequestRawMaterial
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RequestRawMaterialImplCopyWith<_$RequestRawMaterialImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -244,8 +257,12 @@ mixin _$BarangRaw {
   @JsonKey(name: 'amount_product')
   double? get amountProduct => throw _privateConstructorUsedError;
 
+  /// Serializes this BarangRaw to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BarangRaw
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $BarangRawCopyWith<BarangRaw> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -270,6 +287,8 @@ class _$BarangRawCopyWithImpl<$Res, $Val extends BarangRaw>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of BarangRaw
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -310,6 +329,8 @@ class __$$BarangRawImplCopyWithImpl<$Res>
       _$BarangRawImpl _value, $Res Function(_$BarangRawImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BarangRaw
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -363,11 +384,13 @@ class _$BarangRawImpl implements _BarangRaw {
                 other.amountProduct == amountProduct));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, idProduct, amountProduct);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BarangRaw
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$BarangRawImplCopyWith<_$BarangRawImpl> get copyWith =>
@@ -396,8 +419,11 @@ abstract class _BarangRaw implements BarangRaw {
   @override
   @JsonKey(name: 'amount_product')
   double? get amountProduct;
+
+  /// Create a copy of BarangRaw
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$BarangRawImplCopyWith<_$BarangRawImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

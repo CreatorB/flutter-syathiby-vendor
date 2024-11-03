@@ -704,8 +704,16 @@ class HomeScreen extends HookConsumerWidget {
                     goToRouteName: AppRoute.eatingReport.name,
                   ),
                   MenuGrid(
-                    title: 'Laporan Kerja',
+                    title: 'Laporan Kerja Dapur',
                     iconData: Icons.report,
+                    goToRouteName: AppRoute.activityReport.name,
+                    queryParameters: {
+                      'type': 'dapur',
+                    },
+                  ),
+                  MenuGrid(
+                    title: 'Laporan Kerja Sarpras',
+                    iconData: Icons.report_gmailerrorred,
                     goToRouteName: AppRoute.activityReport.name,
                     queryParameters: {
                       'type': 'kerumahtanggaan',
@@ -791,12 +799,12 @@ class HomeScreen extends HookConsumerWidget {
                       'type': 'keuangan',
                     },
                   ),
-                  MenuGrid(
-                    title: 'Tabungan',
-                    iconData: Icons.monetization_on,
-                    goToRouteName: AppRoute.studentTransaction.name,
-                    queryParameters: {'type': 'Tabungan'},
-                  ),
+                  // MenuGrid(
+                  //   title: 'Tabungan',
+                  //   iconData: Icons.monetization_on,
+                  //   goToRouteName: AppRoute.studentTransaction.name,
+                  //   queryParameters: {'type': 'Tabungan'},
+                  // ),
                 ],
               ),
               buildListMenu(
@@ -804,23 +812,31 @@ class HomeScreen extends HookConsumerWidget {
                 enabled: fetchPresence.valueOrNull?.unitusaha == 1,
                 menus: [
                   MenuGrid(
-                    title: 'Loundry',
-                    iconData: Icons.water_drop,
-                    goToRouteName: AppRoute.studentTransaction.name,
-                    queryParameters: {'type': 'Loundry'},
+                    title: 'Laporan Kerja',
+                    iconData: Icons.report,
+                    goToRouteName: AppRoute.activityReport.name,
+                    queryParameters: {
+                      'type': 'unit_usaha',
+                    }
                   ),
-                  MenuGrid(
-                    title: 'Mini Market',
-                    iconData: Icons.store,
-                    goToRouteName: AppRoute.studentTransaction.name,
-                    queryParameters: {'type': 'Mart'},
-                  ),
-                  MenuGrid(
-                    title: 'Kantin',
-                    iconData: Icons.shopping_cart,
-                    goToRouteName: AppRoute.studentTransaction.name,
-                    queryParameters: {'type': 'Kantin'},
-                  ),
+                  // MenuGrid(
+                  //   title: 'Loundry',
+                  //   iconData: Icons.water_drop,
+                  //   goToRouteName: AppRoute.studentTransaction.name,
+                  //   queryParameters: {'type': 'Loundry'},
+                  // ),
+                  // MenuGrid(
+                  //   title: 'Mini Market',
+                  //   iconData: Icons.store,
+                  //   goToRouteName: AppRoute.studentTransaction.name,
+                  //   queryParameters: {'type': 'Mart'},
+                  // ),
+                  // MenuGrid(
+                  //   title: 'Kantin',
+                  //   iconData: Icons.shopping_cart,
+                  //   goToRouteName: AppRoute.studentTransaction.name,
+                  //   queryParameters: {'type': 'Kantin'},
+                  // ),
                 ],
               ),
               buildListMenu(
@@ -881,6 +897,11 @@ class HomeScreen extends HookConsumerWidget {
                     goToRouteName: AppRoute.manageMeetings.name,
                   ),
                   MenuGrid(
+                    title: 'Data Presensi',
+                    iconData: Icons.edit_calendar,
+                    goToRouteName: AppRoute.dataPresence.name,
+                  ),
+                  MenuGrid(
                     title: 'Absensi Manual',
                     iconData: Icons.edit_document,
                     goToRouteName: AppRoute.manualAttendance.name,
@@ -893,22 +914,7 @@ class HomeScreen extends HookConsumerWidget {
                   MenuGrid(
                     title: 'Daftar Kehadiran',
                     iconData: Icons.co_present,
-                    goToRouteName: AppRoute.reportAttendance.name,
-                    onClicked: () {
-                      showModalBottomSheet(
-                        context: context,
-                        shape: const RoundedRectangleBorder(
-                          borderRadius: BorderRadius.vertical(
-                            top: Radius.circular(20),
-                          ),
-                        ),
-                        clipBehavior: Clip.antiAliasWithSaveLayer,
-                        builder: (context) => BottomSheetStaffMonthPicker(
-                          title: 'Daftar Kehadiran',
-                          routeName: AppRoute.reportAttendance.name,
-                        ),
-                      );
-                    },
+                    goToRouteName: AppRoute.attendanceRecapMonth.name,
                   ),
                   MenuGrid(
                     title: 'Laporan Absensi',

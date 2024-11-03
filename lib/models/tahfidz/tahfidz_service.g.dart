@@ -6,12 +6,13 @@ part of 'tahfidz_service.dart';
 // RetrofitGenerator
 // **************************************************************************
 
-// ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers
+// ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers,unused_element,unnecessary_string_interpolations
 
 class _TahfidzRestInterface implements TahfidzRestInterface {
   _TahfidzRestInterface(
     this._dio, {
     this.baseUrl,
+    this.errorLogger,
   }) {
     baseUrl ??= 'tahfidz/';
   }
@@ -19,6 +20,8 @@ class _TahfidzRestInterface implements TahfidzRestInterface {
   final Dio _dio;
 
   String? baseUrl;
+
+  final ParseErrorLogger? errorLogger;
 
   @override
   Future<List<Tahfidz>> get(
@@ -33,27 +36,33 @@ class _TahfidzRestInterface implements TahfidzRestInterface {
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch<List<dynamic>>(_setStreamType<List<Tahfidz>>(Options(
+    final _options = _setStreamType<List<Tahfidz>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              'list.php',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    var value = _result.data!
-        .map((dynamic i) => Tahfidz.fromJson(i as Map<String, dynamic>))
-        .toList();
-    return value;
+        .compose(
+          _dio.options,
+          'list.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<List<dynamic>>(_options);
+    late List<Tahfidz> _value;
+    try {
+      _value = _result.data!
+          .map((dynamic i) => Tahfidz.fromJson(i as Map<String, dynamic>))
+          .toList();
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
@@ -70,27 +79,33 @@ class _TahfidzRestInterface implements TahfidzRestInterface {
     };
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch<List<dynamic>>(_setStreamType<List<Tahfidz>>(Options(
+    final _options = _setStreamType<List<Tahfidz>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              'listpenilaiantahfidz.php',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    var value = _result.data!
-        .map((dynamic i) => Tahfidz.fromJson(i as Map<String, dynamic>))
-        .toList();
-    return value;
+        .compose(
+          _dio.options,
+          'listpenilaiantahfidz.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<List<dynamic>>(_options);
+    late List<Tahfidz> _value;
+    try {
+      _value = _result.data!
+          .map((dynamic i) => Tahfidz.fromJson(i as Map<String, dynamic>))
+          .toList();
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
@@ -107,27 +122,33 @@ class _TahfidzRestInterface implements TahfidzRestInterface {
     };
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch<List<dynamic>>(_setStreamType<List<Tahfidz>>(Options(
+    final _options = _setStreamType<List<Tahfidz>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              'listpenilaiankepengasuhan.php',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    var value = _result.data!
-        .map((dynamic i) => Tahfidz.fromJson(i as Map<String, dynamic>))
-        .toList();
-    return value;
+        .compose(
+          _dio.options,
+          'listpenilaiankepengasuhan.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<List<dynamic>>(_options);
+    late List<Tahfidz> _value;
+    try {
+      _value = _result.data!
+          .map((dynamic i) => Tahfidz.fromJson(i as Map<String, dynamic>))
+          .toList();
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
@@ -146,27 +167,33 @@ class _TahfidzRestInterface implements TahfidzRestInterface {
     };
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch<List<dynamic>>(_setStreamType<List<Tahfidz>>(Options(
+    final _options = _setStreamType<List<Tahfidz>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              'deletepenilaiantahfidz.php',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    var value = _result.data!
-        .map((dynamic i) => Tahfidz.fromJson(i as Map<String, dynamic>))
-        .toList();
-    return value;
+        .compose(
+          _dio.options,
+          'deletepenilaiantahfidz.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<List<dynamic>>(_options);
+    late List<Tahfidz> _value;
+    try {
+      _value = _result.data!
+          .map((dynamic i) => Tahfidz.fromJson(i as Map<String, dynamic>))
+          .toList();
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
@@ -185,25 +212,31 @@ class _TahfidzRestInterface implements TahfidzRestInterface {
     };
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch<Map<String, dynamic>>(_setStreamType<Message>(Options(
+    final _options = _setStreamType<Message>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              'deletepenilaiankepengasuhan.php',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    final value = Message.fromJson(_result.data!);
-    return value;
+        .compose(
+          _dio.options,
+          'deletepenilaiankepengasuhan.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late Message _value;
+    try {
+      _value = Message.fromJson(_result.data!);
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
@@ -220,27 +253,33 @@ class _TahfidzRestInterface implements TahfidzRestInterface {
     };
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch<List<dynamic>>(_setStreamType<List<Tahfidz>>(Options(
+    final _options = _setStreamType<List<Tahfidz>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              'listtahfidz.php',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    var value = _result.data!
-        .map((dynamic i) => Tahfidz.fromJson(i as Map<String, dynamic>))
-        .toList();
-    return value;
+        .compose(
+          _dio.options,
+          'listtahfidz.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<List<dynamic>>(_options);
+    late List<Tahfidz> _value;
+    try {
+      _value = _result.data!
+          .map((dynamic i) => Tahfidz.fromJson(i as Map<String, dynamic>))
+          .toList();
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
@@ -259,27 +298,33 @@ class _TahfidzRestInterface implements TahfidzRestInterface {
     };
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch<List<dynamic>>(_setStreamType<List<Tahfidz>>(Options(
+    final _options = _setStreamType<List<Tahfidz>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              'deletelisttahfidz.php',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    var value = _result.data!
-        .map((dynamic i) => Tahfidz.fromJson(i as Map<String, dynamic>))
-        .toList();
-    return value;
+        .compose(
+          _dio.options,
+          'deletelisttahfidz.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<List<dynamic>>(_options);
+    late List<Tahfidz> _value;
+    try {
+      _value = _result.data!
+          .map((dynamic i) => Tahfidz.fromJson(i as Map<String, dynamic>))
+          .toList();
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
@@ -296,27 +341,33 @@ class _TahfidzRestInterface implements TahfidzRestInterface {
     };
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch<List<dynamic>>(_setStreamType<List<Tahfidz>>(Options(
+    final _options = _setStreamType<List<Tahfidz>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              'listabsensi.php',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    var value = _result.data!
-        .map((dynamic i) => Tahfidz.fromJson(i as Map<String, dynamic>))
-        .toList();
-    return value;
+        .compose(
+          _dio.options,
+          'listabsensi.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<List<dynamic>>(_options);
+    late List<Tahfidz> _value;
+    try {
+      _value = _result.data!
+          .map((dynamic i) => Tahfidz.fromJson(i as Map<String, dynamic>))
+          .toList();
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
@@ -331,27 +382,33 @@ class _TahfidzRestInterface implements TahfidzRestInterface {
     };
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch<List<dynamic>>(_setStreamType<List<Tahfidz>>(Options(
+    final _options = _setStreamType<List<Tahfidz>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              'detail.php',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    var value = _result.data!
-        .map((dynamic i) => Tahfidz.fromJson(i as Map<String, dynamic>))
-        .toList();
-    return value;
+        .compose(
+          _dio.options,
+          'detail.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<List<dynamic>>(_options);
+    late List<Tahfidz> _value;
+    try {
+      _value = _result.data!
+          .map((dynamic i) => Tahfidz.fromJson(i as Map<String, dynamic>))
+          .toList();
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
@@ -366,27 +423,33 @@ class _TahfidzRestInterface implements TahfidzRestInterface {
     };
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch<List<dynamic>>(_setStreamType<List<Tahfidz>>(Options(
+    final _options = _setStreamType<List<Tahfidz>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              'detailsantri.php',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    var value = _result.data!
-        .map((dynamic i) => Tahfidz.fromJson(i as Map<String, dynamic>))
-        .toList();
-    return value;
+        .compose(
+          _dio.options,
+          'detailsantri.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<List<dynamic>>(_options);
+    late List<Tahfidz> _value;
+    try {
+      _value = _result.data!
+          .map((dynamic i) => Tahfidz.fromJson(i as Map<String, dynamic>))
+          .toList();
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
@@ -401,27 +464,33 @@ class _TahfidzRestInterface implements TahfidzRestInterface {
     };
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch<List<dynamic>>(_setStreamType<List<Tahfidz>>(Options(
+    final _options = _setStreamType<List<Tahfidz>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              'detailpenilaiansantri.php',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    var value = _result.data!
-        .map((dynamic i) => Tahfidz.fromJson(i as Map<String, dynamic>))
-        .toList();
-    return value;
+        .compose(
+          _dio.options,
+          'detailpenilaiansantri.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<List<dynamic>>(_options);
+    late List<Tahfidz> _value;
+    try {
+      _value = _result.data!
+          .map((dynamic i) => Tahfidz.fromJson(i as Map<String, dynamic>))
+          .toList();
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
@@ -436,27 +505,33 @@ class _TahfidzRestInterface implements TahfidzRestInterface {
     };
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch<List<dynamic>>(_setStreamType<List<Tahfidz>>(Options(
+    final _options = _setStreamType<List<Tahfidz>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              'detailpenilaiankepengasuhan.php',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    var value = _result.data!
-        .map((dynamic i) => Tahfidz.fromJson(i as Map<String, dynamic>))
-        .toList();
-    return value;
+        .compose(
+          _dio.options,
+          'detailpenilaiankepengasuhan.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<List<dynamic>>(_options);
+    late List<Tahfidz> _value;
+    try {
+      _value = _result.data!
+          .map((dynamic i) => Tahfidz.fromJson(i as Map<String, dynamic>))
+          .toList();
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
@@ -475,25 +550,31 @@ class _TahfidzRestInterface implements TahfidzRestInterface {
     };
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch<Map<String, dynamic>>(_setStreamType<Message>(Options(
+    final _options = _setStreamType<Message>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              'confirm.php',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    final value = Message.fromJson(_result.data!);
-    return value;
+        .compose(
+          _dio.options,
+          'confirm.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late Message _value;
+    try {
+      _value = Message.fromJson(_result.data!);
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
@@ -512,25 +593,31 @@ class _TahfidzRestInterface implements TahfidzRestInterface {
     };
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch<Map<String, dynamic>>(_setStreamType<Message>(Options(
+    final _options = _setStreamType<Message>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              'confirmsantri.php',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    final value = Message.fromJson(_result.data!);
-    return value;
+        .compose(
+          _dio.options,
+          'confirmsantri.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late Message _value;
+    try {
+      _value = Message.fromJson(_result.data!);
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
@@ -546,27 +633,33 @@ class _TahfidzRestInterface implements TahfidzRestInterface {
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch<List<dynamic>>(_setStreamType<List<Tahfidz>>(Options(
+    final _options = _setStreamType<List<Tahfidz>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              'listhafalan.php',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    var value = _result.data!
-        .map((dynamic i) => Tahfidz.fromJson(i as Map<String, dynamic>))
-        .toList();
-    return value;
+        .compose(
+          _dio.options,
+          'listhafalan.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<List<dynamic>>(_options);
+    late List<Tahfidz> _value;
+    try {
+      _value = _result.data!
+          .map((dynamic i) => Tahfidz.fromJson(i as Map<String, dynamic>))
+          .toList();
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
@@ -575,27 +668,33 @@ class _TahfidzRestInterface implements TahfidzRestInterface {
     final queryParameters = <String, dynamic>{r'key': key};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch<List<dynamic>>(_setStreamType<List<Tahfidz>>(Options(
+    final _options = _setStreamType<List<Tahfidz>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              'jenis.php',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    var value = _result.data!
-        .map((dynamic i) => Tahfidz.fromJson(i as Map<String, dynamic>))
-        .toList();
-    return value;
+        .compose(
+          _dio.options,
+          'jenis.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<List<dynamic>>(_options);
+    late List<Tahfidz> _value;
+    try {
+      _value = _result.data!
+          .map((dynamic i) => Tahfidz.fromJson(i as Map<String, dynamic>))
+          .toList();
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
@@ -610,27 +709,33 @@ class _TahfidzRestInterface implements TahfidzRestInterface {
     };
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch<List<dynamic>>(_setStreamType<List<Tahfidz>>(Options(
+    final _options = _setStreamType<List<Tahfidz>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              'type.php',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    var value = _result.data!
-        .map((dynamic i) => Tahfidz.fromJson(i as Map<String, dynamic>))
-        .toList();
-    return value;
+        .compose(
+          _dio.options,
+          'type.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<List<dynamic>>(_options);
+    late List<Tahfidz> _value;
+    try {
+      _value = _result.data!
+          .map((dynamic i) => Tahfidz.fromJson(i as Map<String, dynamic>))
+          .toList();
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
@@ -639,27 +744,33 @@ class _TahfidzRestInterface implements TahfidzRestInterface {
     final queryParameters = <String, dynamic>{r'key': key};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch<List<dynamic>>(_setStreamType<List<Tahfidz>>(Options(
+    final _options = _setStreamType<List<Tahfidz>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              'kegiatan.php',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    var value = _result.data!
-        .map((dynamic i) => Tahfidz.fromJson(i as Map<String, dynamic>))
-        .toList();
-    return value;
+        .compose(
+          _dio.options,
+          'kegiatan.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<List<dynamic>>(_options);
+    late List<Tahfidz> _value;
+    try {
+      _value = _result.data!
+          .map((dynamic i) => Tahfidz.fromJson(i as Map<String, dynamic>))
+          .toList();
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
@@ -668,27 +779,33 @@ class _TahfidzRestInterface implements TahfidzRestInterface {
     final queryParameters = <String, dynamic>{r'key': key};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch<List<dynamic>>(_setStreamType<List<Tahfidz>>(Options(
+    final _options = _setStreamType<List<Tahfidz>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              'datenow.php',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    var value = _result.data!
-        .map((dynamic i) => Tahfidz.fromJson(i as Map<String, dynamic>))
-        .toList();
-    return value;
+        .compose(
+          _dio.options,
+          'datenow.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<List<dynamic>>(_options);
+    late List<Tahfidz> _value;
+    try {
+      _value = _result.data!
+          .map((dynamic i) => Tahfidz.fromJson(i as Map<String, dynamic>))
+          .toList();
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
@@ -703,27 +820,33 @@ class _TahfidzRestInterface implements TahfidzRestInterface {
     };
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch<List<dynamic>>(_setStreamType<List<Tahfidz>>(Options(
+    final _options = _setStreamType<List<Tahfidz>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              'typepenilaian.php',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    var value = _result.data!
-        .map((dynamic i) => Tahfidz.fromJson(i as Map<String, dynamic>))
-        .toList();
-    return value;
+        .compose(
+          _dio.options,
+          'typepenilaian.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<List<dynamic>>(_options);
+    late List<Tahfidz> _value;
+    try {
+      _value = _result.data!
+          .map((dynamic i) => Tahfidz.fromJson(i as Map<String, dynamic>))
+          .toList();
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
@@ -738,27 +861,33 @@ class _TahfidzRestInterface implements TahfidzRestInterface {
     };
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch<List<dynamic>>(_setStreamType<List<Tahfidz>>(Options(
+    final _options = _setStreamType<List<Tahfidz>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              'typepenilaiankepengasuhan.php',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    var value = _result.data!
-        .map((dynamic i) => Tahfidz.fromJson(i as Map<String, dynamic>))
-        .toList();
-    return value;
+        .compose(
+          _dio.options,
+          'typepenilaiankepengasuhan.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<List<dynamic>>(_options);
+    late List<Tahfidz> _value;
+    try {
+      _value = _result.data!
+          .map((dynamic i) => Tahfidz.fromJson(i as Map<String, dynamic>))
+          .toList();
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
@@ -796,45 +925,53 @@ class _TahfidzRestInterface implements TahfidzRestInterface {
       detail,
     ));
     if (img != null) {
-      _data.files.add(MapEntry(
-        'img',
-        MultipartFile.fromFileSync(
-          img.path,
-          filename: img.path.split(Platform.pathSeparator).last,
-        ),
-      ));
+      if (img != null) {
+        _data.files.add(MapEntry(
+          'img',
+          MultipartFile.fromFileSync(
+            img.path,
+            filename: img.path.split(Platform.pathSeparator).last,
+          ),
+        ));
+      }
     }
-    final _result =
-        await _dio.fetch<Map<String, dynamic>>(_setStreamType<Message>(Options(
+    final _options = _setStreamType<Message>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
       contentType: 'multipart/form-data',
     )
-            .compose(
-              _dio.options,
-              'insert.php',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    final value = Message.fromJson(_result.data!);
-    return value;
+        .compose(
+          _dio.options,
+          'insert.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late Message _value;
+    try {
+      _value = Message.fromJson(_result.data!);
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
   Future<Message> addSantri(
     String key,
-    String id_jenis,
-    String? waktu_hafalan,
+    String idJenis,
+    String? waktuHafalan,
     String halaman,
-    String halaman_end,
+    String halamanEnd,
     String nis,
-    String id_kelas,
+    String idKelas,
     String? detail,
     String jumlah,
   ) async {
@@ -849,12 +986,12 @@ class _TahfidzRestInterface implements TahfidzRestInterface {
     ));
     _data.fields.add(MapEntry(
       'id_jenis',
-      id_jenis,
+      idJenis,
     ));
-    if (waktu_hafalan != null) {
+    if (waktuHafalan != null) {
       _data.fields.add(MapEntry(
         'waktu_hafalan',
-        waktu_hafalan,
+        waktuHafalan,
       ));
     }
     _data.fields.add(MapEntry(
@@ -863,7 +1000,7 @@ class _TahfidzRestInterface implements TahfidzRestInterface {
     ));
     _data.fields.add(MapEntry(
       'halaman_end',
-      halaman_end,
+      halamanEnd,
     ));
     _data.fields.add(MapEntry(
       'nis',
@@ -871,7 +1008,7 @@ class _TahfidzRestInterface implements TahfidzRestInterface {
     ));
     _data.fields.add(MapEntry(
       'id_kelas',
-      id_kelas,
+      idKelas,
     ));
     if (detail != null) {
       _data.fields.add(MapEntry(
@@ -883,36 +1020,42 @@ class _TahfidzRestInterface implements TahfidzRestInterface {
       'jumlah',
       jumlah,
     ));
-    final _result =
-        await _dio.fetch<Map<String, dynamic>>(_setStreamType<Message>(Options(
+    final _options = _setStreamType<Message>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
       contentType: 'multipart/form-data',
     )
-            .compose(
-              _dio.options,
-              'insertsantri.php',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    final value = Message.fromJson(_result.data!);
-    return value;
+        .compose(
+          _dio.options,
+          'insertsantri.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late Message _value;
+    try {
+      _value = Message.fromJson(_result.data!);
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
   Future<Message> editSantri(
     String key,
     String id,
-    String id_jenis,
-    String? waktu_hafalan,
+    String idJenis,
+    String? waktuHafalan,
     String halaman,
-    String halaman_end,
+    String halamanEnd,
     String? detail,
     String jumlah,
   ) async {
@@ -931,12 +1074,12 @@ class _TahfidzRestInterface implements TahfidzRestInterface {
     ));
     _data.fields.add(MapEntry(
       'id_jenis',
-      id_jenis,
+      idJenis,
     ));
-    if (waktu_hafalan != null) {
+    if (waktuHafalan != null) {
       _data.fields.add(MapEntry(
         'waktu_hafalan',
-        waktu_hafalan,
+        waktuHafalan,
       ));
     }
     _data.fields.add(MapEntry(
@@ -945,7 +1088,7 @@ class _TahfidzRestInterface implements TahfidzRestInterface {
     ));
     _data.fields.add(MapEntry(
       'halaman_end',
-      halaman_end,
+      halamanEnd,
     ));
     if (detail != null) {
       _data.fields.add(MapEntry(
@@ -957,35 +1100,41 @@ class _TahfidzRestInterface implements TahfidzRestInterface {
       'jumlah',
       jumlah,
     ));
-    final _result =
-        await _dio.fetch<Map<String, dynamic>>(_setStreamType<Message>(Options(
+    final _options = _setStreamType<Message>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
       contentType: 'multipart/form-data',
     )
-            .compose(
-              _dio.options,
-              'editsantri.php',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    final value = Message.fromJson(_result.data!);
-    return value;
+        .compose(
+          _dio.options,
+          'editsantri.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late Message _value;
+    try {
+      _value = Message.fromJson(_result.data!);
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
   Future<Message> addPenilaianSantri(
     String key,
-    String id_jenis,
+    String idJenis,
     String nilai,
     String nis,
-    String id_kelas,
+    String idKelas,
     String? detail,
   ) async {
     final _extra = <String, dynamic>{};
@@ -999,7 +1148,7 @@ class _TahfidzRestInterface implements TahfidzRestInterface {
     ));
     _data.fields.add(MapEntry(
       'id_jenis',
-      id_jenis,
+      idJenis,
     ));
     _data.fields.add(MapEntry(
       'nilai',
@@ -1011,7 +1160,7 @@ class _TahfidzRestInterface implements TahfidzRestInterface {
     ));
     _data.fields.add(MapEntry(
       'id_kelas',
-      id_kelas,
+      idKelas,
     ));
     if (detail != null) {
       _data.fields.add(MapEntry(
@@ -1019,35 +1168,41 @@ class _TahfidzRestInterface implements TahfidzRestInterface {
         detail,
       ));
     }
-    final _result =
-        await _dio.fetch<Map<String, dynamic>>(_setStreamType<Message>(Options(
+    final _options = _setStreamType<Message>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
       contentType: 'multipart/form-data',
     )
-            .compose(
-              _dio.options,
-              'insertpenilaiansantri.php',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    final value = Message.fromJson(_result.data!);
-    return value;
+        .compose(
+          _dio.options,
+          'insertpenilaiansantri.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late Message _value;
+    try {
+      _value = Message.fromJson(_result.data!);
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
   Future<Message> addPenilaianKepengasuhan(
     String key,
-    String id_jenis,
+    String idJenis,
     String nilai,
     String nis,
-    String id_kelas,
+    String idKelas,
     String? detail,
   ) async {
     final _extra = <String, dynamic>{};
@@ -1061,7 +1216,7 @@ class _TahfidzRestInterface implements TahfidzRestInterface {
     ));
     _data.fields.add(MapEntry(
       'id_jenis',
-      id_jenis,
+      idJenis,
     ));
     _data.fields.add(MapEntry(
       'nilai',
@@ -1073,7 +1228,7 @@ class _TahfidzRestInterface implements TahfidzRestInterface {
     ));
     _data.fields.add(MapEntry(
       'id_kelas',
-      id_kelas,
+      idKelas,
     ));
     if (detail != null) {
       _data.fields.add(MapEntry(
@@ -1081,33 +1236,39 @@ class _TahfidzRestInterface implements TahfidzRestInterface {
         detail,
       ));
     }
-    final _result =
-        await _dio.fetch<Map<String, dynamic>>(_setStreamType<Message>(Options(
+    final _options = _setStreamType<Message>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
       contentType: 'multipart/form-data',
     )
-            .compose(
-              _dio.options,
-              'insertpenilaiankepengasuhan.php',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    final value = Message.fromJson(_result.data!);
-    return value;
+        .compose(
+          _dio.options,
+          'insertpenilaiankepengasuhan.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late Message _value;
+    try {
+      _value = Message.fromJson(_result.data!);
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
   Future<Message> editPenilaianSantri(
     String key,
     String id,
-    String id_jenis,
+    String idJenis,
     String nilai,
     String? detail,
   ) async {
@@ -1126,7 +1287,7 @@ class _TahfidzRestInterface implements TahfidzRestInterface {
     ));
     _data.fields.add(MapEntry(
       'id_jenis',
-      id_jenis,
+      idJenis,
     ));
     _data.fields.add(MapEntry(
       'nilai',
@@ -1138,33 +1299,39 @@ class _TahfidzRestInterface implements TahfidzRestInterface {
         detail,
       ));
     }
-    final _result =
-        await _dio.fetch<Map<String, dynamic>>(_setStreamType<Message>(Options(
+    final _options = _setStreamType<Message>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
       contentType: 'multipart/form-data',
     )
-            .compose(
-              _dio.options,
-              'editpenilaiansantri.php',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    final value = Message.fromJson(_result.data!);
-    return value;
+        .compose(
+          _dio.options,
+          'editpenilaiansantri.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late Message _value;
+    try {
+      _value = Message.fromJson(_result.data!);
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
   Future<Message> editPenilaianKepengasuhan(
     String key,
     String id,
-    String id_jenis,
+    String idJenis,
     String nilai,
     String? detail,
   ) async {
@@ -1183,7 +1350,7 @@ class _TahfidzRestInterface implements TahfidzRestInterface {
     ));
     _data.fields.add(MapEntry(
       'id_jenis',
-      id_jenis,
+      idJenis,
     ));
     _data.fields.add(MapEntry(
       'nilai',
@@ -1195,26 +1362,32 @@ class _TahfidzRestInterface implements TahfidzRestInterface {
         detail,
       ));
     }
-    final _result =
-        await _dio.fetch<Map<String, dynamic>>(_setStreamType<Message>(Options(
+    final _options = _setStreamType<Message>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
       contentType: 'multipart/form-data',
     )
-            .compose(
-              _dio.options,
-              'editpenilaiankepengasuhan.php',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    final value = Message.fromJson(_result.data!);
-    return value;
+        .compose(
+          _dio.options,
+          'editpenilaiankepengasuhan.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late Message _value;
+    try {
+      _value = Message.fromJson(_result.data!);
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
@@ -1231,25 +1404,31 @@ class _TahfidzRestInterface implements TahfidzRestInterface {
     };
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch<Map<String, dynamic>>(_setStreamType<Message>(Options(
+    final _options = _setStreamType<Message>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              'absensisantri.php',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    final value = Message.fromJson(_result.data!);
-    return value;
+        .compose(
+          _dio.options,
+          'absensisantri.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late Message _value;
+    try {
+      _value = Message.fromJson(_result.data!);
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   RequestOptions _setStreamType<T>(RequestOptions requestOptions) {

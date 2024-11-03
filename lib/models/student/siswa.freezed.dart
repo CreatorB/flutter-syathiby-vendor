@@ -81,8 +81,12 @@ mixin _$Siswa {
   @JsonKey(name: 'limit_transaksi')
   String? get limitTransaksi => throw _privateConstructorUsedError;
 
+  /// Serializes this Siswa to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Siswa
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SiswaCopyWith<Siswa> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -134,6 +138,8 @@ class _$SiswaCopyWithImpl<$Res, $Val extends Siswa>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Siswa
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -341,6 +347,8 @@ class __$$SiswaImplCopyWithImpl<$Res>
       _$SiswaImpl _value, $Res Function(_$SiswaImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Siswa
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -687,7 +695,7 @@ class _$SiswaImpl implements _Siswa {
                 other.limitTransaksi == limitTransaksi));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -723,7 +731,9 @@ class _$SiswaImpl implements _Siswa {
         limitTransaksi
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Siswa
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SiswaImplCopyWith<_$SiswaImpl> get copyWith =>
@@ -863,8 +873,11 @@ abstract class _Siswa implements Siswa {
   @override
   @JsonKey(name: 'limit_transaksi')
   String? get limitTransaksi;
+
+  /// Create a copy of Siswa
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SiswaImplCopyWith<_$SiswaImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

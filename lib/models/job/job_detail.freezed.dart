@@ -24,8 +24,12 @@ mixin _$DetailsJob {
   @JsonKey(name: 'data')
   List<JobData>? get data => throw _privateConstructorUsedError;
 
+  /// Serializes this DetailsJob to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DetailsJob
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DetailsJobCopyWith<DetailsJob> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$DetailsJobCopyWithImpl<$Res, $Val extends DetailsJob>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DetailsJob
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -69,6 +75,8 @@ class _$DetailsJobCopyWithImpl<$Res, $Val extends DetailsJob>
     ) as $Val);
   }
 
+  /// Create a copy of DetailsJob
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $InfoCopyWith<$Res>? get info {
@@ -104,6 +112,8 @@ class __$$DetailsJobImplCopyWithImpl<$Res>
       _$DetailsJobImpl _value, $Res Function(_$DetailsJobImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DetailsJob
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -160,12 +170,14 @@ class _$DetailsJobImpl implements _DetailsJob {
             const DeepCollectionEquality().equals(other._data, _data));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, info, const DeepCollectionEquality().hash(_data));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DetailsJob
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DetailsJobImplCopyWith<_$DetailsJobImpl> get copyWith =>
@@ -192,8 +204,11 @@ abstract class _DetailsJob implements DetailsJob {
   @override
   @JsonKey(name: 'data')
   List<JobData>? get data;
+
+  /// Create a copy of DetailsJob
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DetailsJobImplCopyWith<_$DetailsJobImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -223,8 +238,12 @@ mixin _$Info {
   @JsonKey(name: 'by')
   String? get by => throw _privateConstructorUsedError;
 
+  /// Serializes this Info to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Info
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $InfoCopyWith<Info> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -255,6 +274,8 @@ class _$InfoCopyWithImpl<$Res, $Val extends Info>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Info
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -335,6 +356,8 @@ class __$$InfoImplCopyWithImpl<$Res>
   __$$InfoImplCopyWithImpl(_$InfoImpl _value, $Res Function(_$InfoImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Info
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -458,12 +481,14 @@ class _$InfoImpl implements _Info {
             (identical(other.by, by) || other.by == by));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id_history_job, no_invoice, note,
       detail, date, status, img, name_staff, by);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Info
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InfoImplCopyWith<_$InfoImpl> get copyWith =>
@@ -518,8 +543,11 @@ abstract class _Info implements Info {
   @override
   @JsonKey(name: 'by')
   String? get by;
+
+  /// Create a copy of Info
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InfoImplCopyWith<_$InfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -541,8 +569,12 @@ mixin _$JobData {
   String? get img => throw _privateConstructorUsedError;
   String? get note => throw _privateConstructorUsedError;
 
+  /// Serializes this JobData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of JobData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $JobDataCopyWith<JobData> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -572,6 +604,8 @@ class _$JobDataCopyWithImpl<$Res, $Val extends JobData>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of JobData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -647,6 +681,8 @@ class __$$JobDataImplCopyWithImpl<$Res>
       _$JobDataImpl _value, $Res Function(_$JobDataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of JobData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -753,12 +789,14 @@ class _$JobDataImpl implements _JobData {
             (identical(other.note, note) || other.note == note));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, name_staff, comment,
       no_invoice, date, status, img, note);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of JobData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$JobDataImplCopyWith<_$JobDataImpl> get copyWith =>
@@ -803,8 +841,11 @@ abstract class _JobData implements JobData {
   String? get img;
   @override
   String? get note;
+
+  /// Create a copy of JobData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$JobDataImplCopyWith<_$JobDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

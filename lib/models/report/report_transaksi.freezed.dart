@@ -43,8 +43,12 @@ mixin _$ReportTransaksi {
   String? get haveStock => throw _privateConstructorUsedError;
   String? get unit => throw _privateConstructorUsedError;
 
+  /// Serializes this ReportTransaksi to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ReportTransaksi
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ReportTransaksiCopyWith<ReportTransaksi> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -80,6 +84,8 @@ class _$ReportTransaksiCopyWithImpl<$Res, $Val extends ReportTransaksi>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ReportTransaksi
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -180,6 +186,8 @@ class __$$ReportTransaksiImplCopyWithImpl<$Res>
       _$ReportTransaksiImpl _value, $Res Function(_$ReportTransaksiImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ReportTransaksi
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -338,7 +346,7 @@ class _$ReportTransaksiImpl implements _ReportTransaksi {
             (identical(other.unit, unit) || other.unit == unit));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -355,7 +363,9 @@ class _$ReportTransaksiImpl implements _ReportTransaksi {
       haveStock,
       unit);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ReportTransaksi
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ReportTransaksiImplCopyWith<_$ReportTransaksiImpl> get copyWith =>
@@ -422,8 +432,11 @@ abstract class _ReportTransaksi implements ReportTransaksi {
   String? get haveStock;
   @override
   String? get unit;
+
+  /// Create a copy of ReportTransaksi
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ReportTransaksiImplCopyWith<_$ReportTransaksiImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

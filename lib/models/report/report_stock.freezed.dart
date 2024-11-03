@@ -35,8 +35,12 @@ mixin _$ReportStock {
   String? get minimalStok => throw _privateConstructorUsedError;
   List<Detail>? get datastok => throw _privateConstructorUsedError;
 
+  /// Serializes this ReportStock to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ReportStock
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ReportStockCopyWith<ReportStock> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -68,6 +72,8 @@ class _$ReportStockCopyWithImpl<$Res, $Val extends ReportStock>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ReportStock
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -144,6 +150,8 @@ class __$$ReportStockImplCopyWithImpl<$Res>
       _$ReportStockImpl _value, $Res Function(_$ReportStockImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ReportStock
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -266,7 +274,7 @@ class _$ReportStockImpl implements _ReportStock {
             const DeepCollectionEquality().equals(other._datastok, _datastok));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -279,7 +287,9 @@ class _$ReportStockImpl implements _ReportStock {
       minimalStok,
       const DeepCollectionEquality().hash(_datastok));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ReportStock
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ReportStockImplCopyWith<_$ReportStockImpl> get copyWith =>
@@ -329,8 +339,11 @@ abstract class _ReportStock implements ReportStock {
   String? get minimalStok;
   @override
   List<Detail>? get datastok;
+
+  /// Create a copy of ReportStock
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ReportStockImplCopyWith<_$ReportStockImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -347,8 +360,12 @@ mixin _$Detail {
   String? get minimalStok => throw _privateConstructorUsedError;
   String? get tanggal => throw _privateConstructorUsedError;
 
+  /// Serializes this Detail to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Detail
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DetailCopyWith<Detail> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -373,6 +390,8 @@ class _$DetailCopyWithImpl<$Res, $Val extends Detail>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Detail
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -418,6 +437,8 @@ class __$$DetailImplCopyWithImpl<$Res>
       _$DetailImpl _value, $Res Function(_$DetailImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Detail
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -479,11 +500,13 @@ class _$DetailImpl implements _Detail {
             (identical(other.tanggal, tanggal) || other.tanggal == tanggal));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, sisaStok, minimalStok, tanggal);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Detail
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DetailImplCopyWith<_$DetailImpl> get copyWith =>
@@ -513,8 +536,11 @@ abstract class _Detail implements Detail {
   String? get minimalStok;
   @override
   String? get tanggal;
+
+  /// Create a copy of Detail
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DetailImplCopyWith<_$DetailImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

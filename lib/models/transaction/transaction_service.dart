@@ -255,19 +255,19 @@ abstract class TransactionService {
   @POST('sales/salesdata.php')
   Future<Message> addSalesData(
     @Field('user') String user,
-    @Field('no_invoice') String no_invoice,
-    @Field('id_customer') String id_customer,
-    @Field('id_store') String id_store,
+    @Field('no_invoice') String noInvoice,
+    @Field('id_customer') String idCustomer,
+    @Field('id_store') String idStore,
     @Field('payment') String payment,
     @Field('totalorder') String totalorder,
     @Field('totalprice') String totalprice,
     @Field('totalpay') String totalpay,
     @Field('changepay') String changepay,
     @Field('status') String status,
-    @Field('due_date') String due_date,
+    @Field('due_date') String dueDate,
     @Field('tax') String tax,
     @Field('discount') String discount,
-    @Field('service_charge') String service_charge,
+    @Field('service_charge') String serviceCharge,
     @Field('operator') String operator,
     @Field('location') String location,
     @Field('note') String note,
@@ -277,7 +277,7 @@ abstract class TransactionService {
   @POST('spending/spendingdata.php')
   Future<Message> addSpendingData(
     @Field('user') String user,
-    @Field('id_store') String id_store,
+    @Field('id_store') String idStore,
     @Field('no_invoice') String payment,
     @Field('date') String totalprice,
     @Field('totalnominal') String totalpay,
@@ -286,7 +286,7 @@ abstract class TransactionService {
   @POST('spending/spending.php')
   Future<Message> addSpending(
     @Field('name_spending') String user,
-    @Field('user') String id_store,
+    @Field('user') String idStore,
     @Field('no_invoice') String payment,
     @Field('nominal') String totalprice,
     @Field('date') String totalpay,
@@ -295,9 +295,9 @@ abstract class TransactionService {
   @POST('sales/sales.php')
   Future<Message> addSales(
     @Field('user') String user,
-    @Field('no_invoice') String no_invoice,
-    @Field('id_customer') String id_customer,
-    @Field('id_store') String id_store,
+    @Field('no_invoice') String noInvoice,
+    @Field('id_customer') String idCustomer,
+    @Field('id_store') String idStore,
     @Field('id_product') String payment,
     @Field('amount') String totalorder,
     @Field('totalprice') String totalprice,
@@ -388,8 +388,8 @@ abstract class TransactionService {
   @GET('pengadaan/ubahharga.php')
   Future<Message> hargaPengadaan(
     @Query('key') String key,
-    @Query('id_product') String id_product,
-    @Query('no_invoice') String no_invoice,
+    @Query('id_product') String idProduct,
+    @Query('no_invoice') String noInvoice,
     @Query('price') String price,
   );
 
@@ -397,7 +397,7 @@ abstract class TransactionService {
   Future<List<DetailPayment>> checkPayment(
     @Query('key') String key,
     @Query('totalprice') double totalharga,
-    @Query('id_discount') String? id_discount,
+    @Query('id_discount') String? idDiscount,
   );
 
   @GET('spending/history.php')
@@ -438,21 +438,21 @@ abstract class TransactionService {
   @GET('sales/deleteproduct.php')
   Future<Message> deleteProductItem(
     @Query('key') String key,
-    @Query('no_invoice') String no_invoice,
+    @Query('no_invoice') String noInvoice,
     @Query('id_product') String id,
   );
 
   @GET('sales/additemproduct.php')
   Future<Message> plusProductItem(
     @Query('key') String key,
-    @Query('no_invoice') String no_invoice,
+    @Query('no_invoice') String noInvoice,
     @Query('id_product') String id,
   );
 
   @GET('sales/cutitemproduct.php')
   Future<Message> minusProductItem(
     @Query('key') String key,
-    @Query('no_invoice') String no_invoice,
+    @Query('no_invoice') String noInvoice,
     @Query('id_product') String id,
   );
 
@@ -502,13 +502,13 @@ abstract class TransactionService {
   @GET('transaction/historystock.php')
   Future<List<DetailHistory>> getHistoryStock(
     @Query('key') String key,
-    @Query('id_product') String id_product,
+    @Query('id_product') String idProduct,
   );
 
   @GET('transaction/historyjob.php')
   Future<List<DetailJob>> getHistoryJob(
     @Query('key') String key,
-    @Query('no_invoice') String phone_number,
+    @Query('no_invoice') String phoneNumber,
   );
 
   @POST('rawmaterial/order.php')
@@ -519,7 +519,7 @@ abstract class TransactionService {
   @GET('rawmaterial/historystock.php')
   Future<List<DetailHistory>> getHistoryStockRawMaterial(
     @Query('key') String key,
-    @Query('id') String id_product,
+    @Query('id') String idProduct,
     @Query('first_date') String awal,
     @Query('last_date') String akhir,
   );

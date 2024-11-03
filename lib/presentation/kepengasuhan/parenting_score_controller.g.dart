@@ -167,6 +167,8 @@ class FetchAllScoreParentingProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchAllScoreParentingRef on AutoDisposeFutureProviderRef<List<Tahfidz>> {
   /// The parameter `key` of this provider.
   String get key;
@@ -320,6 +322,8 @@ class FetchAllParentingTypeProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchAllParentingTypeRef on AutoDisposeFutureProviderRef<List<Tahfidz>> {
   /// The parameter `key` of this provider.
   String get key;
@@ -470,6 +474,8 @@ class FetchDetailScoreParentingProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchDetailScoreParentingRef
     on AutoDisposeFutureProviderRef<List<Tahfidz>> {
   /// The parameter `key` of this provider.
@@ -618,6 +624,8 @@ class FetchAllStudentProvider extends AutoDisposeFutureProvider<List<Siswa>> {
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchAllStudentRef on AutoDisposeFutureProviderRef<List<Siswa>> {
   /// The parameter `key` of this provider.
   String get key;
@@ -655,4 +663,4 @@ final parentingScoreControllerProvider =
 
 typedef _$ParentingScoreController = AutoDisposeAsyncNotifier<void>;
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

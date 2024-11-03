@@ -45,8 +45,12 @@ mixin _$Job {
   @JsonKey(name: 'id_asrama')
   String? get id_asrama => throw _privateConstructorUsedError;
 
+  /// Serializes this Job to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Job
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $JobCopyWith<Job> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -79,6 +83,8 @@ class _$JobCopyWithImpl<$Res, $Val extends Job> implements $JobCopyWith<$Res> {
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Job
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -175,6 +181,8 @@ class __$$JobImplCopyWithImpl<$Res> extends _$JobCopyWithImpl<$Res, _$JobImpl>
   __$$JobImplCopyWithImpl(_$JobImpl _value, $Res Function(_$JobImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Job
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -330,12 +338,14 @@ class _$JobImpl implements _Job {
                 other.id_asrama == id_asrama));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, key, id_history_job, no_invoice,
       note, detail, date, status, img, operator, phone_number, hour, id_asrama);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Job
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$JobImplCopyWith<_$JobImpl> get copyWith =>
@@ -402,8 +412,11 @@ abstract class _Job implements Job {
   @override
   @JsonKey(name: 'id_asrama')
   String? get id_asrama;
+
+  /// Create a copy of Job
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$JobImplCopyWith<_$JobImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

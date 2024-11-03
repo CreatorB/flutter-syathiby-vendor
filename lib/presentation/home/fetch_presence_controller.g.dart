@@ -142,6 +142,8 @@ class FetchPresenceProvider extends AutoDisposeFutureProvider<Store?> {
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchPresenceRef on AutoDisposeFutureProviderRef<Store?> {
   /// The parameter `key` of this provider.
   String get key;
@@ -270,6 +272,8 @@ class FetchScheduleJobProvider extends AutoDisposeFutureProvider<List<Days>> {
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchScheduleJobRef on AutoDisposeFutureProviderRef<List<Days>> {
   /// The parameter `key` of this provider.
   String get key;
@@ -411,6 +415,8 @@ class SaveTokenToServerProvider extends AutoDisposeFutureProvider<User> {
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin SaveTokenToServerRef on AutoDisposeFutureProviderRef<User> {
   /// The parameter `key` of this provider.
   String get key;
@@ -429,4 +435,4 @@ class _SaveTokenToServerProviderElement
   String get token => (origin as SaveTokenToServerProvider).token;
 }
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

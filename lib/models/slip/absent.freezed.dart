@@ -47,8 +47,12 @@ mixin _$Absent {
   String? get name_event => throw _privateConstructorUsedError;
   String? get reason => throw _privateConstructorUsedError;
 
+  /// Serializes this Absent to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Absent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AbsentCopyWith<Absent> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -96,6 +100,8 @@ class _$AbsentCopyWithImpl<$Res, $Val extends Absent>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Absent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -279,6 +285,8 @@ class __$$AbsentImplCopyWithImpl<$Res>
       _$AbsentImpl _value, $Res Function(_$AbsentImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Absent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -556,7 +564,7 @@ class _$AbsentImpl implements _Absent {
             (identical(other.reason, reason) || other.reason == reason));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -588,7 +596,9 @@ class _$AbsentImpl implements _Absent {
         reason
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Absent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AbsentImplCopyWith<_$AbsentImpl> get copyWith =>
@@ -685,8 +695,11 @@ abstract class _Absent implements Absent {
   String? get name_event;
   @override
   String? get reason;
+
+  /// Create a copy of Absent
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AbsentImplCopyWith<_$AbsentImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

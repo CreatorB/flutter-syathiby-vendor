@@ -20,6 +20,8 @@ final fetchBookListProvider = AutoDisposeFutureProvider<BookResponse>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef FetchBookListRef = AutoDisposeFutureProviderRef<BookResponse>;
 String _$fetchHadithListHash() => r'b30159c7d8be7819e2844e3616e7d441a978a9b9';
 
@@ -170,6 +172,8 @@ class FetchHadithListProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchHadithListRef on AutoDisposeFutureProviderRef<HadithResponse> {
   /// The parameter `bookId` of this provider.
   String get bookId;
@@ -318,6 +322,8 @@ class FetchHadithDetailProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchHadithDetailRef
     on AutoDisposeFutureProviderRef<HadithDetailResponse> {
   /// The parameter `bookId` of this provider.
@@ -353,6 +359,8 @@ final fetchArbainNawawiProvider =
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef FetchArbainNawawiRef = AutoDisposeFutureProviderRef<BookNawawiResponse>;
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

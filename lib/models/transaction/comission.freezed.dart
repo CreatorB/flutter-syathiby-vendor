@@ -25,8 +25,12 @@ mixin _$Comission {
   String? get totalcommision => throw _privateConstructorUsedError;
   List<DetailCommission>? get detail => throw _privateConstructorUsedError;
 
+  /// Serializes this Comission to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Comission
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ComissionCopyWith<Comission> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -53,6 +57,8 @@ class _$ComissionCopyWithImpl<$Res, $Val extends Comission>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Comission
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -105,6 +111,8 @@ class __$$ComissionImplCopyWithImpl<$Res>
       _$ComissionImpl _value, $Res Function(_$ComissionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Comission
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -181,12 +189,14 @@ class _$ComissionImpl implements _Comission {
             const DeepCollectionEquality().equals(other._detail, _detail));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, totalorderall, date,
       totalcommision, const DeepCollectionEquality().hash(_detail));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Comission
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ComissionImplCopyWith<_$ComissionImpl> get copyWith =>
@@ -218,8 +228,11 @@ abstract class _Comission implements Comission {
   String? get totalcommision;
   @override
   List<DetailCommission>? get detail;
+
+  /// Create a copy of Comission
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ComissionImplCopyWith<_$ComissionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

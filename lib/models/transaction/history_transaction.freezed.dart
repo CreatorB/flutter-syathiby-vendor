@@ -26,8 +26,12 @@ mixin _$HistoryTransaction {
   String? get date => throw _privateConstructorUsedError;
   List<Transaction>? get detail => throw _privateConstructorUsedError;
 
+  /// Serializes this HistoryTransaction to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of HistoryTransaction
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $HistoryTransactionCopyWith<HistoryTransaction> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -55,6 +59,8 @@ class _$HistoryTransactionCopyWithImpl<$Res, $Val extends HistoryTransaction>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of HistoryTransaction
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -107,6 +113,8 @@ class __$$HistoryTransactionImplCopyWithImpl<$Res>
       $Res Function(_$HistoryTransactionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of HistoryTransaction
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -184,7 +192,7 @@ class _$HistoryTransactionImpl implements _HistoryTransaction {
             const DeepCollectionEquality().equals(other._detail, _detail));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -193,7 +201,9 @@ class _$HistoryTransactionImpl implements _HistoryTransaction {
       date,
       const DeepCollectionEquality().hash(_detail));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of HistoryTransaction
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$HistoryTransactionImplCopyWith<_$HistoryTransactionImpl> get copyWith =>
@@ -227,8 +237,11 @@ abstract class _HistoryTransaction implements HistoryTransaction {
   String? get date;
   @override
   List<Transaction>? get detail;
+
+  /// Create a copy of HistoryTransaction
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$HistoryTransactionImplCopyWith<_$HistoryTransactionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

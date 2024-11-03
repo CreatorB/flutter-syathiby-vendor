@@ -23,8 +23,12 @@ mixin _$Unit {
   String? get id_unit => throw _privateConstructorUsedError;
   String? get name_unit => throw _privateConstructorUsedError;
 
+  /// Serializes this Unit to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Unit
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UnitCopyWith<Unit> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -46,6 +50,8 @@ class _$UnitCopyWithImpl<$Res, $Val extends Unit>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Unit
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -82,6 +88,8 @@ class __$$UnitImplCopyWithImpl<$Res>
   __$$UnitImplCopyWithImpl(_$UnitImpl _value, $Res Function(_$UnitImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Unit
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -129,11 +137,13 @@ class _$UnitImpl implements _Unit {
                 other.name_unit == name_unit));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id_unit, name_unit);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Unit
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UnitImplCopyWith<_$UnitImpl> get copyWith =>
@@ -157,8 +167,11 @@ abstract class _Unit implements Unit {
   String? get id_unit;
   @override
   String? get name_unit;
+
+  /// Create a copy of Unit
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UnitImplCopyWith<_$UnitImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

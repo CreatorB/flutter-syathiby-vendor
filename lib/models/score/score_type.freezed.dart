@@ -29,8 +29,12 @@ mixin _$TypeNilai {
   @JsonKey(name: 'kode')
   String? get kode => throw _privateConstructorUsedError;
 
+  /// Serializes this TypeNilai to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of TypeNilai
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $TypeNilaiCopyWith<TypeNilai> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -57,6 +61,8 @@ class _$TypeNilaiCopyWithImpl<$Res, $Val extends TypeNilai>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of TypeNilai
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -109,6 +115,8 @@ class __$$TypeNilaiImplCopyWithImpl<$Res>
       _$TypeNilaiImpl _value, $Res Function(_$TypeNilaiImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of TypeNilai
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -181,12 +189,14 @@ class _$TypeNilaiImpl implements _TypeNilai {
             (identical(other.kode, kode) || other.kode == kode));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, key, idJenisPenilaian, nameJenisPenilaian, kode);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of TypeNilai
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TypeNilaiImplCopyWith<_$TypeNilaiImpl> get copyWith =>
@@ -222,8 +232,11 @@ abstract class _TypeNilai implements TypeNilai {
   @override
   @JsonKey(name: 'kode')
   String? get kode;
+
+  /// Create a copy of TypeNilai
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TypeNilaiImplCopyWith<_$TypeNilaiImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

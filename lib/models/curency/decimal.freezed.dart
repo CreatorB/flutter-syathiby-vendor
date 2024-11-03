@@ -23,8 +23,12 @@ mixin _$Decimal {
   String? get id_decimal => throw _privateConstructorUsedError;
   String? get code_decimal => throw _privateConstructorUsedError;
 
+  /// Serializes this Decimal to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Decimal
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DecimalCopyWith<Decimal> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -46,6 +50,8 @@ class _$DecimalCopyWithImpl<$Res, $Val extends Decimal>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Decimal
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -83,6 +89,8 @@ class __$$DecimalImplCopyWithImpl<$Res>
       _$DecimalImpl _value, $Res Function(_$DecimalImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Decimal
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -131,11 +139,13 @@ class _$DecimalImpl implements _Decimal {
                 other.code_decimal == code_decimal));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id_decimal, code_decimal);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Decimal
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DecimalImplCopyWith<_$DecimalImpl> get copyWith =>
@@ -159,8 +169,11 @@ abstract class _Decimal implements Decimal {
   String? get id_decimal;
   @override
   String? get code_decimal;
+
+  /// Create a copy of Decimal
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DecimalImplCopyWith<_$DecimalImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

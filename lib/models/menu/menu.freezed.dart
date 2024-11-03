@@ -29,8 +29,12 @@ mixin _$Menu {
   @JsonKey(name: 'image')
   int? get image => throw _privateConstructorUsedError;
 
+  /// Serializes this Menu to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Menu
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MenuCopyWith<Menu> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -56,6 +60,8 @@ class _$MenuCopyWithImpl<$Res, $Val extends Menu>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Menu
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -106,6 +112,8 @@ class __$$MenuImplCopyWithImpl<$Res>
   __$$MenuImplCopyWithImpl(_$MenuImpl _value, $Res Function(_$MenuImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Menu
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -176,11 +184,13 @@ class _$MenuImpl implements _Menu {
             (identical(other.image, image) || other.image == image));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, name, desc, image);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Menu
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MenuImplCopyWith<_$MenuImpl> get copyWith =>
@@ -215,8 +225,11 @@ abstract class _Menu implements Menu {
   @override
   @JsonKey(name: 'image')
   int? get image;
+
+  /// Create a copy of Menu
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MenuImplCopyWith<_$MenuImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

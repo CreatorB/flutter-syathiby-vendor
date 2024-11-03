@@ -43,10 +43,10 @@ abstract class KesehatanRestInterface {
     @Part(name: 'date') String date,
     @Part(name: 'hour') String hour,
     @Part(name: 'penanganan') String penanganan,
-    @Part(name: 'nama_siswa') String nama_siswa,
-    @Part(name: 'id_kelas') String id_kelas,
+    @Part(name: 'nama_siswa') String namaSiswa,
+    @Part(name: 'id_kelas') String idKelas,
     @Part(name: 'dijemput') String dijemput,
-    @Part(name: 'info_ortu') String info_ortu,
+    @Part(name: 'info_ortu') String infoOrtu,
     @Part(name: 'istirahat') String istirahat, {
     @Part(name: 'img') File? img,
   });

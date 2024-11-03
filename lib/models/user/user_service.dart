@@ -92,7 +92,7 @@ abstract class UserService {
     @Part(name: 'key') String key,
     @Part(name: 'full_name') String fullName,
     @Part(name: 'email') String email,
-    @Part(name: 'phone_number') String phone_number,
+    @Part(name: 'phone_number') String phoneNumber,
     @Part(name: 'address') String address, {
     @Part(name: 'img') File? file,
   });

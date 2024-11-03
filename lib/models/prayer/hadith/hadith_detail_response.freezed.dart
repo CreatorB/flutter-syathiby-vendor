@@ -25,8 +25,12 @@ mixin _$HadithDetailResponse {
   HadithDetailResponseData get data => throw _privateConstructorUsedError;
   bool get error => throw _privateConstructorUsedError;
 
+  /// Serializes this HadithDetailResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of HadithDetailResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $HadithDetailResponseCopyWith<HadithDetailResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -54,6 +58,8 @@ class _$HadithDetailResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of HadithDetailResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -82,6 +88,8 @@ class _$HadithDetailResponseCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of HadithDetailResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $HadithDetailResponseDataCopyWith<$Res> get data {
@@ -114,6 +122,8 @@ class __$$HadithDetailResponseImplCopyWithImpl<$Res>
       $Res Function(_$HadithDetailResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of HadithDetailResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -180,11 +190,13 @@ class _$HadithDetailResponseImpl implements _HadithDetailResponse {
             (identical(other.error, error) || other.error == error));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, code, message, data, error);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of HadithDetailResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$HadithDetailResponseImplCopyWith<_$HadithDetailResponseImpl>
@@ -218,8 +230,11 @@ abstract class _HadithDetailResponse implements HadithDetailResponse {
   HadithDetailResponseData get data;
   @override
   bool get error;
+
+  /// Create a copy of HadithDetailResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$HadithDetailResponseImplCopyWith<_$HadithDetailResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -236,8 +251,12 @@ mixin _$HadithDetailResponseData {
   int get available => throw _privateConstructorUsedError;
   Hadith get contents => throw _privateConstructorUsedError;
 
+  /// Serializes this HadithDetailResponseData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of HadithDetailResponseData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $HadithDetailResponseDataCopyWith<HadithDetailResponseData> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -264,6 +283,8 @@ class _$HadithDetailResponseDataCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of HadithDetailResponseData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -292,6 +313,8 @@ class _$HadithDetailResponseDataCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of HadithDetailResponseData
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $HadithCopyWith<$Res> get contents {
@@ -326,6 +349,8 @@ class __$$HadithDetailResponseDataImplCopyWithImpl<$Res>
       $Res Function(_$HadithDetailResponseDataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of HadithDetailResponseData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -394,11 +419,13 @@ class _$HadithDetailResponseDataImpl implements _HadithDetailResponseData {
                 other.contents == contents));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, name, id, available, contents);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of HadithDetailResponseData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$HadithDetailResponseDataImplCopyWith<_$HadithDetailResponseDataImpl>
@@ -431,8 +458,11 @@ abstract class _HadithDetailResponseData implements HadithDetailResponseData {
   int get available;
   @override
   Hadith get contents;
+
+  /// Create a copy of HadithDetailResponseData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$HadithDetailResponseDataImplCopyWith<_$HadithDetailResponseDataImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

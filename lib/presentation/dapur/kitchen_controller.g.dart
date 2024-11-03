@@ -143,6 +143,8 @@ class FetchAllFoodMenuProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchAllFoodMenuRef on AutoDisposeFutureProviderRef<List<Product>> {
   /// The parameter `key` of this provider.
   String get key;
@@ -275,6 +277,8 @@ class FetchAllRawMaterialProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchAllRawMaterialRef
     on AutoDisposeFutureProviderRef<List<RawMaterial>> {
   /// The parameter `key` of this provider.
@@ -409,6 +413,8 @@ class FetchRealStockRawMaterialProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchRealStockRawMaterialRef
     on AutoDisposeFutureProviderRef<List<RawMaterial>> {
   /// The parameter `key` of this provider.
@@ -577,6 +583,8 @@ class FetchHistoryRawMaterialProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchHistoryRawMaterialRef
     on AutoDisposeFutureProviderRef<List<DetailHistory>> {
   /// The parameter `key` of this provider.
@@ -724,6 +732,8 @@ class FetchDetailFoodMenuProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchDetailFoodMenuRef on AutoDisposeFutureProviderRef<List<Product>> {
   /// The parameter `key` of this provider.
   String get key;
@@ -891,6 +901,8 @@ class FetchReportCookingProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchReportCookingRef
     on AutoDisposeFutureProviderRef<List<HistoryTransaction>> {
   /// The parameter `key` of this provider.
@@ -1052,6 +1064,8 @@ class FetchDetailReportCookingProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchDetailReportCookingRef
     on AutoDisposeFutureProviderRef<DetailTransaction> {
   /// The parameter `key` of this provider.
@@ -1188,6 +1202,8 @@ class FetchCookingTimeProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchCookingTimeRef on AutoDisposeFutureProviderRef<List<Allocation>> {
   /// The parameter `key` of this provider.
   String get key;
@@ -1219,4 +1235,4 @@ final kitchenControllerProvider =
 
 typedef _$KitchenController = AutoDisposeAsyncNotifier<void>;
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

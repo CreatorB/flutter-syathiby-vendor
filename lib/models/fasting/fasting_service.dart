@@ -112,12 +112,12 @@ abstract class PuasaService {
   @POST('insertsantri.php')
   Future<Message> addSantri(
     @Field('key') String key,
-    @Field('id_jenis') String id_jenis,
-    @Field('waktu_hafalan') String waktu_hafalan,
+    @Field('id_jenis') String idJenis,
+    @Field('waktu_hafalan') String waktuHafalan,
     @Field('halaman') String halaman,
-    @Field('halaman_end') String halaman_end,
+    @Field('halaman_end') String halamanEnd,
     @Field('nis') String nis,
-    @Field('id_kelas') String id_kelas,
+    @Field('id_kelas') String idKelas,
     @Field('detail') String detail,
   );
 
@@ -125,10 +125,10 @@ abstract class PuasaService {
   @POST('insert.php')
   Future<Message> addPuasa(
     @Part(name: 'key') String key,
-    @Part(name: 'id_jenis') String id_jenis,
+    @Part(name: 'id_jenis') String idJenis,
     @Part(name: 'nis') String nis,
-    @Part(name: 'id_kelas') String id_kelas,
-    @Part(name: 'id_asrama') String id_asrama,
+    @Part(name: 'id_kelas') String idKelas,
+    @Part(name: 'id_asrama') String idAsrama,
     @Part(name: 'date') String date, {
     @Part(name: 'img') File? image,
   });

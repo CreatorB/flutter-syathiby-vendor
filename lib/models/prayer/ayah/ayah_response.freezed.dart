@@ -22,8 +22,12 @@ AyahResponse _$AyahResponseFromJson(Map<String, dynamic> json) {
 mixin _$AyahResponse {
   List<Ayah> get result => throw _privateConstructorUsedError;
 
+  /// Serializes this AyahResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AyahResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AyahResponseCopyWith<AyahResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$AyahResponseCopyWithImpl<$Res, $Val extends AyahResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AyahResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,6 +86,8 @@ class __$$AyahResponseImplCopyWithImpl<$Res>
       _$AyahResponseImpl _value, $Res Function(_$AyahResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AyahResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -124,12 +132,14 @@ class _$AyahResponseImpl implements _AyahResponse {
             const DeepCollectionEquality().equals(other._result, _result));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_result));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AyahResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AyahResponseImplCopyWith<_$AyahResponseImpl> get copyWith =>
@@ -152,8 +162,11 @@ abstract class _AyahResponse implements AyahResponse {
 
   @override
   List<Ayah> get result;
+
+  /// Create a copy of AyahResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AyahResponseImplCopyWith<_$AyahResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -172,8 +185,12 @@ mixin _$Ayah {
   String get translation => throw _privateConstructorUsedError;
   String get footnotes => throw _privateConstructorUsedError;
 
+  /// Serializes this Ayah to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Ayah
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AyahCopyWith<Ayah> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -201,6 +218,8 @@ class _$AyahCopyWithImpl<$Res, $Val extends Ayah>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Ayah
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -263,6 +282,8 @@ class __$$AyahImplCopyWithImpl<$Res>
   __$$AyahImplCopyWithImpl(_$AyahImpl _value, $Res Function(_$AyahImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Ayah
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -351,12 +372,14 @@ class _$AyahImpl implements _Ayah {
                 other.footnotes == footnotes));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, id, sura, aya, arabicText, translation, footnotes);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Ayah
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AyahImplCopyWith<_$AyahImpl> get copyWith =>
@@ -394,8 +417,11 @@ abstract class _Ayah implements Ayah {
   String get translation;
   @override
   String get footnotes;
+
+  /// Create a copy of Ayah
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AyahImplCopyWith<_$AyahImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

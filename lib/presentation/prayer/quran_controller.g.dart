@@ -20,6 +20,8 @@ final fetchSurahListProvider = AutoDisposeFutureProvider<List<Surah>>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef FetchSurahListRef = AutoDisposeFutureProviderRef<List<Surah>>;
 String _$fetchAyahListHash() => r'e5d7f735672ba5391624f85b529aa0ec81e2fcc0';
 
@@ -157,6 +159,8 @@ class FetchAyahListProvider extends AutoDisposeFutureProvider<AyahResponse> {
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchAyahListRef on AutoDisposeFutureProviderRef<AyahResponse> {
   /// The parameter `surahNumber` of this provider.
   int get surahNumber;
@@ -185,6 +189,8 @@ final getLastReadQuranProvider = AutoDisposeFutureProvider<Quran?>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef GetLastReadQuranRef = AutoDisposeFutureProviderRef<Quran?>;
 String _$getBookmarkQuranHash() => r'52c579adbfc6783de62e2b54c8f94c2d3123b041';
 
@@ -200,6 +206,8 @@ final getBookmarkQuranProvider = AutoDisposeFutureProvider<Quran?>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef GetBookmarkQuranRef = AutoDisposeFutureProviderRef<Quran?>;
 String _$saveLastReadQuranHash() => r'b3879a1f966b0eca3ecb963a51099a8bf13492b5';
 
@@ -316,6 +324,8 @@ class SaveLastReadQuranProvider extends AutoDisposeFutureProvider<void> {
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin SaveLastReadQuranRef on AutoDisposeFutureProviderRef<void> {
   /// The parameter `quran` of this provider.
   Quran get quran;
@@ -444,6 +454,8 @@ class SaveBookmarkQuranProvider extends AutoDisposeFutureProvider<void> {
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin SaveBookmarkQuranRef on AutoDisposeFutureProviderRef<void> {
   /// The parameter `quran` of this provider.
   Quran get quran;
@@ -457,4 +469,4 @@ class _SaveBookmarkQuranProviderElement
   Quran get quran => (origin as SaveBookmarkQuranProvider).quran;
 }
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

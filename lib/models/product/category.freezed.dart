@@ -25,8 +25,12 @@ mixin _$Category {
   String get msg => throw _privateConstructorUsedError;
   List<CategoryData> get data => throw _privateConstructorUsedError;
 
+  /// Serializes this Category to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Category
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CategoryCopyWith<Category> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$CategoryCopyWithImpl<$Res, $Val extends Category>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Category
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -99,6 +105,8 @@ class __$$CategoryImplCopyWithImpl<$Res>
       _$CategoryImpl _value, $Res Function(_$CategoryImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Category
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -171,12 +179,14 @@ class _$CategoryImpl implements _Category {
             const DeepCollectionEquality().equals(other._data, _data));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, status, errCode, msg,
       const DeepCollectionEquality().hash(_data));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Category
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CategoryImplCopyWith<_$CategoryImpl> get copyWith =>
@@ -208,8 +218,11 @@ abstract class _Category implements Category {
   String get msg;
   @override
   List<CategoryData> get data;
+
+  /// Create a copy of Category
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CategoryImplCopyWith<_$CategoryImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -223,8 +236,12 @@ mixin _$CategoryData {
   String get id_category => throw _privateConstructorUsedError;
   String get name_category => throw _privateConstructorUsedError;
 
+  /// Serializes this CategoryData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CategoryData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CategoryDataCopyWith<CategoryData> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -248,6 +265,8 @@ class _$CategoryDataCopyWithImpl<$Res, $Val extends CategoryData>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CategoryData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -286,6 +305,8 @@ class __$$CategoryDataImplCopyWithImpl<$Res>
       _$CategoryDataImpl _value, $Res Function(_$CategoryDataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CategoryData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -335,11 +356,13 @@ class _$CategoryDataImpl implements _CategoryData {
                 other.name_category == name_category));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id_category, name_category);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CategoryData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CategoryDataImplCopyWith<_$CategoryDataImpl> get copyWith =>
@@ -365,8 +388,11 @@ abstract class _CategoryData implements CategoryData {
   String get id_category;
   @override
   String get name_category;
+
+  /// Create a copy of CategoryData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CategoryDataImplCopyWith<_$CategoryDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

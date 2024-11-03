@@ -21,26 +21,26 @@ abstract class JadwalRestInterface {
   @GET('laporanabsensi.php')
   Future<List<Jadwal>> getLaporanAbsensi(
       @Query('key') String key,
-      @Query('tgl_awal') String tgl_awal,
-      @Query('tgl_akhir') String tgl_akhir,
-      @Query('id_kelas') String id_kelas);
+      @Query('tgl_awal') String tglAwal,
+      @Query('tgl_akhir') String tglAkhir,
+      @Query('id_kelas') String idKelas);
 
   @GET('rekapabsensi.php')
   Future<List<Jadwal>> getJadwal(
       @Query('key') String key,
-      @Query('id_kelas') String id_kelas,
-      @Query('id_mapel') String id_mapel,
-      @Query('id_timetable') String id_timetable);
+      @Query('id_kelas') String idKelas,
+      @Query('id_mapel') String idMapel,
+      @Query('id_timetable') String idTimetable);
 
   @FormUrlEncoded()
   @POST('jurnal.php')
   Future<Message> addJurnal(
     @Field('key') String key,
-    @Field('id_kelas') String id_kelas,
-    @Field('id_mapel') String id_mapel,
+    @Field('id_kelas') String idKelas,
+    @Field('id_mapel') String idMapel,
     @Field('bab') String bab,
     @Field('detail') String detail,
-    @Field('id_timetable') String id_timetable,
+    @Field('id_timetable') String idTimetable,
   );
 
   @GET('type.php')
@@ -50,11 +50,11 @@ abstract class JadwalRestInterface {
   @MultiPart()
   Future<Message> add(
     @Part(name: 'key') String key,
-    @Part(name: 'nama_Jadwal') String nama_Jadwal,
+    @Part(name: 'nama_Jadwal') String namaJadwal,
     @Part(name: 'date') String date,
     @Part(name: 'hour') String hour,
     @Part(name: 'location') String location,
-    @Part(name: 'nama_siswa') String nama_siswa,
+    @Part(name: 'nama_siswa') String namaSiswa,
     @Part(name: 'detail') String detail, {
     @Part(name: 'img') File? img,
   });

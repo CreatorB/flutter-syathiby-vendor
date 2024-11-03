@@ -32,8 +32,12 @@ mixin _$ChangeSchedule {
   String? get aproval => throw _privateConstructorUsedError;
   String? get alasan => throw _privateConstructorUsedError;
 
+  /// Serializes this ChangeSchedule to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ChangeSchedule
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ChangeScheduleCopyWith<ChangeSchedule> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -68,6 +72,8 @@ class _$ChangeScheduleCopyWithImpl<$Res, $Val extends ChangeSchedule>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ChangeSchedule
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -162,6 +168,8 @@ class __$$ChangeScheduleImplCopyWithImpl<$Res>
       _$ChangeScheduleImpl _value, $Res Function(_$ChangeScheduleImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ChangeSchedule
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -294,12 +302,14 @@ class _$ChangeScheduleImpl implements _ChangeSchedule {
             (identical(other.alasan, alasan) || other.alasan == alasan));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id_ubah_jadwal, date, detail,
       staff, staff2, status, position, pengganti, kabag, aproval, alasan);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ChangeSchedule
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ChangeScheduleImplCopyWith<_$ChangeScheduleImpl> get copyWith =>
@@ -353,8 +363,11 @@ abstract class _ChangeSchedule implements ChangeSchedule {
   String? get aproval;
   @override
   String? get alasan;
+
+  /// Create a copy of ChangeSchedule
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ChangeScheduleImplCopyWith<_$ChangeScheduleImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

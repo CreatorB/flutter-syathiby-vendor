@@ -27,8 +27,12 @@ mixin _$RequestKulakan {
   String? get dueDate => throw _privateConstructorUsedError;
   List<Barang>? get product => throw _privateConstructorUsedError;
 
+  /// Serializes this RequestKulakan to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RequestKulakan
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RequestKulakanCopyWith<RequestKulakan> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -58,6 +62,8 @@ class _$RequestKulakanCopyWithImpl<$Res, $Val extends RequestKulakan>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RequestKulakan
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -122,6 +128,8 @@ class __$$RequestKulakanImplCopyWithImpl<$Res>
       _$RequestKulakanImpl _value, $Res Function(_$RequestKulakanImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RequestKulakan
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -217,12 +225,14 @@ class _$RequestKulakanImpl implements _RequestKulakan {
             const DeepCollectionEquality().equals(other._product, _product));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, key, paymentType, totalOrder,
       idSupplier, dueDate, const DeepCollectionEquality().hash(_product));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RequestKulakan
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RequestKulakanImplCopyWith<_$RequestKulakanImpl> get copyWith =>
@@ -261,8 +271,11 @@ abstract class _RequestKulakan implements RequestKulakan {
   String? get dueDate;
   @override
   List<Barang>? get product;
+
+  /// Create a copy of RequestKulakan
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RequestKulakanImplCopyWith<_$RequestKulakanImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -276,8 +289,12 @@ mixin _$Barang {
   String? get idProduct => throw _privateConstructorUsedError;
   int? get amountProduct => throw _privateConstructorUsedError;
 
+  /// Serializes this Barang to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Barang
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $BarangCopyWith<Barang> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -299,6 +316,8 @@ class _$BarangCopyWithImpl<$Res, $Val extends Barang>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Barang
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -336,6 +355,8 @@ class __$$BarangImplCopyWithImpl<$Res>
       _$BarangImpl _value, $Res Function(_$BarangImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Barang
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -384,11 +405,13 @@ class _$BarangImpl implements _Barang {
                 other.amountProduct == amountProduct));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, idProduct, amountProduct);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Barang
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$BarangImplCopyWith<_$BarangImpl> get copyWith =>
@@ -412,8 +435,11 @@ abstract class _Barang implements Barang {
   String? get idProduct;
   @override
   int? get amountProduct;
+
+  /// Create a copy of Barang
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$BarangImplCopyWith<_$BarangImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

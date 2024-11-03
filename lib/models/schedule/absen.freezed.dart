@@ -22,8 +22,12 @@ Absen _$AbsenFromJson(Map<String, dynamic> json) {
 mixin _$Absen {
   String? get status => throw _privateConstructorUsedError;
 
+  /// Serializes this Absen to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Absen
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AbsenCopyWith<Absen> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -45,6 +49,8 @@ class _$AbsenCopyWithImpl<$Res, $Val extends Absen>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Absen
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -77,6 +83,8 @@ class __$$AbsenImplCopyWithImpl<$Res>
       _$AbsenImpl _value, $Res Function(_$AbsenImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Absen
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -115,11 +123,13 @@ class _$AbsenImpl implements _Absen {
             (identical(other.status, status) || other.status == status));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, status);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Absen
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AbsenImplCopyWith<_$AbsenImpl> get copyWith =>
@@ -140,8 +150,11 @@ abstract class _Absen implements Absen {
 
   @override
   String? get status;
+
+  /// Create a copy of Absen
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AbsenImplCopyWith<_$AbsenImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

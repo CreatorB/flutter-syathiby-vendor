@@ -50,8 +50,12 @@ mixin _$Slip {
   @JsonKey(name: 'totallembur')
   String? get totalLembur => throw _privateConstructorUsedError;
 
+  /// Serializes this Slip to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Slip
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SlipCopyWith<Slip> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -92,6 +96,8 @@ class _$SlipCopyWithImpl<$Res, $Val extends Slip>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Slip
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -232,6 +238,8 @@ class __$$SlipImplCopyWithImpl<$Res>
   __$$SlipImplCopyWithImpl(_$SlipImpl _value, $Res Function(_$SlipImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Slip
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -455,7 +463,7 @@ class _$SlipImpl implements _Slip {
                 other.totalLembur == totalLembur));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -480,7 +488,9 @@ class _$SlipImpl implements _Slip {
         totalLembur
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Slip
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SlipImplCopyWith<_$SlipImpl> get copyWith =>
@@ -566,8 +576,11 @@ abstract class _Slip implements Slip {
   @override
   @JsonKey(name: 'totallembur')
   String? get totalLembur;
+
+  /// Create a copy of Slip
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SlipImplCopyWith<_$SlipImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

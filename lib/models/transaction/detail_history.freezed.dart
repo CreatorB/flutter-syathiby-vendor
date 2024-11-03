@@ -33,8 +33,12 @@ mixin _$DetailHistory {
   String? get status => throw _privateConstructorUsedError; //Important
   String? get unit => throw _privateConstructorUsedError;
 
+  /// Serializes this DetailHistory to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DetailHistory
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DetailHistoryCopyWith<DetailHistory> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -68,6 +72,8 @@ class _$DetailHistoryCopyWithImpl<$Res, $Val extends DetailHistory>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DetailHistory
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -156,6 +162,8 @@ class __$$DetailHistoryImplCopyWithImpl<$Res>
       _$DetailHistoryImpl _value, $Res Function(_$DetailHistoryImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DetailHistory
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -284,12 +292,14 @@ class _$DetailHistoryImpl implements _DetailHistory {
             (identical(other.unit, unit) || other.unit == unit));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, nameProduct, nameStore, img,
       detail, date, stock, nominal, by, status, unit);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DetailHistory
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DetailHistoryImplCopyWith<_$DetailHistoryImpl> get copyWith =>
@@ -328,21 +338,24 @@ abstract class _DetailHistory implements DetailHistory {
   @override
   String? get img;
   @override
-  String? get detail;
-  @override //Important
-  String? get date;
-  @override //Important
-  String? get stock;
-  @override //Important
+  String? get detail; //Important
+  @override
+  String? get date; //Important
+  @override
+  String? get stock; //Important
+  @override
   String? get nominal;
   @override
   String? get by;
   @override
-  String? get status;
-  @override //Important
-  String? get unit;
+  String? get status; //Important
   @override
-  @JsonKey(ignore: true)
+  String? get unit;
+
+  /// Create a copy of DetailHistory
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DetailHistoryImplCopyWith<_$DetailHistoryImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

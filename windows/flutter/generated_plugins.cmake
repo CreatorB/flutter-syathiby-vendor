@@ -7,9 +7,9 @@ list(APPEND FLUTTER_PLUGIN_LIST
   file_saver
   file_selector_windows
   firebase_core
+  flutter_inappwebview_windows
   geolocator_windows
   local_auth_windows
-  maps_launcher
   share_plus
   url_launcher_windows
 )

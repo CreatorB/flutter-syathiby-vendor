@@ -14,7 +14,7 @@ abstract class PenjemputanRestInterface {
   Future<List<Penjemputan>> gets(
     @Query('key') String key,
     @Query('id') String id,
-    @Query('id_kelas') String id_kelas,
+    @Query('id_kelas') String idKelas,
     @Query('type') String type,
     @Query('page') int? page,
   );
@@ -23,7 +23,7 @@ abstract class PenjemputanRestInterface {
   Future<List<Penjemputan>> getsNegative(
     @Query('key') String key,
     @Query('id') String id,
-    @Query('id_kelas') String id_kelas,
+    @Query('id_kelas') String idKelas,
     @Query('type') String type,
     @Query('page') int? page,
   );
@@ -32,7 +32,7 @@ abstract class PenjemputanRestInterface {
   Future<List<Penjemputan>> getsdata(
     @Query('key') String key,
     @Query('id') String id,
-    @Query('id_event') String id_event,
+    @Query('id_event') String idEvent,
   );
 
   @GET('startdrive.php')
@@ -65,8 +65,8 @@ abstract class PenjemputanRestInterface {
   Future<Message> getJemput(
     @Part(name: 'key') String key,
     @Part(name: 'nis') String nis,
-    @Part(name: 'id_event') String id_event,
-    @Part(name: 'id_kelas') String id_kelas,
+    @Part(name: 'id_event') String idEvent,
+    @Part(name: 'id_kelas') String idKelas,
     @Part(name: 'value') String data,
   );
 
@@ -75,8 +75,8 @@ abstract class PenjemputanRestInterface {
   Future<Message> getPengembalian(
     @Part(name: 'key') String key,
     @Part(name: 'nis') String nis,
-    @Part(name: 'id_event') String id_event,
-    @Part(name: 'id_kelas') String id_kelas,
+    @Part(name: 'id_event') String idEvent,
+    @Part(name: 'id_kelas') String idKelas,
     @Part(name: 'value') String data,
   );
 
@@ -84,6 +84,6 @@ abstract class PenjemputanRestInterface {
   Future<List<Penjemputan>> searchByBarcode(
     @Query('key') String key,
     @Query('code') String id,
-    @Query('id_event') String id_event,
+    @Query('id_event') String idEvent,
   );
 }

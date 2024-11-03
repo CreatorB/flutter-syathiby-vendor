@@ -49,8 +49,12 @@ mixin _$Rapat {
   @JsonKey(name: 'status_meeting')
   dynamic get statusMeeting => throw _privateConstructorUsedError;
 
+  /// Serializes this Rapat to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Rapat
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RapatCopyWith<Rapat> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -86,6 +90,8 @@ class _$RapatCopyWithImpl<$Res, $Val extends Rapat>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Rapat
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -197,6 +203,8 @@ class __$$RapatImplCopyWithImpl<$Res>
       _$RapatImpl _value, $Res Function(_$RapatImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Rapat
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -379,7 +387,7 @@ class _$RapatImpl implements _Rapat {
                 .equals(other.statusMeeting, statusMeeting));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -398,7 +406,9 @@ class _$RapatImpl implements _Rapat {
       linkPeserta,
       const DeepCollectionEquality().hash(statusMeeting));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Rapat
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RapatImplCopyWith<_$RapatImpl> get copyWith =>
@@ -474,8 +484,11 @@ abstract class _Rapat implements Rapat {
   @override
   @JsonKey(name: 'status_meeting')
   dynamic get statusMeeting;
+
+  /// Create a copy of Rapat
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RapatImplCopyWith<_$RapatImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

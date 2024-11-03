@@ -1,5 +1,4 @@
 import 'package:dio/dio.dart';
-import 'package:al_ukhuwah/models/prayer/murottal/murottal.dart';
 import 'package:retrofit/retrofit.dart';
 
 part 'murottal_service.g.dart';

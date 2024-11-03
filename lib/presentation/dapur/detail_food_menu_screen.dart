@@ -6,6 +6,6 @@ class DetailFoodMenuScreen extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return Scaffold();
+    return const Scaffold();
   }
 }

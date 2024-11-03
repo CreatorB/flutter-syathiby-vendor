@@ -178,6 +178,8 @@ class FetchAllRecapPresenceProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchAllRecapPresenceRef on AutoDisposeFutureProviderRef<List<Recap>> {
   /// The parameter `key` of this provider.
   String get key;
@@ -322,6 +324,8 @@ class FetchAllGroupProvider extends AutoDisposeFutureProvider<List<Store>> {
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchAllGroupRef on AutoDisposeFutureProviderRef<List<Store>> {
   /// The parameter `key` of this provider.
   String get key;
@@ -510,6 +514,8 @@ class FetchFilterRecapPresenceProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchFilterRecapPresenceRef
     on AutoDisposeFutureProviderRef<List<Absent>> {
   /// The parameter `key` of this provider.
@@ -714,6 +720,8 @@ class FetchAllRecapPermitProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchAllRecapPermitRef on AutoDisposeFutureProviderRef<List<Permit>> {
   /// The parameter `key` of this provider.
   String get key;
@@ -866,6 +874,8 @@ class FetchAllManualAttendanceProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchAllManualAttendanceRef
     on AutoDisposeFutureProviderRef<List<Absent>> {
   /// The parameter `key` of this provider.
@@ -879,6 +889,750 @@ class _FetchAllManualAttendanceProviderElement
 
   @override
   String get key => (origin as FetchAllManualAttendanceProvider).key;
+}
+
+String _$fetchAllDataPresenceHash() =>
+    r'2c45a854c487c9299f974449f02d9ec993562676';
+
+/// See also [fetchAllDataPresence].
+@ProviderFor(fetchAllDataPresence)
+const fetchAllDataPresenceProvider = FetchAllDataPresenceFamily();
+
+/// See also [fetchAllDataPresence].
+class FetchAllDataPresenceFamily extends Family<AsyncValue<List<Asrama>>> {
+  /// See also [fetchAllDataPresence].
+  const FetchAllDataPresenceFamily();
+
+  /// See also [fetchAllDataPresence].
+  FetchAllDataPresenceProvider call({
+    required String key,
+    required String dateStart,
+    required String dateEnd,
+    required String division,
+  }) {
+    return FetchAllDataPresenceProvider(
+      key: key,
+      dateStart: dateStart,
+      dateEnd: dateEnd,
+      division: division,
+    );
+  }
+
+  @override
+  FetchAllDataPresenceProvider getProviderOverride(
+    covariant FetchAllDataPresenceProvider provider,
+  ) {
+    return call(
+      key: provider.key,
+      dateStart: provider.dateStart,
+      dateEnd: provider.dateEnd,
+      division: provider.division,
+    );
+  }
+
+  static const Iterable<ProviderOrFamily>? _dependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
+
+  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
+      _allTransitiveDependencies;
+
+  @override
+  String? get name => r'fetchAllDataPresenceProvider';
+}
+
+/// See also [fetchAllDataPresence].
+class FetchAllDataPresenceProvider
+    extends AutoDisposeFutureProvider<List<Asrama>> {
+  /// See also [fetchAllDataPresence].
+  FetchAllDataPresenceProvider({
+    required String key,
+    required String dateStart,
+    required String dateEnd,
+    required String division,
+  }) : this._internal(
+          (ref) => fetchAllDataPresence(
+            ref as FetchAllDataPresenceRef,
+            key: key,
+            dateStart: dateStart,
+            dateEnd: dateEnd,
+            division: division,
+          ),
+          from: fetchAllDataPresenceProvider,
+          name: r'fetchAllDataPresenceProvider',
+          debugGetCreateSourceHash:
+              const bool.fromEnvironment('dart.vm.product')
+                  ? null
+                  : _$fetchAllDataPresenceHash,
+          dependencies: FetchAllDataPresenceFamily._dependencies,
+          allTransitiveDependencies:
+              FetchAllDataPresenceFamily._allTransitiveDependencies,
+          key: key,
+          dateStart: dateStart,
+          dateEnd: dateEnd,
+          division: division,
+        );
+
+  FetchAllDataPresenceProvider._internal(
+    super._createNotifier, {
+    required super.name,
+    required super.dependencies,
+    required super.allTransitiveDependencies,
+    required super.debugGetCreateSourceHash,
+    required super.from,
+    required this.key,
+    required this.dateStart,
+    required this.dateEnd,
+    required this.division,
+  }) : super.internal();
+
+  final String key;
+  final String dateStart;
+  final String dateEnd;
+  final String division;
+
+  @override
+  Override overrideWith(
+    FutureOr<List<Asrama>> Function(FetchAllDataPresenceRef provider) create,
+  ) {
+    return ProviderOverride(
+      origin: this,
+      override: FetchAllDataPresenceProvider._internal(
+        (ref) => create(ref as FetchAllDataPresenceRef),
+        from: from,
+        name: null,
+        dependencies: null,
+        allTransitiveDependencies: null,
+        debugGetCreateSourceHash: null,
+        key: key,
+        dateStart: dateStart,
+        dateEnd: dateEnd,
+        division: division,
+      ),
+    );
+  }
+
+  @override
+  AutoDisposeFutureProviderElement<List<Asrama>> createElement() {
+    return _FetchAllDataPresenceProviderElement(this);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return other is FetchAllDataPresenceProvider &&
+        other.key == key &&
+        other.dateStart == dateStart &&
+        other.dateEnd == dateEnd &&
+        other.division == division;
+  }
+
+  @override
+  int get hashCode {
+    var hash = _SystemHash.combine(0, runtimeType.hashCode);
+    hash = _SystemHash.combine(hash, key.hashCode);
+    hash = _SystemHash.combine(hash, dateStart.hashCode);
+    hash = _SystemHash.combine(hash, dateEnd.hashCode);
+    hash = _SystemHash.combine(hash, division.hashCode);
+
+    return _SystemHash.finish(hash);
+  }
+}
+
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
+mixin FetchAllDataPresenceRef on AutoDisposeFutureProviderRef<List<Asrama>> {
+  /// The parameter `key` of this provider.
+  String get key;
+
+  /// The parameter `dateStart` of this provider.
+  String get dateStart;
+
+  /// The parameter `dateEnd` of this provider.
+  String get dateEnd;
+
+  /// The parameter `division` of this provider.
+  String get division;
+}
+
+class _FetchAllDataPresenceProviderElement
+    extends AutoDisposeFutureProviderElement<List<Asrama>>
+    with FetchAllDataPresenceRef {
+  _FetchAllDataPresenceProviderElement(super.provider);
+
+  @override
+  String get key => (origin as FetchAllDataPresenceProvider).key;
+  @override
+  String get dateStart => (origin as FetchAllDataPresenceProvider).dateStart;
+  @override
+  String get dateEnd => (origin as FetchAllDataPresenceProvider).dateEnd;
+  @override
+  String get division => (origin as FetchAllDataPresenceProvider).division;
+}
+
+String _$fetchPresenceGroupHash() =>
+    r'b2a82e01cd92403340fceded3c2a05e6bcc53287';
+
+/// See also [fetchPresenceGroup].
+@ProviderFor(fetchPresenceGroup)
+const fetchPresenceGroupProvider = FetchPresenceGroupFamily();
+
+/// See also [fetchPresenceGroup].
+class FetchPresenceGroupFamily extends Family<AsyncValue<List<Kinerja>>> {
+  /// See also [fetchPresenceGroup].
+  const FetchPresenceGroupFamily();
+
+  /// See also [fetchPresenceGroup].
+  FetchPresenceGroupProvider call({
+    required String key,
+    required String startDate,
+    required String endDate,
+    required String id,
+  }) {
+    return FetchPresenceGroupProvider(
+      key: key,
+      startDate: startDate,
+      endDate: endDate,
+      id: id,
+    );
+  }
+
+  @override
+  FetchPresenceGroupProvider getProviderOverride(
+    covariant FetchPresenceGroupProvider provider,
+  ) {
+    return call(
+      key: provider.key,
+      startDate: provider.startDate,
+      endDate: provider.endDate,
+      id: provider.id,
+    );
+  }
+
+  static const Iterable<ProviderOrFamily>? _dependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
+
+  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
+      _allTransitiveDependencies;
+
+  @override
+  String? get name => r'fetchPresenceGroupProvider';
+}
+
+/// See also [fetchPresenceGroup].
+class FetchPresenceGroupProvider
+    extends AutoDisposeFutureProvider<List<Kinerja>> {
+  /// See also [fetchPresenceGroup].
+  FetchPresenceGroupProvider({
+    required String key,
+    required String startDate,
+    required String endDate,
+    required String id,
+  }) : this._internal(
+          (ref) => fetchPresenceGroup(
+            ref as FetchPresenceGroupRef,
+            key: key,
+            startDate: startDate,
+            endDate: endDate,
+            id: id,
+          ),
+          from: fetchPresenceGroupProvider,
+          name: r'fetchPresenceGroupProvider',
+          debugGetCreateSourceHash:
+              const bool.fromEnvironment('dart.vm.product')
+                  ? null
+                  : _$fetchPresenceGroupHash,
+          dependencies: FetchPresenceGroupFamily._dependencies,
+          allTransitiveDependencies:
+              FetchPresenceGroupFamily._allTransitiveDependencies,
+          key: key,
+          startDate: startDate,
+          endDate: endDate,
+          id: id,
+        );
+
+  FetchPresenceGroupProvider._internal(
+    super._createNotifier, {
+    required super.name,
+    required super.dependencies,
+    required super.allTransitiveDependencies,
+    required super.debugGetCreateSourceHash,
+    required super.from,
+    required this.key,
+    required this.startDate,
+    required this.endDate,
+    required this.id,
+  }) : super.internal();
+
+  final String key;
+  final String startDate;
+  final String endDate;
+  final String id;
+
+  @override
+  Override overrideWith(
+    FutureOr<List<Kinerja>> Function(FetchPresenceGroupRef provider) create,
+  ) {
+    return ProviderOverride(
+      origin: this,
+      override: FetchPresenceGroupProvider._internal(
+        (ref) => create(ref as FetchPresenceGroupRef),
+        from: from,
+        name: null,
+        dependencies: null,
+        allTransitiveDependencies: null,
+        debugGetCreateSourceHash: null,
+        key: key,
+        startDate: startDate,
+        endDate: endDate,
+        id: id,
+      ),
+    );
+  }
+
+  @override
+  AutoDisposeFutureProviderElement<List<Kinerja>> createElement() {
+    return _FetchPresenceGroupProviderElement(this);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return other is FetchPresenceGroupProvider &&
+        other.key == key &&
+        other.startDate == startDate &&
+        other.endDate == endDate &&
+        other.id == id;
+  }
+
+  @override
+  int get hashCode {
+    var hash = _SystemHash.combine(0, runtimeType.hashCode);
+    hash = _SystemHash.combine(hash, key.hashCode);
+    hash = _SystemHash.combine(hash, startDate.hashCode);
+    hash = _SystemHash.combine(hash, endDate.hashCode);
+    hash = _SystemHash.combine(hash, id.hashCode);
+
+    return _SystemHash.finish(hash);
+  }
+}
+
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
+mixin FetchPresenceGroupRef on AutoDisposeFutureProviderRef<List<Kinerja>> {
+  /// The parameter `key` of this provider.
+  String get key;
+
+  /// The parameter `startDate` of this provider.
+  String get startDate;
+
+  /// The parameter `endDate` of this provider.
+  String get endDate;
+
+  /// The parameter `id` of this provider.
+  String get id;
+}
+
+class _FetchPresenceGroupProviderElement
+    extends AutoDisposeFutureProviderElement<List<Kinerja>>
+    with FetchPresenceGroupRef {
+  _FetchPresenceGroupProviderElement(super.provider);
+
+  @override
+  String get key => (origin as FetchPresenceGroupProvider).key;
+  @override
+  String get startDate => (origin as FetchPresenceGroupProvider).startDate;
+  @override
+  String get endDate => (origin as FetchPresenceGroupProvider).endDate;
+  @override
+  String get id => (origin as FetchPresenceGroupProvider).id;
+}
+
+String _$fetchPresenceFilterHash() =>
+    r'39551bbc02e08832fb84291bc91b70e3714831df';
+
+/// See also [fetchPresenceFilter].
+@ProviderFor(fetchPresenceFilter)
+const fetchPresenceFilterProvider = FetchPresenceFilterFamily();
+
+/// See also [fetchPresenceFilter].
+class FetchPresenceFilterFamily extends Family<AsyncValue<List<Kinerja>>> {
+  /// See also [fetchPresenceFilter].
+  const FetchPresenceFilterFamily();
+
+  /// See also [fetchPresenceFilter].
+  FetchPresenceFilterProvider call({
+    required String key,
+    required String startDate,
+    required String endDate,
+    required String id,
+    required String value,
+  }) {
+    return FetchPresenceFilterProvider(
+      key: key,
+      startDate: startDate,
+      endDate: endDate,
+      id: id,
+      value: value,
+    );
+  }
+
+  @override
+  FetchPresenceFilterProvider getProviderOverride(
+    covariant FetchPresenceFilterProvider provider,
+  ) {
+    return call(
+      key: provider.key,
+      startDate: provider.startDate,
+      endDate: provider.endDate,
+      id: provider.id,
+      value: provider.value,
+    );
+  }
+
+  static const Iterable<ProviderOrFamily>? _dependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
+
+  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
+      _allTransitiveDependencies;
+
+  @override
+  String? get name => r'fetchPresenceFilterProvider';
+}
+
+/// See also [fetchPresenceFilter].
+class FetchPresenceFilterProvider
+    extends AutoDisposeFutureProvider<List<Kinerja>> {
+  /// See also [fetchPresenceFilter].
+  FetchPresenceFilterProvider({
+    required String key,
+    required String startDate,
+    required String endDate,
+    required String id,
+    required String value,
+  }) : this._internal(
+          (ref) => fetchPresenceFilter(
+            ref as FetchPresenceFilterRef,
+            key: key,
+            startDate: startDate,
+            endDate: endDate,
+            id: id,
+            value: value,
+          ),
+          from: fetchPresenceFilterProvider,
+          name: r'fetchPresenceFilterProvider',
+          debugGetCreateSourceHash:
+              const bool.fromEnvironment('dart.vm.product')
+                  ? null
+                  : _$fetchPresenceFilterHash,
+          dependencies: FetchPresenceFilterFamily._dependencies,
+          allTransitiveDependencies:
+              FetchPresenceFilterFamily._allTransitiveDependencies,
+          key: key,
+          startDate: startDate,
+          endDate: endDate,
+          id: id,
+          value: value,
+        );
+
+  FetchPresenceFilterProvider._internal(
+    super._createNotifier, {
+    required super.name,
+    required super.dependencies,
+    required super.allTransitiveDependencies,
+    required super.debugGetCreateSourceHash,
+    required super.from,
+    required this.key,
+    required this.startDate,
+    required this.endDate,
+    required this.id,
+    required this.value,
+  }) : super.internal();
+
+  final String key;
+  final String startDate;
+  final String endDate;
+  final String id;
+  final String value;
+
+  @override
+  Override overrideWith(
+    FutureOr<List<Kinerja>> Function(FetchPresenceFilterRef provider) create,
+  ) {
+    return ProviderOverride(
+      origin: this,
+      override: FetchPresenceFilterProvider._internal(
+        (ref) => create(ref as FetchPresenceFilterRef),
+        from: from,
+        name: null,
+        dependencies: null,
+        allTransitiveDependencies: null,
+        debugGetCreateSourceHash: null,
+        key: key,
+        startDate: startDate,
+        endDate: endDate,
+        id: id,
+        value: value,
+      ),
+    );
+  }
+
+  @override
+  AutoDisposeFutureProviderElement<List<Kinerja>> createElement() {
+    return _FetchPresenceFilterProviderElement(this);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return other is FetchPresenceFilterProvider &&
+        other.key == key &&
+        other.startDate == startDate &&
+        other.endDate == endDate &&
+        other.id == id &&
+        other.value == value;
+  }
+
+  @override
+  int get hashCode {
+    var hash = _SystemHash.combine(0, runtimeType.hashCode);
+    hash = _SystemHash.combine(hash, key.hashCode);
+    hash = _SystemHash.combine(hash, startDate.hashCode);
+    hash = _SystemHash.combine(hash, endDate.hashCode);
+    hash = _SystemHash.combine(hash, id.hashCode);
+    hash = _SystemHash.combine(hash, value.hashCode);
+
+    return _SystemHash.finish(hash);
+  }
+}
+
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
+mixin FetchPresenceFilterRef on AutoDisposeFutureProviderRef<List<Kinerja>> {
+  /// The parameter `key` of this provider.
+  String get key;
+
+  /// The parameter `startDate` of this provider.
+  String get startDate;
+
+  /// The parameter `endDate` of this provider.
+  String get endDate;
+
+  /// The parameter `id` of this provider.
+  String get id;
+
+  /// The parameter `value` of this provider.
+  String get value;
+}
+
+class _FetchPresenceFilterProviderElement
+    extends AutoDisposeFutureProviderElement<List<Kinerja>>
+    with FetchPresenceFilterRef {
+  _FetchPresenceFilterProviderElement(super.provider);
+
+  @override
+  String get key => (origin as FetchPresenceFilterProvider).key;
+  @override
+  String get startDate => (origin as FetchPresenceFilterProvider).startDate;
+  @override
+  String get endDate => (origin as FetchPresenceFilterProvider).endDate;
+  @override
+  String get id => (origin as FetchPresenceFilterProvider).id;
+  @override
+  String get value => (origin as FetchPresenceFilterProvider).value;
+}
+
+String _$fetchPermitAttendanceHash() =>
+    r'aea26ba438d432c8910a3445eada2e0b002b60ee';
+
+/// See also [fetchPermitAttendance].
+@ProviderFor(fetchPermitAttendance)
+const fetchPermitAttendanceProvider = FetchPermitAttendanceFamily();
+
+/// See also [fetchPermitAttendance].
+class FetchPermitAttendanceFamily extends Family<AsyncValue<List<Kinerja>>> {
+  /// See also [fetchPermitAttendance].
+  const FetchPermitAttendanceFamily();
+
+  /// See also [fetchPermitAttendance].
+  FetchPermitAttendanceProvider call({
+    required String key,
+    required String startDate,
+    required String endDate,
+    required String id,
+  }) {
+    return FetchPermitAttendanceProvider(
+      key: key,
+      startDate: startDate,
+      endDate: endDate,
+      id: id,
+    );
+  }
+
+  @override
+  FetchPermitAttendanceProvider getProviderOverride(
+    covariant FetchPermitAttendanceProvider provider,
+  ) {
+    return call(
+      key: provider.key,
+      startDate: provider.startDate,
+      endDate: provider.endDate,
+      id: provider.id,
+    );
+  }
+
+  static const Iterable<ProviderOrFamily>? _dependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
+
+  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
+      _allTransitiveDependencies;
+
+  @override
+  String? get name => r'fetchPermitAttendanceProvider';
+}
+
+/// See also [fetchPermitAttendance].
+class FetchPermitAttendanceProvider
+    extends AutoDisposeFutureProvider<List<Kinerja>> {
+  /// See also [fetchPermitAttendance].
+  FetchPermitAttendanceProvider({
+    required String key,
+    required String startDate,
+    required String endDate,
+    required String id,
+  }) : this._internal(
+          (ref) => fetchPermitAttendance(
+            ref as FetchPermitAttendanceRef,
+            key: key,
+            startDate: startDate,
+            endDate: endDate,
+            id: id,
+          ),
+          from: fetchPermitAttendanceProvider,
+          name: r'fetchPermitAttendanceProvider',
+          debugGetCreateSourceHash:
+              const bool.fromEnvironment('dart.vm.product')
+                  ? null
+                  : _$fetchPermitAttendanceHash,
+          dependencies: FetchPermitAttendanceFamily._dependencies,
+          allTransitiveDependencies:
+              FetchPermitAttendanceFamily._allTransitiveDependencies,
+          key: key,
+          startDate: startDate,
+          endDate: endDate,
+          id: id,
+        );
+
+  FetchPermitAttendanceProvider._internal(
+    super._createNotifier, {
+    required super.name,
+    required super.dependencies,
+    required super.allTransitiveDependencies,
+    required super.debugGetCreateSourceHash,
+    required super.from,
+    required this.key,
+    required this.startDate,
+    required this.endDate,
+    required this.id,
+  }) : super.internal();
+
+  final String key;
+  final String startDate;
+  final String endDate;
+  final String id;
+
+  @override
+  Override overrideWith(
+    FutureOr<List<Kinerja>> Function(FetchPermitAttendanceRef provider) create,
+  ) {
+    return ProviderOverride(
+      origin: this,
+      override: FetchPermitAttendanceProvider._internal(
+        (ref) => create(ref as FetchPermitAttendanceRef),
+        from: from,
+        name: null,
+        dependencies: null,
+        allTransitiveDependencies: null,
+        debugGetCreateSourceHash: null,
+        key: key,
+        startDate: startDate,
+        endDate: endDate,
+        id: id,
+      ),
+    );
+  }
+
+  @override
+  AutoDisposeFutureProviderElement<List<Kinerja>> createElement() {
+    return _FetchPermitAttendanceProviderElement(this);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return other is FetchPermitAttendanceProvider &&
+        other.key == key &&
+        other.startDate == startDate &&
+        other.endDate == endDate &&
+        other.id == id;
+  }
+
+  @override
+  int get hashCode {
+    var hash = _SystemHash.combine(0, runtimeType.hashCode);
+    hash = _SystemHash.combine(hash, key.hashCode);
+    hash = _SystemHash.combine(hash, startDate.hashCode);
+    hash = _SystemHash.combine(hash, endDate.hashCode);
+    hash = _SystemHash.combine(hash, id.hashCode);
+
+    return _SystemHash.finish(hash);
+  }
+}
+
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
+mixin FetchPermitAttendanceRef on AutoDisposeFutureProviderRef<List<Kinerja>> {
+  /// The parameter `key` of this provider.
+  String get key;
+
+  /// The parameter `startDate` of this provider.
+  String get startDate;
+
+  /// The parameter `endDate` of this provider.
+  String get endDate;
+
+  /// The parameter `id` of this provider.
+  String get id;
+}
+
+class _FetchPermitAttendanceProviderElement
+    extends AutoDisposeFutureProviderElement<List<Kinerja>>
+    with FetchPermitAttendanceRef {
+  _FetchPermitAttendanceProviderElement(super.provider);
+
+  @override
+  String get key => (origin as FetchPermitAttendanceProvider).key;
+  @override
+  String get startDate => (origin as FetchPermitAttendanceProvider).startDate;
+  @override
+  String get endDate => (origin as FetchPermitAttendanceProvider).endDate;
+  @override
+  String get id => (origin as FetchPermitAttendanceProvider).id;
 }
 
 String _$recapControllerHash() => r'89d9c833e36a0f227101b8d17e34e5e841c11a49';
@@ -898,4 +1652,4 @@ final recapControllerProvider =
 
 typedef _$RecapController = AutoDisposeAsyncNotifier<void>;
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

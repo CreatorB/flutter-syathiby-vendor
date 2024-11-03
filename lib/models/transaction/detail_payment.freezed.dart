@@ -28,8 +28,12 @@ mixin _$DetailPayment {
   String? get idDiscount => throw _privateConstructorUsedError;
   String? get nameDiscount => throw _privateConstructorUsedError;
 
+  /// Serializes this DetailPayment to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DetailPayment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DetailPaymentCopyWith<DetailPayment> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -60,6 +64,8 @@ class _$DetailPaymentCopyWithImpl<$Res, $Val extends DetailPayment>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DetailPayment
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -130,6 +136,8 @@ class __$$DetailPaymentImplCopyWithImpl<$Res>
       _$DetailPaymentImpl _value, $Res Function(_$DetailPaymentImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DetailPayment
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -229,12 +237,14 @@ class _$DetailPaymentImpl implements _DetailPayment {
                 other.nameDiscount == nameDiscount));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, totalprice, totalpay, discount,
       tax, serviceCharge, idDiscount, nameDiscount);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DetailPayment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DetailPaymentImplCopyWith<_$DetailPaymentImpl> get copyWith =>
@@ -275,8 +285,11 @@ abstract class _DetailPayment implements DetailPayment {
   String? get idDiscount;
   @override
   String? get nameDiscount;
+
+  /// Create a copy of DetailPayment
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DetailPaymentImplCopyWith<_$DetailPaymentImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

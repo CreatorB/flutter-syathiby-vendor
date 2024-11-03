@@ -27,7 +27,7 @@ abstract class CartRestInterface {
   @POST('pengadaan/addproduct.php')
   Future<List<Product>> addProduct(
     @Part(name: 'key') String key,
-    @Part(name: 'name_product') String name_product,
+    @Part(name: 'name_product') String nameProduct,
     @Part(name: 'unit') String unit,
     @Part(name: 'selling_price') String hargajual,
     @Part(name: 'have_stock') String haveSTok,

@@ -22,6 +22,8 @@ final fetchMurottalSurahProvider =
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef FetchMurottalSurahRef = AutoDisposeFutureProviderRef<List<Murottal>>;
 String _$fetchMurottalAyahHash() => r'a489a4564bee92bf7905287a27cabc789a6f2bc7';
 
@@ -38,6 +40,8 @@ final fetchMurottalAyahProvider =
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef FetchMurottalAyahRef = AutoDisposeFutureProviderRef<List<Murottal>>;
 String _$saveMurottalAyahSelectedHash() =>
     r'632fd07470d8cc0e642b6649f6397fa880eb5ba7';
@@ -177,6 +181,8 @@ class SaveMurottalAyahSelectedProvider extends AutoDisposeFutureProvider<void> {
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin SaveMurottalAyahSelectedRef on AutoDisposeFutureProviderRef<void> {
   /// The parameter `murottal` of this provider.
   Murottal get murottal;
@@ -208,6 +214,8 @@ final getMurottalAyahSelectedProvider =
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef GetMurottalAyahSelectedRef = AutoDisposeFutureProviderRef<Murottal?>;
 String _$fetchMurottalEveryAyahHash() =>
     r'0561acb582803f0f9ce1fbb6e249addaeb2e5b66';
@@ -225,6 +233,8 @@ final fetchMurottalEveryAyahProvider =
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef FetchMurottalEveryAyahRef
     = AutoDisposeFutureProviderRef<List<Murottal>>;
 String _$saveMurottalSelectedHash() =>
@@ -343,6 +353,8 @@ class SaveMurottalSelectedProvider extends AutoDisposeFutureProvider<void> {
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin SaveMurottalSelectedRef on AutoDisposeFutureProviderRef<void> {
   /// The parameter `murottal` of this provider.
   Murottal get murottal;
@@ -373,6 +385,8 @@ final getMurottalSelectedProvider =
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef GetMurottalSelectedRef = AutoDisposeFutureProviderRef<Murottal?>;
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

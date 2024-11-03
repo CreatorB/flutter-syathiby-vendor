@@ -30,7 +30,7 @@ abstract class JobRestInterface {
   @FormUrlEncoded()
   Future<Message> getSendTugas(
     @Field('key') String key,
-    @Field('id_tugas') String id_tugas,
+    @Field('id_tugas') String idTugas,
   );
 
   @GET('job/listall.php')
@@ -118,7 +118,7 @@ abstract class JobRestInterface {
     @Field('date') String date,
     @Field('hour') String hour,
     @Field('jam') String jam,
-    @Field('id_event') String id_event,
+    @Field('id_event') String idEvent,
     @Field('operator') String operator,
   );
 
@@ -127,7 +127,7 @@ abstract class JobRestInterface {
   Future<Message> addActivity(
     @Field('key') String key,
     @Field('detail') String detail,
-    @Field('id_event') String id_event,
+    @Field('id_event') String idEvent,
   );
 
   @POST('event/insertlaporanaktivitas.php')
@@ -135,7 +135,7 @@ abstract class JobRestInterface {
   Future<Message> addLaporanAktivitas(
     @Part(name: 'key') String key,
     @Part(name: 'detail') String detail,
-    @Part(name: 'nama_aktivitas') String nama_aktivitas,
+    @Part(name: 'nama_aktivitas') String namaAktivitas,
     @Part(name: 'type') String type, {
     @Part(name: 'img') File? img,
   });

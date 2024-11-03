@@ -97,8 +97,12 @@ mixin _$Nilai {
   @JsonKey(name: 'img')
   String? get img => throw _privateConstructorUsedError;
 
+  /// Serializes this Nilai to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Nilai
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NilaiCopyWith<Nilai> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -158,6 +162,8 @@ class _$NilaiCopyWithImpl<$Res, $Val extends Nilai>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Nilai
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -413,6 +419,8 @@ class __$$NilaiImplCopyWithImpl<$Res>
       _$NilaiImpl _value, $Res Function(_$NilaiImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Nilai
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -831,7 +839,7 @@ class _$NilaiImpl implements _Nilai {
             (identical(other.img, img) || other.img == img));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -875,7 +883,9 @@ class _$NilaiImpl implements _Nilai {
         img
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Nilai
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NilaiImplCopyWith<_$NilaiImpl> get copyWith =>
@@ -1046,8 +1056,11 @@ abstract class _Nilai implements Nilai {
   @override
   @JsonKey(name: 'img')
   String? get img;
+
+  /// Create a copy of Nilai
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NilaiImplCopyWith<_$NilaiImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -29,7 +29,7 @@ mixin _$Asrama {
   @JsonKey(name: 'jumlah_santri')
   int? get jumlahSantri => throw _privateConstructorUsedError;
   @JsonKey(name: 'musrif')
-  String? get musrif => throw _privateConstructorUsedError;
+  dynamic get musrif => throw _privateConstructorUsedError;
   @JsonKey(name: 'date')
   String? get date => throw _privateConstructorUsedError;
   @JsonKey(name: 'status')
@@ -41,10 +41,16 @@ mixin _$Asrama {
   @JsonKey(name: 'belumpulang')
   int? get belumpulang => throw _privateConstructorUsedError;
   @JsonKey(name: 'belumkembali')
-  int? get belumkembali => throw _privateConstructorUsedError;
+  dynamic get belumkembali => throw _privateConstructorUsedError;
+  @JsonKey(name: 'ontime')
+  int? get ontime => throw _privateConstructorUsedError;
 
+  /// Serializes this Asrama to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Asrama
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AsramaCopyWith<Asrama> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -58,13 +64,14 @@ abstract class $AsramaCopyWith<$Res> {
       @JsonKey(name: 'id_asrama') String? idAsrama,
       @JsonKey(name: 'nama_asrama') String? namaAsrama,
       @JsonKey(name: 'jumlah_santri') int? jumlahSantri,
-      @JsonKey(name: 'musrif') String? musrif,
+      @JsonKey(name: 'musrif') dynamic musrif,
       @JsonKey(name: 'date') String? date,
       @JsonKey(name: 'status') String? status,
       @JsonKey(name: 'dijemput') int? dijemput,
       @JsonKey(name: 'dikembalikan') int? dikembalikan,
       @JsonKey(name: 'belumpulang') int? belumpulang,
-      @JsonKey(name: 'belumkembali') int? belumkembali});
+      @JsonKey(name: 'belumkembali') dynamic belumkembali,
+      @JsonKey(name: 'ontime') int? ontime});
 }
 
 /// @nodoc
@@ -77,6 +84,8 @@ class _$AsramaCopyWithImpl<$Res, $Val extends Asrama>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Asrama
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -91,6 +100,7 @@ class _$AsramaCopyWithImpl<$Res, $Val extends Asrama>
     Object? dikembalikan = freezed,
     Object? belumpulang = freezed,
     Object? belumkembali = freezed,
+    Object? ontime = freezed,
   }) {
     return _then(_value.copyWith(
       key: freezed == key
@@ -112,7 +122,7 @@ class _$AsramaCopyWithImpl<$Res, $Val extends Asrama>
       musrif: freezed == musrif
           ? _value.musrif
           : musrif // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as dynamic,
       date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
@@ -136,6 +146,10 @@ class _$AsramaCopyWithImpl<$Res, $Val extends Asrama>
       belumkembali: freezed == belumkembali
           ? _value.belumkembali
           : belumkembali // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+      ontime: freezed == ontime
+          ? _value.ontime
+          : ontime // ignore: cast_nullable_to_non_nullable
               as int?,
     ) as $Val);
   }
@@ -153,13 +167,14 @@ abstract class _$$AsramaImplCopyWith<$Res> implements $AsramaCopyWith<$Res> {
       @JsonKey(name: 'id_asrama') String? idAsrama,
       @JsonKey(name: 'nama_asrama') String? namaAsrama,
       @JsonKey(name: 'jumlah_santri') int? jumlahSantri,
-      @JsonKey(name: 'musrif') String? musrif,
+      @JsonKey(name: 'musrif') dynamic musrif,
       @JsonKey(name: 'date') String? date,
       @JsonKey(name: 'status') String? status,
       @JsonKey(name: 'dijemput') int? dijemput,
       @JsonKey(name: 'dikembalikan') int? dikembalikan,
       @JsonKey(name: 'belumpulang') int? belumpulang,
-      @JsonKey(name: 'belumkembali') int? belumkembali});
+      @JsonKey(name: 'belumkembali') dynamic belumkembali,
+      @JsonKey(name: 'ontime') int? ontime});
 }
 
 /// @nodoc
@@ -170,6 +185,8 @@ class __$$AsramaImplCopyWithImpl<$Res>
       _$AsramaImpl _value, $Res Function(_$AsramaImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Asrama
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -184,6 +201,7 @@ class __$$AsramaImplCopyWithImpl<$Res>
     Object? dikembalikan = freezed,
     Object? belumpulang = freezed,
     Object? belumkembali = freezed,
+    Object? ontime = freezed,
   }) {
     return _then(_$AsramaImpl(
       key: freezed == key
@@ -205,7 +223,7 @@ class __$$AsramaImplCopyWithImpl<$Res>
       musrif: freezed == musrif
           ? _value.musrif
           : musrif // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as dynamic,
       date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
@@ -229,6 +247,10 @@ class __$$AsramaImplCopyWithImpl<$Res>
       belumkembali: freezed == belumkembali
           ? _value.belumkembali
           : belumkembali // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+      ontime: freezed == ontime
+          ? _value.ontime
+          : ontime // ignore: cast_nullable_to_non_nullable
               as int?,
     ));
   }
@@ -248,7 +270,8 @@ class _$AsramaImpl implements _Asrama {
       @JsonKey(name: 'dijemput') this.dijemput,
       @JsonKey(name: 'dikembalikan') this.dikembalikan,
       @JsonKey(name: 'belumpulang') this.belumpulang,
-      @JsonKey(name: 'belumkembali') this.belumkembali});
+      @JsonKey(name: 'belumkembali') this.belumkembali,
+      @JsonKey(name: 'ontime') this.ontime});
 
   factory _$AsramaImpl.fromJson(Map<String, dynamic> json) =>
       _$$AsramaImplFromJson(json);
@@ -267,7 +290,7 @@ class _$AsramaImpl implements _Asrama {
   final int? jumlahSantri;
   @override
   @JsonKey(name: 'musrif')
-  final String? musrif;
+  final dynamic musrif;
   @override
   @JsonKey(name: 'date')
   final String? date;
@@ -285,11 +308,14 @@ class _$AsramaImpl implements _Asrama {
   final int? belumpulang;
   @override
   @JsonKey(name: 'belumkembali')
-  final int? belumkembali;
+  final dynamic belumkembali;
+  @override
+  @JsonKey(name: 'ontime')
+  final int? ontime;
 
   @override
   String toString() {
-    return 'Asrama(key: $key, idAsrama: $idAsrama, namaAsrama: $namaAsrama, jumlahSantri: $jumlahSantri, musrif: $musrif, date: $date, status: $status, dijemput: $dijemput, dikembalikan: $dikembalikan, belumpulang: $belumpulang, belumkembali: $belumkembali)';
+    return 'Asrama(key: $key, idAsrama: $idAsrama, namaAsrama: $namaAsrama, jumlahSantri: $jumlahSantri, musrif: $musrif, date: $date, status: $status, dijemput: $dijemput, dikembalikan: $dikembalikan, belumpulang: $belumpulang, belumkembali: $belumkembali, ontime: $ontime)';
   }
 
   @override
@@ -304,7 +330,7 @@ class _$AsramaImpl implements _Asrama {
                 other.namaAsrama == namaAsrama) &&
             (identical(other.jumlahSantri, jumlahSantri) ||
                 other.jumlahSantri == jumlahSantri) &&
-            (identical(other.musrif, musrif) || other.musrif == musrif) &&
+            const DeepCollectionEquality().equals(other.musrif, musrif) &&
             (identical(other.date, date) || other.date == date) &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.dijemput, dijemput) ||
@@ -313,11 +339,12 @@ class _$AsramaImpl implements _Asrama {
                 other.dikembalikan == dikembalikan) &&
             (identical(other.belumpulang, belumpulang) ||
                 other.belumpulang == belumpulang) &&
-            (identical(other.belumkembali, belumkembali) ||
-                other.belumkembali == belumkembali));
+            const DeepCollectionEquality()
+                .equals(other.belumkembali, belumkembali) &&
+            (identical(other.ontime, ontime) || other.ontime == ontime));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -325,15 +352,18 @@ class _$AsramaImpl implements _Asrama {
       idAsrama,
       namaAsrama,
       jumlahSantri,
-      musrif,
+      const DeepCollectionEquality().hash(musrif),
       date,
       status,
       dijemput,
       dikembalikan,
       belumpulang,
-      belumkembali);
+      const DeepCollectionEquality().hash(belumkembali),
+      ontime);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Asrama
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AsramaImplCopyWith<_$AsramaImpl> get copyWith =>
@@ -353,13 +383,14 @@ abstract class _Asrama implements Asrama {
       @JsonKey(name: 'id_asrama') final String? idAsrama,
       @JsonKey(name: 'nama_asrama') final String? namaAsrama,
       @JsonKey(name: 'jumlah_santri') final int? jumlahSantri,
-      @JsonKey(name: 'musrif') final String? musrif,
+      @JsonKey(name: 'musrif') final dynamic musrif,
       @JsonKey(name: 'date') final String? date,
       @JsonKey(name: 'status') final String? status,
       @JsonKey(name: 'dijemput') final int? dijemput,
       @JsonKey(name: 'dikembalikan') final int? dikembalikan,
       @JsonKey(name: 'belumpulang') final int? belumpulang,
-      @JsonKey(name: 'belumkembali') final int? belumkembali}) = _$AsramaImpl;
+      @JsonKey(name: 'belumkembali') final dynamic belumkembali,
+      @JsonKey(name: 'ontime') final int? ontime}) = _$AsramaImpl;
 
   factory _Asrama.fromJson(Map<String, dynamic> json) = _$AsramaImpl.fromJson;
 
@@ -377,7 +408,7 @@ abstract class _Asrama implements Asrama {
   int? get jumlahSantri;
   @override
   @JsonKey(name: 'musrif')
-  String? get musrif;
+  dynamic get musrif;
   @override
   @JsonKey(name: 'date')
   String? get date;
@@ -395,9 +426,15 @@ abstract class _Asrama implements Asrama {
   int? get belumpulang;
   @override
   @JsonKey(name: 'belumkembali')
-  int? get belumkembali;
+  dynamic get belumkembali;
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(name: 'ontime')
+  int? get ontime;
+
+  /// Create a copy of Asrama
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AsramaImplCopyWith<_$AsramaImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

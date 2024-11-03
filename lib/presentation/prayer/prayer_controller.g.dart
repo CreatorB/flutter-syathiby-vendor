@@ -154,6 +154,8 @@ class FetchPrayerTimeProvider extends AutoDisposeFutureProvider<PrayerTime?> {
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchPrayerTimeRef on AutoDisposeFutureProviderRef<PrayerTime?> {
   /// The parameter `latitude` of this provider.
   double? get latitude;
@@ -173,4 +175,4 @@ class _FetchPrayerTimeProviderElement
   double? get longitude => (origin as FetchPrayerTimeProvider).longitude;
 }
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

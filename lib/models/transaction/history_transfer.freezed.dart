@@ -25,8 +25,12 @@ mixin _$HistoryTransfer {
   String? get date => throw _privateConstructorUsedError;
   List<Transfer>? get detail => throw _privateConstructorUsedError;
 
+  /// Serializes this HistoryTransfer to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of HistoryTransfer
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $HistoryTransferCopyWith<HistoryTransfer> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -54,6 +58,8 @@ class _$HistoryTransferCopyWithImpl<$Res, $Val extends HistoryTransfer>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of HistoryTransfer
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -106,6 +112,8 @@ class __$$HistoryTransferImplCopyWithImpl<$Res>
       _$HistoryTransferImpl _value, $Res Function(_$HistoryTransferImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of HistoryTransfer
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -182,12 +190,14 @@ class _$HistoryTransferImpl implements _HistoryTransfer {
             const DeepCollectionEquality().equals(other._detail, _detail));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, totalorderall, totalnominal,
       date, const DeepCollectionEquality().hash(_detail));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of HistoryTransfer
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$HistoryTransferImplCopyWith<_$HistoryTransferImpl> get copyWith =>
@@ -220,8 +230,11 @@ abstract class _HistoryTransfer implements HistoryTransfer {
   String? get date;
   @override
   List<Transfer>? get detail;
+
+  /// Create a copy of HistoryTransfer
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$HistoryTransferImplCopyWith<_$HistoryTransferImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

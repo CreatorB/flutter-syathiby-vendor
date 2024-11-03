@@ -4,8 +4,10 @@ import 'package:al_ukhuwah/models/slip/absent.dart';
 import 'package:al_ukhuwah/models/store/store.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
+import '../../models/hostel/hostel.dart';
 import '../../models/message.dart';
 import '../../models/recap/recap.dart';
+import '../../models/staff/kinerja.dart';
 
 part 'recap_controller.g.dart';
 
@@ -54,8 +56,12 @@ Future<List<Recap>> fetchAllRecapPresence(
   required String endDate,
   required String groupId,
 }) async {
-  final result =
-      ref.watch(recapServiceProvider).get(key, startDate, endDate, groupId);
+  final result = ref.watch(recapServiceProvider).get(
+        key,
+        startDate,
+        endDate,
+        groupId,
+      );
   return result;
 }
 
@@ -110,5 +116,75 @@ Future<List<Absent>> fetchAllManualAttendance(
   required String key,
 }) async {
   final result = ref.watch(staffServiceProvider).getAttandance(key);
+  return result;
+}
+
+@riverpod
+Future<List<Asrama>> fetchAllDataPresence(
+  FetchAllDataPresenceRef ref, {
+  required String key,
+  required String dateStart,
+  required String dateEnd,
+  required String division,
+}) async {
+  final result = ref.watch(hostelServiceProvider).getDataPresenceList(
+        key,
+        dateStart,
+        dateEnd,
+        division,
+      );
+  return result;
+}
+
+@riverpod
+Future<List<Kinerja>> fetchPresenceGroup(
+  FetchPresenceGroupRef ref, {
+  required String key,
+  required String startDate,
+  required String endDate,
+  required String id,
+}) async {
+  final result = ref.watch(hostelServiceProvider).getPresenceGroup(
+        key,
+        startDate,
+        endDate,
+        id,
+      );
+  return result;
+}
+
+@riverpod
+Future<List<Kinerja>> fetchPresenceFilter(
+  FetchPresenceFilterRef ref, {
+  required String key,
+  required String startDate,
+  required String endDate,
+  required String id,
+  required String value,
+}) async {
+  final result = ref.watch(hostelServiceProvider).getPresenceFilter(
+        key,
+        startDate,
+        endDate,
+        id,
+        value,
+      );
+  return result;
+}
+
+@riverpod
+Future<List<Kinerja>> fetchPermitAttendance(
+  FetchPermitAttendanceRef ref, {
+  required String key,
+  required String startDate,
+  required String endDate,
+  required String id,
+}) async {
+  final result = ref.watch(hostelServiceProvider).getPermitAttendance(
+        key,
+        startDate,
+        endDate,
+        id,
+      );
   return result;
 }

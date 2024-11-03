@@ -11,13 +11,14 @@ _$AsramaImpl _$$AsramaImplFromJson(Map<String, dynamic> json) => _$AsramaImpl(
       idAsrama: json['id_asrama'] as String?,
       namaAsrama: json['nama_asrama'] as String?,
       jumlahSantri: (json['jumlah_santri'] as num?)?.toInt(),
-      musrif: json['musrif'] as String?,
+      musrif: json['musrif'],
       date: json['date'] as String?,
       status: json['status'] as String?,
       dijemput: (json['dijemput'] as num?)?.toInt(),
       dikembalikan: (json['dikembalikan'] as num?)?.toInt(),
       belumpulang: (json['belumpulang'] as num?)?.toInt(),
-      belumkembali: (json['belumkembali'] as num?)?.toInt(),
+      belumkembali: json['belumkembali'],
+      ontime: (json['ontime'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$$AsramaImplToJson(_$AsramaImpl instance) =>
@@ -33,4 +34,5 @@ Map<String, dynamic> _$$AsramaImplToJson(_$AsramaImpl instance) =>
       'dikembalikan': instance.dikembalikan,
       'belumpulang': instance.belumpulang,
       'belumkembali': instance.belumkembali,
+      'ontime': instance.ontime,
     };

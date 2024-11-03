@@ -35,8 +35,12 @@ mixin _$ReqTrans {
   double? get longitude => throw _privateConstructorUsedError;
   String? get id => throw _privateConstructorUsedError;
 
+  /// Serializes this ReqTrans to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ReqTrans
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ReqTransCopyWith<ReqTrans> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -73,6 +77,8 @@ class _$ReqTransCopyWithImpl<$Res, $Val extends ReqTrans>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ReqTrans
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -185,6 +191,8 @@ class __$$ReqTransImplCopyWithImpl<$Res>
       _$ReqTransImpl _value, $Res Function(_$ReqTransImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ReqTrans
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -357,7 +365,7 @@ class _$ReqTransImpl implements _ReqTrans {
             (identical(other.id, id) || other.id == id));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -376,7 +384,9 @@ class _$ReqTransImpl implements _ReqTrans {
       longitude,
       id);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ReqTrans
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ReqTransImplCopyWith<_$ReqTransImpl> get copyWith =>
@@ -438,8 +448,11 @@ abstract class _ReqTrans implements ReqTrans {
   double? get longitude;
   @override
   String? get id;
+
+  /// Create a copy of ReqTrans
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ReqTransImplCopyWith<_$ReqTransImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -454,8 +467,12 @@ mixin _$Barang {
   int? get amountProduct => throw _privateConstructorUsedError;
   String? get notes => throw _privateConstructorUsedError;
 
+  /// Serializes this Barang to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Barang
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $BarangCopyWith<Barang> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -477,6 +494,8 @@ class _$BarangCopyWithImpl<$Res, $Val extends Barang>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Barang
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -519,6 +538,8 @@ class __$$BarangImplCopyWithImpl<$Res>
       _$BarangImpl _value, $Res Function(_$BarangImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Barang
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -575,11 +596,13 @@ class _$BarangImpl implements _Barang {
             (identical(other.notes, notes) || other.notes == notes));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, idProduct, amountProduct, notes);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Barang
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$BarangImplCopyWith<_$BarangImpl> get copyWith =>
@@ -607,8 +630,11 @@ abstract class _Barang implements Barang {
   int? get amountProduct;
   @override
   String? get notes;
+
+  /// Create a copy of Barang
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$BarangImplCopyWith<_$BarangImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -21,15 +21,15 @@ abstract class RapatRestInterface {
   @POST('presensi.php')
   Future<Message> presensi(
       @Field('key') String key,
-      @Field('id_meeting') String id_meeting,
+      @Field('id_meeting') String idMeeting,
       @Field('lokasi') String lokasi,
-      @Field('palsu') String meeting_for);
+      @Field('palsu') String meetingFor);
 
   @FormUrlEncoded()
   @POST('komentar.php')
   Future<Message> komentar(
     @Field('key') String key,
-    @Field('id_meeting') String id_meeting,
+    @Field('id_meeting') String idMeeting,
     @Field('text') String text,
   );
 
@@ -37,7 +37,7 @@ abstract class RapatRestInterface {
   @MultiPart()
   Future<Message> uploadFoto(
     @Part(name: 'key') String key,
-    @Part(name: 'id_meeting') String id_meeting, {
+    @Part(name: 'id_meeting') String idMeeting, {
     @Part(name: 'img') File? img,
   });
 
@@ -45,7 +45,7 @@ abstract class RapatRestInterface {
   @POST('insertnotulen.php')
   Future<Message> notulen(
     @Field('key') String key,
-    @Field('id_meeting') String id_meeting,
+    @Field('id_meeting') String idMeeting,
     @Field('text') String text,
   );
 
@@ -53,7 +53,7 @@ abstract class RapatRestInterface {
   @POST('updatenotulen.php')
   Future<Message> updateNotulen(
     @Field('key') String key,
-    @Field('id_meeting') String id_meeting,
+    @Field('id_meeting') String idMeeting,
     @Field('text') String text,
   );
 
@@ -61,8 +61,8 @@ abstract class RapatRestInterface {
   @POST('addpeserta.php')
   Future<Message> addPeserta(
       @Field('key') String key,
-      @Field('id_meeting') String id_meeting,
-      @Field('phone_number') String phone_number);
+      @Field('id_meeting') String idMeeting,
+      @Field('phone_number') String phoneNumber);
 
   @GET('peserta.php')
   Future<List<Rapat>> peserta(@Query('key') String key, @Query('id') String id);
@@ -75,13 +75,13 @@ abstract class RapatRestInterface {
 
   @GET('hapuspeserta.php')
   Future<Message> hapusPeserta(@Query('key') String key, @Query('id') String id,
-      @Query('phone_number') String phone_number);
+      @Query('phone_number') String phoneNumber);
 
   @GET('absenpeserta.php')
   Future<Message> absenPeserta(
       @Query('key') String key,
       @Query('id') String id,
-      @Query('phone_number') String phone_number,
+      @Query('phone_number') String phoneNumber,
       @Query('status') String status);
 
   @GET('listdivisi.php')
@@ -91,11 +91,11 @@ abstract class RapatRestInterface {
   @POST('insert.php')
   Future<Message> add(
     @Field('key') String key,
-    @Field('name_meeting') String name_meeting,
+    @Field('name_meeting') String nameMeeting,
     @Field('deskripsi') String deskripsi,
-    @Field('meeting_for') String meeting_for,
+    @Field('meeting_for') String meetingFor,
     @Field('date') String date,
-    @Field('hour_start') String hour_start,
+    @Field('hour_start') String hourStart,
     @Field('finish') String finish,
     @Field('lokasi') String lokasi,
   );
@@ -105,11 +105,11 @@ abstract class RapatRestInterface {
   Future<Message> update(
       @Field('key') String key,
       @Field('id') String id,
-      @Field('name_meeting') String name_meeting,
+      @Field('name_meeting') String nameMeeting,
       @Field('deskripsi') String deskripsi,
-      @Field('meeting_for') String meeting_for,
+      @Field('meeting_for') String meetingFor,
       @Field('date') String date,
-      @Field('hour_start') String hour_start);
+      @Field('hour_start') String hourStart);
 
   @GET('delete.php')
   Future<Message> delete(@Query('key') String key, @Query('id') String id);

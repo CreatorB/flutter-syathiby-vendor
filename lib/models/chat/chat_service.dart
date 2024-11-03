@@ -17,7 +17,7 @@ abstract class ChatRestInterface {
     @Query('key') String key,
     @Query('id') String id,
     @Query('type') String type,
-    @Query('no_invoice') String no_invoice,
+    @Query('no_invoice') String noInvoice,
   );
 
   @GET('posting/data.php')
@@ -82,7 +82,7 @@ abstract class ChatRestInterface {
     @Field('detail') String detail,
     @Field('receiver') String receiver,
     @Field('type') String type,
-    @Field('no_invoice') String no_invoice,
+    @Field('no_invoice') String noInvoice,
   );
 
   @POST('sendchat.php')
@@ -149,7 +149,7 @@ abstract class ChatRestInterface {
     @Part(name: 'key') String key,
     @Part(name: 'detail') String detail,
     @Part(name: 'receiver') String receiver,
-    @Part(name: 'no_invoice') String no_invoice, {
+    @Part(name: 'no_invoice') String noInvoice, {
     @Part(name: 'img') File? img,
   });
 

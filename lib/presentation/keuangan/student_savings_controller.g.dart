@@ -156,6 +156,8 @@ class FetchStudentSavingsProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchStudentSavingsRef on AutoDisposeFutureProviderRef<List<Siswa>> {
   /// The parameter `key` of this provider.
   String get key;
@@ -315,6 +317,8 @@ class SearchStudentTransactionProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin SearchStudentTransactionRef on AutoDisposeFutureProviderRef<List<Siswa>> {
   /// The parameter `key` of this provider.
   String get key;
@@ -480,6 +484,8 @@ class FetchAllSpendingProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchAllSpendingRef
     on AutoDisposeFutureProviderRef<List<HistoryTransaction>> {
   /// The parameter `key` of this provider.
@@ -634,6 +640,8 @@ class FetchDetailSpendingProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchDetailSpendingRef on AutoDisposeFutureProviderRef<DetailSpend> {
   /// The parameter `key` of this provider.
   String get key;
@@ -773,6 +781,8 @@ class FetchAllCategoryExpanseProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchAllCategoryExpanseRef
     on AutoDisposeFutureProviderRef<List<CategoryExpense>> {
   /// The parameter `key` of this provider.
@@ -806,4 +816,4 @@ final studentSavingsControllerProvider =
 
 typedef _$StudentSavingsController = AutoDisposeAsyncNotifier<void>;
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

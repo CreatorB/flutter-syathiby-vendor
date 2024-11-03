@@ -25,8 +25,12 @@ mixin _$ProductNew {
   String get msg => throw _privateConstructorUsedError;
   List<Product>? get data => throw _privateConstructorUsedError;
 
+  /// Serializes this ProductNew to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ProductNew
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ProductNewCopyWith<ProductNew> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$ProductNewCopyWithImpl<$Res, $Val extends ProductNew>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ProductNew
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -98,6 +104,8 @@ class __$$ProductNewImplCopyWithImpl<$Res>
       _$ProductNewImpl _value, $Res Function(_$ProductNewImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ProductNew
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -172,12 +180,14 @@ class _$ProductNewImpl implements _ProductNew {
             const DeepCollectionEquality().equals(other._data, _data));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, status, errCode, msg,
       const DeepCollectionEquality().hash(_data));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ProductNew
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ProductNewImplCopyWith<_$ProductNewImpl> get copyWith =>
@@ -209,8 +219,11 @@ abstract class _ProductNew implements ProductNew {
   String get msg;
   @override
   List<Product>? get data;
+
+  /// Create a copy of ProductNew
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ProductNewImplCopyWith<_$ProductNewImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

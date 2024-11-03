@@ -22,8 +22,12 @@ Visiting _$VisitingFromJson(Map<String, dynamic> json) {
 mixin _$Visiting {
   String? get invoice => throw _privateConstructorUsedError;
 
+  /// Serializes this Visiting to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Visiting
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $VisitingCopyWith<Visiting> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -46,6 +50,8 @@ class _$VisitingCopyWithImpl<$Res, $Val extends Visiting>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Visiting
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -79,6 +85,8 @@ class __$$VisitingImplCopyWithImpl<$Res>
       _$VisitingImpl _value, $Res Function(_$VisitingImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Visiting
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -117,11 +125,13 @@ class _$VisitingImpl implements _Visiting {
             (identical(other.invoice, invoice) || other.invoice == invoice));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, invoice);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Visiting
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$VisitingImplCopyWith<_$VisitingImpl> get copyWith =>
@@ -143,8 +153,11 @@ abstract class _Visiting implements Visiting {
 
   @override
   String? get invoice;
+
+  /// Create a copy of Visiting
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$VisitingImplCopyWith<_$VisitingImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

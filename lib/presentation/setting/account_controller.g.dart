@@ -142,6 +142,8 @@ class FetchProfileProvider extends AutoDisposeFutureProvider<User> {
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchProfileRef on AutoDisposeFutureProviderRef<User> {
   /// The parameter `key` of this provider.
   String get key;
@@ -272,6 +274,8 @@ class FetchPresenceLocationProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchPresenceLocationRef on AutoDisposeFutureProviderRef<List<Asrama>> {
   /// The parameter `key` of this provider.
   String get key;
@@ -303,4 +307,4 @@ final accountControllerProvider =
 
 typedef _$AccountController = AutoDisposeAsyncNotifier<void>;
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

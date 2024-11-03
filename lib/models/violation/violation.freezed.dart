@@ -51,8 +51,12 @@ mixin _$Pelanggaran {
   @JsonKey(name: 'kabag')
   String? get kabag => throw _privateConstructorUsedError;
 
+  /// Serializes this Pelanggaran to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Pelanggaran
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PelanggaranCopyWith<Pelanggaran> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -91,6 +95,8 @@ class _$PelanggaranCopyWithImpl<$Res, $Val extends Pelanggaran>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Pelanggaran
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -209,6 +215,8 @@ class __$$PelanggaranImplCopyWithImpl<$Res>
       _$PelanggaranImpl _value, $Res Function(_$PelanggaranImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Pelanggaran
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -394,7 +402,7 @@ class _$PelanggaranImpl implements _Pelanggaran {
             (identical(other.kabag, kabag) || other.kabag == kabag));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -414,7 +422,9 @@ class _$PelanggaranImpl implements _Pelanggaran {
       penindak,
       kabag);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Pelanggaran
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PelanggaranImplCopyWith<_$PelanggaranImpl> get copyWith =>
@@ -494,8 +504,11 @@ abstract class _Pelanggaran implements Pelanggaran {
   @override
   @JsonKey(name: 'kabag')
   String? get kabag;
+
+  /// Create a copy of Pelanggaran
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PelanggaranImplCopyWith<_$PelanggaranImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

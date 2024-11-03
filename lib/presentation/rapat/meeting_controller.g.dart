@@ -142,6 +142,8 @@ class FetchAllMeetingProvider extends AutoDisposeFutureProvider<List<Rapat>> {
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchAllMeetingRef on AutoDisposeFutureProviderRef<List<Rapat>> {
   /// The parameter `key` of this provider.
   String get key;
@@ -285,6 +287,8 @@ class FetchDetailMeetingProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchDetailMeetingRef on AutoDisposeFutureProviderRef<List<Rapat>> {
   /// The parameter `key` of this provider.
   String get key;
@@ -433,6 +437,8 @@ class FetchMeetingParticipantProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchMeetingParticipantRef on AutoDisposeFutureProviderRef<List<Rapat>> {
   /// The parameter `key` of this provider.
   String get key;
@@ -582,6 +588,8 @@ class FetchMeetingDocumentationProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchMeetingDocumentationRef
     on AutoDisposeFutureProviderRef<List<Rapat>> {
   /// The parameter `key` of this provider.
@@ -730,6 +738,8 @@ class FetchMeetingNotesProvider extends AutoDisposeFutureProvider<List<Rapat>> {
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchMeetingNotesRef on AutoDisposeFutureProviderRef<List<Rapat>> {
   /// The parameter `key` of this provider.
   String get key;
@@ -864,6 +874,8 @@ class FetchAllStaffProvider extends AutoDisposeFutureProvider<List<Staff>> {
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchAllStaffRef on AutoDisposeFutureProviderRef<List<Staff>> {
   /// The parameter `key` of this provider.
   String get key;
@@ -895,4 +907,4 @@ final meetingControllerProvider =
 
 typedef _$MeetingController = AutoDisposeAsyncNotifier<void>;
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

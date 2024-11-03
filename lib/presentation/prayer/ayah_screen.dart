@@ -169,7 +169,7 @@ class AyahScreen extends HookConsumerWidget {
 
   void _copyAyah(Ayah ayah, Surah surah) {
     final template =
-        '${ayah.arabicText}\n\n${ayah.translation}\n\n(QS.${surah?.namaLatin}: ${ayah.aya})';
+        '${ayah.arabicText}\n\n${ayah.translation}\n\n(QS.${surah.namaLatin}: ${ayah.aya})';
     Clipboard.setData(ClipboardData(text: template));
   }
 

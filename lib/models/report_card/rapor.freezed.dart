@@ -43,8 +43,12 @@ mixin _$Rapor {
   @JsonKey(name: 'img')
   String? get img => throw _privateConstructorUsedError;
 
+  /// Serializes this Rapor to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Rapor
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RaporCopyWith<Rapor> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -77,6 +81,8 @@ class _$RaporCopyWithImpl<$Res, $Val extends Rapor>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Rapor
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -170,6 +176,8 @@ class __$$RaporImplCopyWithImpl<$Res>
       _$RaporImpl _value, $Res Function(_$RaporImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Rapor
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -314,12 +322,14 @@ class _$RaporImpl implements _Rapor {
             (identical(other.img, img) || other.img == img));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, key, idKelas, kelas, semester,
       namaLengkap, nis, staff, kkm, rangking, keterangan, img);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Rapor
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RaporImplCopyWith<_$RaporImpl> get copyWith =>
@@ -382,8 +392,11 @@ abstract class _Rapor implements Rapor {
   @override
   @JsonKey(name: 'img')
   String? get img;
+
+  /// Create a copy of Rapor
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RaporImplCopyWith<_$RaporImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

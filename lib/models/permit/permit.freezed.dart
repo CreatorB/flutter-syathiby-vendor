@@ -43,8 +43,12 @@ mixin _$Permit {
   String? get alasan => throw _privateConstructorUsedError;
   String? get aproval => throw _privateConstructorUsedError;
 
+  /// Serializes this Permit to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Permit
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PermitCopyWith<Permit> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -83,6 +87,8 @@ class _$PermitCopyWithImpl<$Res, $Val extends Permit>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Permit
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -212,6 +218,8 @@ class __$$PermitImplCopyWithImpl<$Res>
       _$PermitImpl _value, $Res Function(_$PermitImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Permit
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -404,7 +412,7 @@ class _$PermitImpl implements _Permit {
             (identical(other.aproval, aproval) || other.aproval == aproval));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -426,7 +434,9 @@ class _$PermitImpl implements _Permit {
       alasan,
       aproval);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Permit
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PermitImplCopyWith<_$PermitImpl> get copyWith =>
@@ -501,8 +511,11 @@ abstract class _Permit implements Permit {
   String? get alasan;
   @override
   String? get aproval;
+
+  /// Create a copy of Permit
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PermitImplCopyWith<_$PermitImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

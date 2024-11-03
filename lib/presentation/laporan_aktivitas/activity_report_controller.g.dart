@@ -178,6 +178,8 @@ class FetchAllActivityReportProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchAllActivityReportRef on AutoDisposeFutureProviderRef<List<Absent>> {
   /// The parameter `key` of this provider.
   String get key;
@@ -336,6 +338,8 @@ class FetchAllActivityNameProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchAllActivityNameRef on AutoDisposeFutureProviderRef<List<Event>> {
   /// The parameter `key` of this provider.
   String get key;
@@ -373,4 +377,4 @@ final activityReportControllerProvider =
 
 typedef _$ActivityReportController = AutoDisposeAsyncNotifier<void>;
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

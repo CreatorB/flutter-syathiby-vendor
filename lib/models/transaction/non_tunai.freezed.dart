@@ -25,8 +25,12 @@ mixin _$NonTunai {
   String? get img => throw _privateConstructorUsedError;
   String? get inc => throw _privateConstructorUsedError;
 
+  /// Serializes this NonTunai to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NonTunai
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NonTunaiCopyWith<NonTunai> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$NonTunaiCopyWithImpl<$Res, $Val extends NonTunai>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NonTunai
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -97,6 +103,8 @@ class __$$NonTunaiImplCopyWithImpl<$Res>
       _$NonTunaiImpl _value, $Res Function(_$NonTunaiImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NonTunai
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -160,11 +168,13 @@ class _$NonTunaiImpl implements _NonTunai {
             (identical(other.inc, inc) || other.inc == inc));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, idLink, nameLink, img, inc);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NonTunai
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NonTunaiImplCopyWith<_$NonTunaiImpl> get copyWith =>
@@ -196,8 +206,11 @@ abstract class _NonTunai implements NonTunai {
   String? get img;
   @override
   String? get inc;
+
+  /// Create a copy of NonTunai
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NonTunaiImplCopyWith<_$NonTunaiImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

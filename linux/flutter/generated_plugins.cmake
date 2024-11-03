@@ -6,7 +6,6 @@ list(APPEND FLUTTER_PLUGIN_LIST
   dynamic_color
   file_saver
   file_selector_linux
-  maps_launcher
   url_launcher_linux
 )
 

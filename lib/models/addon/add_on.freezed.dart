@@ -38,8 +38,12 @@ mixin _$AddOn {
   String? get status => throw _privateConstructorUsedError;
   String? get number => throw _privateConstructorUsedError;
 
+  /// Serializes this AddOn to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AddOn
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AddOnCopyWith<AddOn> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -74,6 +78,8 @@ class _$AddOnCopyWithImpl<$Res, $Val extends AddOn>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AddOn
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -179,6 +185,8 @@ class __$$AddOnImplCopyWithImpl<$Res>
       _$AddOnImpl _value, $Res Function(_$AddOnImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AddOn
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -332,7 +340,7 @@ class _$AddOnImpl implements _AddOn {
             (identical(other.number, number) || other.number == number));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -350,7 +358,9 @@ class _$AddOnImpl implements _AddOn {
       status,
       number);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AddOn
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AddOnImplCopyWith<_$AddOnImpl> get copyWith =>
@@ -412,8 +422,11 @@ abstract class _AddOn implements AddOn {
   String? get status;
   @override
   String? get number;
+
+  /// Create a copy of AddOn
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AddOnImplCopyWith<_$AddOnImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

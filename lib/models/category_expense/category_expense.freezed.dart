@@ -25,8 +25,12 @@ mixin _$CategoryExpense {
   @JsonKey(name: 'name_expense_category', defaultValue: '')
   String? get nameExpenseCategory => throw _privateConstructorUsedError;
 
+  /// Serializes this CategoryExpense to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CategoryExpense
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CategoryExpenseCopyWith<CategoryExpense> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -53,6 +57,8 @@ class _$CategoryExpenseCopyWithImpl<$Res, $Val extends CategoryExpense>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CategoryExpense
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -94,6 +100,8 @@ class __$$CategoryExpenseImplCopyWithImpl<$Res>
       _$CategoryExpenseImpl _value, $Res Function(_$CategoryExpenseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CategoryExpense
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -147,12 +155,14 @@ class _$CategoryExpenseImpl implements _CategoryExpense {
                 other.nameExpenseCategory == nameExpenseCategory));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, idExpenseCategory, nameExpenseCategory);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CategoryExpense
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CategoryExpenseImplCopyWith<_$CategoryExpenseImpl> get copyWith =>
@@ -182,8 +192,11 @@ abstract class _CategoryExpense implements CategoryExpense {
   @override
   @JsonKey(name: 'name_expense_category', defaultValue: '')
   String? get nameExpenseCategory;
+
+  /// Create a copy of CategoryExpense
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CategoryExpenseImplCopyWith<_$CategoryExpenseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

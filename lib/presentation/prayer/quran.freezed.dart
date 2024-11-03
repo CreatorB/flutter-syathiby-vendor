@@ -23,8 +23,12 @@ mixin _$Quran {
   Surah get surah => throw _privateConstructorUsedError;
   Ayah get ayah => throw _privateConstructorUsedError;
 
+  /// Serializes this Quran to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Quran
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $QuranCopyWith<Quran> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -49,6 +53,8 @@ class _$QuranCopyWithImpl<$Res, $Val extends Quran>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Quran
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -67,6 +73,8 @@ class _$QuranCopyWithImpl<$Res, $Val extends Quran>
     ) as $Val);
   }
 
+  /// Create a copy of Quran
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SurahCopyWith<$Res> get surah {
@@ -75,6 +83,8 @@ class _$QuranCopyWithImpl<$Res, $Val extends Quran>
     });
   }
 
+  /// Create a copy of Quran
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AyahCopyWith<$Res> get ayah {
@@ -107,6 +117,8 @@ class __$$QuranImplCopyWithImpl<$Res>
       _$QuranImpl _value, $Res Function(_$QuranImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Quran
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -153,11 +165,13 @@ class _$QuranImpl implements _Quran {
             (identical(other.ayah, ayah) || other.ayah == ayah));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, surah, ayah);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Quran
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$QuranImplCopyWith<_$QuranImpl> get copyWith =>
@@ -181,8 +195,11 @@ abstract class _Quran implements Quran {
   Surah get surah;
   @override
   Ayah get ayah;
+
+  /// Create a copy of Quran
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$QuranImplCopyWith<_$QuranImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

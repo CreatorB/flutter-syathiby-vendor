@@ -31,8 +31,12 @@ mixin _$Tempat {
   dynamic get cukupbaik => throw _privateConstructorUsedError;
   dynamic get rusak => throw _privateConstructorUsedError;
 
+  /// Serializes this Tempat to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Tempat
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $TempatCopyWith<Tempat> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -64,6 +68,8 @@ class _$TempatCopyWithImpl<$Res, $Val extends Tempat>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Tempat
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -151,6 +157,8 @@ class __$$TempatImplCopyWithImpl<$Res>
       _$TempatImpl _value, $Res Function(_$TempatImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Tempat
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -274,7 +282,7 @@ class _$TempatImpl implements _Tempat {
             const DeepCollectionEquality().equals(other.rusak, rusak));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -289,7 +297,9 @@ class _$TempatImpl implements _Tempat {
       const DeepCollectionEquality().hash(cukupbaik),
       const DeepCollectionEquality().hash(rusak));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Tempat
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TempatImplCopyWith<_$TempatImpl> get copyWith =>
@@ -338,8 +348,11 @@ abstract class _Tempat implements Tempat {
   dynamic get cukupbaik;
   @override
   dynamic get rusak;
+
+  /// Create a copy of Tempat
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TempatImplCopyWith<_$TempatImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

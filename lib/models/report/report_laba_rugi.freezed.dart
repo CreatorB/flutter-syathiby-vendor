@@ -24,8 +24,12 @@ mixin _$ReportLabaRugi {
   Keuangan? get financialStatements => throw _privateConstructorUsedError;
   List<Penjualan>? get salesReport => throw _privateConstructorUsedError;
 
+  /// Serializes this ReportLabaRugi to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ReportLabaRugi
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ReportLabaRugiCopyWith<ReportLabaRugi> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -55,6 +59,8 @@ class _$ReportLabaRugiCopyWithImpl<$Res, $Val extends ReportLabaRugi>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ReportLabaRugi
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -78,6 +84,8 @@ class _$ReportLabaRugiCopyWithImpl<$Res, $Val extends ReportLabaRugi>
     ) as $Val);
   }
 
+  /// Create a copy of ReportLabaRugi
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $InfoCopyWith<$Res>? get info {
@@ -90,6 +98,8 @@ class _$ReportLabaRugiCopyWithImpl<$Res, $Val extends ReportLabaRugi>
     });
   }
 
+  /// Create a copy of ReportLabaRugi
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KeuanganCopyWith<$Res>? get financialStatements {
@@ -130,6 +140,8 @@ class __$$ReportLabaRugiImplCopyWithImpl<$Res>
       _$ReportLabaRugiImpl _value, $Res Function(_$ReportLabaRugiImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ReportLabaRugi
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -195,12 +207,14 @@ class _$ReportLabaRugiImpl implements _ReportLabaRugi {
                 .equals(other._salesReport, _salesReport));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, info, financialStatements,
       const DeepCollectionEquality().hash(_salesReport));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ReportLabaRugi
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ReportLabaRugiImplCopyWith<_$ReportLabaRugiImpl> get copyWith =>
@@ -230,8 +244,11 @@ abstract class _ReportLabaRugi implements ReportLabaRugi {
   Keuangan? get financialStatements;
   @override
   List<Penjualan>? get salesReport;
+
+  /// Create a copy of ReportLabaRugi
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ReportLabaRugiImplCopyWith<_$ReportLabaRugiImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -248,8 +265,12 @@ mixin _$Info {
   @JsonKey(name: 'amount_transaction')
   String? get amountTransaction => throw _privateConstructorUsedError;
 
+  /// Serializes this Info to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Info
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $InfoCopyWith<Info> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -274,6 +295,8 @@ class _$InfoCopyWithImpl<$Res, $Val extends Info>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Info
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -318,6 +341,8 @@ class __$$InfoImplCopyWithImpl<$Res>
   __$$InfoImplCopyWithImpl(_$InfoImpl _value, $Res Function(_$InfoImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Info
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -379,12 +404,14 @@ class _$InfoImpl implements _Info {
                 other.amountTransaction == amountTransaction));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, netSales, average, amountTransaction);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Info
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InfoImplCopyWith<_$InfoImpl> get copyWith =>
@@ -415,8 +442,11 @@ abstract class _Info implements Info {
   @override
   @JsonKey(name: 'amount_transaction')
   String? get amountTransaction;
+
+  /// Create a copy of Info
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InfoImplCopyWith<_$InfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -437,8 +467,12 @@ mixin _$Penjualan {
   @JsonKey(name: 'selling_price')
   String? get sellingPrice => throw _privateConstructorUsedError;
 
+  /// Serializes this Penjualan to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Penjualan
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PenjualanCopyWith<Penjualan> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -466,6 +500,8 @@ class _$PenjualanCopyWithImpl<$Res, $Val extends Penjualan>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Penjualan
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -524,6 +560,8 @@ class __$$PenjualanImplCopyWithImpl<$Res>
       _$PenjualanImpl _value, $Res Function(_$PenjualanImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Penjualan
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -607,12 +645,14 @@ class _$PenjualanImpl implements _Penjualan {
                 other.sellingPrice == sellingPrice));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, idProduct, nameProduct, amount, totalPrice, sellingPrice);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Penjualan
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PenjualanImplCopyWith<_$PenjualanImpl> get copyWith =>
@@ -652,8 +692,11 @@ abstract class _Penjualan implements Penjualan {
   @override
   @JsonKey(name: 'selling_price')
   String? get sellingPrice;
+
+  /// Create a copy of Penjualan
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PenjualanImplCopyWith<_$PenjualanImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -680,8 +723,12 @@ mixin _$Keuangan {
   String? get grossProfit => throw _privateConstructorUsedError;
   String? get expenses => throw _privateConstructorUsedError;
 
+  /// Serializes this Keuangan to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Keuangan
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KeuanganCopyWith<Keuangan> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -714,6 +761,8 @@ class _$KeuanganCopyWithImpl<$Res, $Val extends Keuangan>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Keuangan
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -802,6 +851,8 @@ class __$$KeuanganImplCopyWithImpl<$Res>
       _$KeuanganImpl _value, $Res Function(_$KeuanganImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Keuangan
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -935,7 +986,7 @@ class _$KeuanganImpl implements _Keuangan {
                 other.expenses == expenses));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -950,7 +1001,9 @@ class _$KeuanganImpl implements _Keuangan {
       grossProfit,
       expenses);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Keuangan
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$KeuanganImplCopyWith<_$KeuanganImpl> get copyWith =>
@@ -1005,8 +1058,11 @@ abstract class _Keuangan implements Keuangan {
   String? get grossProfit;
   @override
   String? get expenses;
+
+  /// Create a copy of Keuangan
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$KeuanganImplCopyWith<_$KeuanganImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

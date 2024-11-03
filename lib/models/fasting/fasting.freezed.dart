@@ -39,8 +39,12 @@ mixin _$Puasa {
   int? get totalmsw => throw _privateConstructorUsedError;
   int? get totalpi => throw _privateConstructorUsedError;
 
+  /// Serializes this Puasa to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Puasa
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PuasaCopyWith<Puasa> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -77,6 +81,8 @@ class _$PuasaCopyWithImpl<$Res, $Val extends Puasa>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Puasa
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -194,6 +200,8 @@ class __$$PuasaImplCopyWithImpl<$Res>
       _$PuasaImpl _value, $Res Function(_$PuasaImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Puasa
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -365,7 +373,7 @@ class _$PuasaImpl implements _Puasa {
             (identical(other.totalpi, totalpi) || other.totalpi == totalpi));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -385,7 +393,9 @@ class _$PuasaImpl implements _Puasa {
       totalmsw,
       totalpi);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Puasa
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PuasaImplCopyWith<_$PuasaImpl> get copyWith =>
@@ -452,8 +462,11 @@ abstract class _Puasa implements Puasa {
   int? get totalmsw;
   @override
   int? get totalpi;
+
+  /// Create a copy of Puasa
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PuasaImplCopyWith<_$PuasaImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

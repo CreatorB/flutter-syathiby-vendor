@@ -165,6 +165,8 @@ class FetchAllTahfidzProvider extends AutoDisposeFutureProvider<List<Tahfidz>> {
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchAllTahfidzRef on AutoDisposeFutureProviderRef<List<Tahfidz>> {
   /// The parameter `key` of this provider.
   String get key;
@@ -318,6 +320,8 @@ class FetchDetailTahfidzProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchDetailTahfidzRef on AutoDisposeFutureProviderRef<List<Tahfidz>> {
   /// The parameter `key` of this provider.
   String get key;
@@ -467,6 +471,8 @@ class FetchDetailTahfidzGradeProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchDetailTahfidzGradeRef
     on AutoDisposeFutureProviderRef<List<Tahfidz>> {
   /// The parameter `key` of this provider.
@@ -617,6 +623,8 @@ class FetchStudentTahfidzFilterProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchStudentTahfidzFilterRef
     on AutoDisposeFutureProviderRef<List<Siswa>> {
   /// The parameter `key` of this provider.
@@ -777,6 +785,8 @@ class FetchAllTahfidzGradeProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchAllTahfidzGradeRef on AutoDisposeFutureProviderRef<List<Tahfidz>> {
   /// The parameter `key` of this provider.
   String get key;
@@ -917,6 +927,8 @@ class FetchTahfidzTypeProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchTahfidzTypeRef on AutoDisposeFutureProviderRef<List<Tahfidz>> {
   /// The parameter `key` of this provider.
   String get key;
@@ -1060,6 +1072,8 @@ class FetchTahfidzGradeTypeProvider
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FetchTahfidzGradeTypeRef on AutoDisposeFutureProviderRef<List<Tahfidz>> {
   /// The parameter `key` of this provider.
   String get key;
@@ -1096,4 +1110,4 @@ final tahfidzControllerProvider =
 
 typedef _$TahfidzController = AutoDisposeAsyncNotifier<void>;
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

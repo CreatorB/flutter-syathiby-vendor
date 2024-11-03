@@ -1,7 +1,7 @@
 import 'package:adaptive_dialog/adaptive_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:maps_launcher/maps_launcher.dart';
+import 'package:map_launcher/map_launcher.dart';
 import 'package:al_ukhuwah/presentation/report/report_controller.dart';
 import 'package:al_ukhuwah/utils/custom_avatar_widget.dart';
 import 'package:al_ukhuwah/utils/extension/color.dart';
@@ -119,14 +119,33 @@ class DetailAttendanceReportScreen extends HookConsumerWidget {
                               const Text('Absen Masuk'),
                             ],
                           ),
-                          onPressed: () {
+                          onPressed: () async {
                             final location = absent.location?.split(', ');
                             final latitude =
                                 double.tryParse('${location?.first}');
                             final longitude =
                                 double.tryParse('${location?.last}');
                             if (latitude == null || longitude == null) return;
-                            MapsLauncher.launchCoordinates(latitude, longitude);
+                            final isAvailable =
+                                await MapLauncher.isMapAvailable(
+                                    MapType.google);
+                            if (isAvailable == true) {
+                              await MapLauncher.showMarker(
+                                mapType: MapType.google,
+                                coords: Coords(latitude, longitude),
+                                title: "Lokasi Absensi",
+                                description: 'Lokasi Absensi',
+                              );
+                            } else {
+                              final availableMaps =
+                                  await MapLauncher.installedMaps;
+                              await availableMaps.first.showMarker(
+                                coords: Coords(latitude, longitude),
+                                title: "Lokasi Absensi",
+                                description: 'Lokasi Absensi',
+                              );
+                            }
+                            // MapsLauncher.launchCoordinates(latitude, longitude);
                           },
                         ),
                         IconButton(
@@ -140,14 +159,33 @@ class DetailAttendanceReportScreen extends HookConsumerWidget {
                               const Text('Absen Pulang'),
                             ],
                           ),
-                          onPressed: () {
+                          onPressed: () async {
                             final location = absent.locationfinish?.split(', ');
                             final latitude =
                                 double.tryParse('${location?.first}');
                             final longitude =
                                 double.tryParse('${location?.last}');
                             if (latitude == null || longitude == null) return;
-                            MapsLauncher.launchCoordinates(latitude, longitude);
+
+                            final isAvailable =
+                                await MapLauncher.isMapAvailable(
+                                    MapType.google);
+                            if (isAvailable == true) {
+                              await MapLauncher.showMarker(
+                                mapType: MapType.google,
+                                coords: Coords(latitude, longitude),
+                                title: "Lokasi Absensi",
+                                description: 'Lokasi Absensi',
+                              );
+                            } else {
+                              final availableMaps =
+                                  await MapLauncher.installedMaps;
+                              await availableMaps.first.showMarker(
+                                coords: Coords(latitude, longitude),
+                                title: "Lokasi Absensi",
+                                description: 'Lokasi Absensi',
+                              );
+                            }
                           },
                         ),
                       ],

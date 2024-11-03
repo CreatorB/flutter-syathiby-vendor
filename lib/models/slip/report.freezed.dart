@@ -46,8 +46,12 @@ mixin _$Report {
   int? get finish => throw _privateConstructorUsedError;
   String? get presence => throw _privateConstructorUsedError;
 
+  /// Serializes this Report to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Report
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ReportCopyWith<Report> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -88,6 +92,8 @@ class _$ReportCopyWithImpl<$Res, $Val extends Report>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Report
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -229,6 +235,8 @@ class __$$ReportImplCopyWithImpl<$Res>
       _$ReportImpl _value, $Res Function(_$ReportImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Report
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -443,7 +451,7 @@ class _$ReportImpl implements _Report {
                 other.presence == presence));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -468,7 +476,9 @@ class _$ReportImpl implements _Report {
         presence
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Report
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ReportImplCopyWith<_$ReportImpl> get copyWith =>
@@ -550,8 +560,11 @@ abstract class _Report implements Report {
   int? get finish;
   @override
   String? get presence;
+
+  /// Create a copy of Report
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ReportImplCopyWith<_$ReportImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

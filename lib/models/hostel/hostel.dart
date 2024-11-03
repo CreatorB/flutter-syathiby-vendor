@@ -10,13 +10,14 @@ class Asrama with _$Asrama {
     @JsonKey(name: 'id_asrama') String? idAsrama,
     @JsonKey(name: 'nama_asrama') String? namaAsrama,
     @JsonKey(name: 'jumlah_santri') int? jumlahSantri,
-    @JsonKey(name: 'musrif') String? musrif,
+    @JsonKey(name: 'musrif') dynamic musrif,
     @JsonKey(name: 'date') String? date,
     @JsonKey(name: 'status') String? status,
     @JsonKey(name: 'dijemput') int? dijemput,
     @JsonKey(name: 'dikembalikan') int? dikembalikan,
     @JsonKey(name: 'belumpulang') int? belumpulang,
-    @JsonKey(name: 'belumkembali') int? belumkembali,
+    @JsonKey(name: 'belumkembali') dynamic belumkembali,
+    @JsonKey(name: 'ontime') int? ontime,
   }) = _Asrama;
 
   factory Asrama.fromJson(Map<String, dynamic> json) => _$AsramaFromJson(json);

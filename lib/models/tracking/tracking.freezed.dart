@@ -28,8 +28,12 @@ mixin _$Tracking {
   String? get latitude => throw _privateConstructorUsedError;
   String? get longitude => throw _privateConstructorUsedError;
 
+  /// Serializes this Tracking to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Tracking
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $TrackingCopyWith<Tracking> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -59,6 +63,8 @@ class _$TrackingCopyWithImpl<$Res, $Val extends Tracking>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Tracking
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -129,6 +135,8 @@ class __$$TrackingImplCopyWithImpl<$Res>
       _$TrackingImpl _value, $Res Function(_$TrackingImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Tracking
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -227,12 +235,14 @@ class _$TrackingImpl implements _Tracking {
                 other.longitude == longitude));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, full_name, phone_number, img,
       date_update, latlong, latitude, longitude);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Tracking
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TrackingImplCopyWith<_$TrackingImpl> get copyWith =>
@@ -273,8 +283,11 @@ abstract class _Tracking implements Tracking {
   String? get latitude;
   @override
   String? get longitude;
+
+  /// Create a copy of Tracking
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TrackingImplCopyWith<_$TrackingImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

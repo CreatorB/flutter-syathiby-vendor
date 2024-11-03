@@ -26,8 +26,12 @@ mixin _$DetailJob {
   String? get status => throw _privateConstructorUsedError;
   String? get operator => throw _privateConstructorUsedError;
 
+  /// Serializes this DetailJob to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DetailJob
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DetailJobCopyWith<DetailJob> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -55,6 +59,8 @@ class _$DetailJobCopyWithImpl<$Res, $Val extends DetailJob>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DetailJob
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -113,6 +119,8 @@ class __$$DetailJobImplCopyWithImpl<$Res>
       _$DetailJobImpl _value, $Res Function(_$DetailJobImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DetailJob
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -186,12 +194,14 @@ class _$DetailJobImpl implements _DetailJob {
                 other.operator == operator));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, no_invoice, note, date, status, operator);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DetailJob
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DetailJobImplCopyWith<_$DetailJobImpl> get copyWith =>
@@ -226,8 +236,11 @@ abstract class _DetailJob implements DetailJob {
   String? get status;
   @override
   String? get operator;
+
+  /// Create a copy of DetailJob
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DetailJobImplCopyWith<_$DetailJobImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -74,7 +74,7 @@ class AddItemScreen extends HookConsumerWidget {
       ref.invalidate(fetchAllItemProvider);
     }
 
-    debugPrint('${transactionController}');
+    debugPrint('$transactionController');
 
     return GestureDetector(
       onTap: () {

@@ -21,6 +21,8 @@ final fetchMorningDhikrProvider =
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef FetchMorningDhikrRef = AutoDisposeFutureProviderRef<List<Dhikr>>;
 String _$fetchEveningDhikrHash() => r'f2fa108b39838ad9ef1e2f997d3a1367d17c3680';
 
@@ -37,6 +39,8 @@ final fetchEveningDhikrProvider =
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef FetchEveningDhikrRef = AutoDisposeFutureProviderRef<List<Dhikr>>;
 String _$fetchPrayListHash() => r'cf89c055421bf91b8652440d6f95c1f0fef7c03f';
 
@@ -52,6 +56,8 @@ final fetchPrayListProvider = AutoDisposeFutureProvider<PrayResponse>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef FetchPrayListRef = AutoDisposeFutureProviderRef<PrayResponse>;
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

@@ -5,7 +5,6 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:form_builder_validators/form_builder_validators.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:intl/intl.dart';
-import 'package:qr_bar_code_scanner_dialog/qr_bar_code_scanner_dialog.dart';
 import 'package:al_ukhuwah/presentation/keuangan/student_savings_controller.dart';
 import 'package:al_ukhuwah/utils/extension/typography.dart';
 import 'package:al_ukhuwah/utils/extension/ui.dart';
@@ -16,6 +15,7 @@ import '../../di/providers.dart';
 import '../../models/student/siswa.dart';
 import '../../utils/custom_avatar_widget.dart';
 import '../pelanggaran/violation_controller.dart';
+import '../qr/scan_barcode_screen.dart';
 
 class StudentTransactionScreen extends HookConsumerWidget {
   final String? type;
@@ -92,33 +92,32 @@ class StudentTransactionScreen extends HookConsumerWidget {
           ),
           IconButton(
             onPressed: () async {
-              QrBarCodeScannerDialog().getScannedQrBarCode(
+              showModalBottomSheet(
                 context: context,
-                onCode: (scanTextId) async {
-                  try {
-                    final isEmpty = scanTextId == '-1' || scanTextId == null;
-                    if (isEmpty || !context.mounted) {
-                      return;
+                builder: (context) => ScanBarcodeScreen(
+                  isSingleCapture: true,
+                  onCapture: (scanTextId) async {
+                    try {
+                      final studentId = scanTextId.split('-').firstOrNull;
+                      if (studentId == null) {
+                        context.showErrorMessage('ID Siswa tidak ditemukan');
+                        return;
+                      }
+                      final result = await ref.read(
+                        searchStudentTransactionProvider(
+                          key: key,
+                          query: studentId,
+                          type: '$type',
+                        ).future,
+                      );
+                      final student = result.firstOrNull;
+                      if (student == null || !context.mounted) return;
+                      _addTransaction(context, ref, key, student);
+                    } catch (error) {
+                      context.showErrorMessage('Data tidak ditemukan');
                     }
-                    final studentId = scanTextId.split('-').firstOrNull;
-                    if (studentId == null) {
-                      context.showErrorMessage('ID Siswa tidak ditemukan');
-                      return;
-                    }
-                    final result = await ref.read(
-                      searchStudentTransactionProvider(
-                        key: key,
-                        query: studentId,
-                        type: '$type',
-                      ).future,
-                    );
-                    final student = result.firstOrNull;
-                    if (student == null || !context.mounted) return;
-                    _addTransaction(context, ref, key, student);
-                  } catch (error) {
-                    context.showErrorMessage('Data tidak ditemukan');
-                  }
-                },
+                  },
+                ),
               );
             },
             icon: const Icon(Icons.qr_code_scanner),

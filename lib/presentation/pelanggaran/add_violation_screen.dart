@@ -218,8 +218,8 @@ class AddViolationScreen extends HookConsumerWidget {
                         ),
                         validator: FormBuilderValidators.compose(
                           [
-                            FormBuilderValidators.dateString(),
                             FormBuilderValidators.required(),
+                            FormBuilderValidators.date(),
                           ],
                         ),
                         keyboardType: TextInputType.datetime,

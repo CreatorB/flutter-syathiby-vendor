@@ -14,9 +14,9 @@ class ScaffoldNestedNavigation extends HookConsumerWidget {
     return AdaptiveScaffold(
       // An option to override the default breakpoints used for small, medium,
       // and large.
-      smallBreakpoint: const WidthPlatformBreakpoint(end: 700),
-      mediumBreakpoint: const WidthPlatformBreakpoint(begin: 700, end: 1000),
-      largeBreakpoint: const WidthPlatformBreakpoint(begin: 1000),
+      // smallBreakpoint: const Breakpoints.small(end: 700),
+      // mediumBreakpoint: const WidthPlatformBreakpoint(begin: 700, end: 1000),
+      // largeBreakpoint: const WidthPlatformBreakpoint(begin: 1000),
       useDrawer: false,
       selectedIndex: navigationShell.currentIndex,
       onSelectedIndexChange: (int index) {

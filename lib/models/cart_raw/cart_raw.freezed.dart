@@ -31,8 +31,12 @@ mixin _$CartRaw {
   @JsonKey(name: 'product')
   RawMaterial? get product => throw _privateConstructorUsedError;
 
+  /// Serializes this CartRaw to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CartRaw
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CartRawCopyWith<CartRaw> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -61,6 +65,8 @@ class _$CartRawCopyWithImpl<$Res, $Val extends CartRaw>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CartRaw
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -94,6 +100,8 @@ class _$CartRawCopyWithImpl<$Res, $Val extends CartRaw>
     ) as $Val);
   }
 
+  /// Create a copy of CartRaw
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RawMaterialCopyWith<$Res>? get product {
@@ -133,6 +141,8 @@ class __$$CartRawImplCopyWithImpl<$Res>
       _$CartRawImpl _value, $Res Function(_$CartRawImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CartRaw
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -215,12 +225,14 @@ class _$CartRawImpl implements _CartRaw {
             (identical(other.product, product) || other.product == product));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, position, count, note, newPrice, product);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CartRaw
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CartRawImplCopyWith<_$CartRawImpl> get copyWith =>
@@ -259,8 +271,11 @@ abstract class _CartRaw implements CartRaw {
   @override
   @JsonKey(name: 'product')
   RawMaterial? get product;
+
+  /// Create a copy of CartRaw
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CartRawImplCopyWith<_$CartRawImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

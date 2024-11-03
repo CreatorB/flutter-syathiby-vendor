@@ -46,8 +46,12 @@ mixin _$Jadwal {
   String? get finish_hour => throw _privateConstructorUsedError;
   String? get tingkat => throw _privateConstructorUsedError;
 
+  /// Serializes this Jadwal to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Jadwal
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $JadwalCopyWith<Jadwal> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -94,6 +98,8 @@ class _$JadwalCopyWithImpl<$Res, $Val extends Jadwal>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Jadwal
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -271,6 +277,8 @@ class __$$JadwalImplCopyWithImpl<$Res>
       _$JadwalImpl _value, $Res Function(_$JadwalImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Jadwal
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -535,7 +543,7 @@ class _$JadwalImpl implements _Jadwal {
             (identical(other.tingkat, tingkat) || other.tingkat == tingkat));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -566,7 +574,9 @@ class _$JadwalImpl implements _Jadwal {
         tingkat
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Jadwal
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$JadwalImplCopyWith<_$JadwalImpl> get copyWith =>
@@ -660,8 +670,11 @@ abstract class _Jadwal implements Jadwal {
   String? get finish_hour;
   @override
   String? get tingkat;
+
+  /// Create a copy of Jadwal
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$JadwalImplCopyWith<_$JadwalImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

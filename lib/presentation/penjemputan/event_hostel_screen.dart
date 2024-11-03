@@ -2,7 +2,6 @@ import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:qr_bar_code_scanner_dialog/qr_bar_code_scanner_dialog.dart';
 import 'package:al_ukhuwah/di/providers.dart';
 import 'package:al_ukhuwah/l10n/string_hardcoded.dart';
 import 'package:al_ukhuwah/presentation/penjemputan/event_controller.dart';
@@ -13,6 +12,7 @@ import 'package:skeletonizer/skeletonizer.dart';
 
 import '../../models/student/siswa.dart';
 import '../pelanggaran/violation_controller.dart';
+import '../qr/scan_barcode_screen.dart';
 
 class EventHostelScreen extends HookConsumerWidget {
   final String? eventId, eventName;
@@ -41,40 +41,39 @@ class EventHostelScreen extends HookConsumerWidget {
         actions: [
           IconButton(
             onPressed: () async {
-              QrBarCodeScannerDialog().getScannedQrBarCode(
+              showModalBottomSheet(
                 context: context,
-                onCode: (scanTextId) async {
-                  final isEmpty = scanTextId == '-1' || scanTextId == null;
-                  if (isEmpty || !context.mounted) {
-                    return;
-                  }
-                  try {
-                    final result = await ref.read(
-                      searchStudentHomecomingProvider(
-                        key: key,
-                        id: scanTextId,
-                        eventId: '$eventId',
-                      ).future,
-                    );
-                    final selected = result.firstOrNull;
-                    if (!context.mounted) return;
-                    if (selected == null) {
-                      context.showErrorMessage('Data tidak ditemukan');
-                      return;
+                builder: (context) => ScanBarcodeScreen(
+                  isSingleCapture: true,
+                  onCapture: (scanTextId) async {
+                    try {
+                      final result = await ref.read(
+                        searchStudentHomecomingProvider(
+                          key: key,
+                          id: scanTextId,
+                          eventId: '$eventId',
+                        ).future,
+                      );
+                      final selected = result.firstOrNull;
+                      if (!context.mounted) return;
+                      if (selected == null) {
+                        context.showErrorMessage('Data tidak ditemukan');
+                        return;
+                      }
+                      final code = '${selected.nis}-${selected.idKelas}';
+                      context.goNamed(
+                        AppRoute.detailHomecoming.name,
+                        queryParameters: {
+                          'id': code,
+                          'eventId': '$eventId',
+                          'eventName': '$eventName',
+                        },
+                      );
+                    } catch (error) {
+                      context.showErrorMessage('Data Tidak ditemukan');
                     }
-                    final code = '${selected.nis}-${selected.idKelas}';
-                    context.goNamed(
-                      AppRoute.detailHomecoming.name,
-                      queryParameters: {
-                        'id': code,
-                        'eventId': '$eventId',
-                        'eventName': '$eventName',
-                      },
-                    );
-                  } catch (error) {
-                    context.showErrorMessage('Data Tidak ditemukan');
-                  }
-                },
+                  },
+                ),
               );
             },
             icon: const Icon(Icons.qr_code_scanner),

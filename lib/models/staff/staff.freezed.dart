@@ -81,8 +81,12 @@ mixin _$Staff {
   @JsonKey(name: 'kinerja')
   String? get kinerja => throw _privateConstructorUsedError;
 
+  /// Serializes this Staff to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Staff
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $StaffCopyWith<Staff> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -134,6 +138,8 @@ class _$StaffCopyWithImpl<$Res, $Val extends Staff>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Staff
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -341,6 +347,8 @@ class __$$StaffImplCopyWithImpl<$Res>
       _$StaffImpl _value, $Res Function(_$StaffImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Staff
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -686,7 +694,7 @@ class _$StaffImpl implements _Staff {
             (identical(other.kinerja, kinerja) || other.kinerja == kinerja));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -722,7 +730,9 @@ class _$StaffImpl implements _Staff {
         kinerja
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Staff
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$StaffImplCopyWith<_$StaffImpl> get copyWith =>
@@ -861,8 +871,11 @@ abstract class _Staff implements Staff {
   @override
   @JsonKey(name: 'kinerja')
   String? get kinerja;
+
+  /// Create a copy of Staff
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$StaffImplCopyWith<_$StaffImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

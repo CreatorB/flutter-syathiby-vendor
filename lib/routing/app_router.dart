@@ -99,7 +99,7 @@ import 'package:al_ukhuwah/presentation/rekap/filter_recap_presence_screen.dart'
 import 'package:al_ukhuwah/presentation/rekap/manual_attendance_screen.dart';
 import 'package:al_ukhuwah/presentation/rekap/recap_presence_screen.dart';
 import 'package:al_ukhuwah/presentation/report/attendance_recap_screen.dart';
-import 'package:al_ukhuwah/presentation/report/attendance_report_screen.dart';
+import 'package:al_ukhuwah/presentation/report/attendance_report_month_screen.dart';
 import 'package:al_ukhuwah/presentation/report/detail_attendance_report_screen.dart';
 import 'package:al_ukhuwah/presentation/report/report_presence_screen.dart';
 import 'package:al_ukhuwah/presentation/reward/add_reward_screen.dart';
@@ -152,6 +152,8 @@ import '../presentation/puasa/add_report_fasting_student.dart';
 import '../presentation/puasa/report_fasting_student_screen.dart';
 import '../presentation/rapat/detail_meeting_screen.dart';
 import '../presentation/rekap/add_manual_attendance_screen.dart';
+import '../presentation/rekap/data_presence_screen.dart';
+import '../presentation/report/attendance_report_screen.dart';
 import '../presentation/report/student_fasting_screen.dart';
 import '../presentation/setting/face_preview_screen.dart';
 import '../presentation/setting/fingerprint_screen.dart';
@@ -338,6 +340,8 @@ enum AppRoute {
   orderItem,
   addItem,
   scanQr,
+  dataPresence,
+  attendanceRecapMonth,
 }
 
 final _rootNavigatorKey = GlobalKey<NavigatorState>();
@@ -354,7 +358,7 @@ GoRouter goRouter(GoRouterRef ref) {
     navigatorKey: _rootNavigatorKey,
     // errorBuilder: (context, state) => const NotFoundScreen(),
     redirect: (context, state) async {
-      final session = await ref
+      final session = ref
           .read(sharedPreferencesHelperProvider)
           .getObject<Map<String, dynamic>>(AppConstant.keyLoginSession);
 
@@ -1010,12 +1014,9 @@ GoRouter goRouter(GoRouterRef ref) {
                   ),
                   GoRoute(
                     path: 'recap-attendance',
-                    name: AppRoute.recapAttendance.name,
-                    builder: (context, state) => AttendanceRecapScreen(
-                      startDate: state.uri.queryParameters['startDate'],
-                      endDate: state.uri.queryParameters['endDate'],
-                      userKey: state.uri.queryParameters['userKey'],
-                    ),
+                    name: AppRoute.attendanceRecapMonth.name,
+                    builder: (context, state) =>
+                        const AttendanceReportMonthScreen(),
                   ),
                   // Manage Kitchen
                   GoRoute(
@@ -1227,6 +1228,11 @@ GoRouter goRouter(GoRouterRef ref) {
                         ),
                       ),
                     ],
+                  ),
+                  GoRoute(
+                    path: 'data-presence',
+                    name: AppRoute.dataPresence.name,
+                    builder: (context, state) => const DataPresenceScreen(),
                   ),
                   // Recap Presence
                   GoRoute(

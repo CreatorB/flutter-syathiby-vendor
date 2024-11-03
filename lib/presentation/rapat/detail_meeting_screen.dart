@@ -9,7 +9,6 @@ import 'package:flutter_image_compress/flutter_image_compress.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:qr_bar_code_scanner_dialog/qr_bar_code_scanner_dialog.dart';
 import 'package:al_ukhuwah/utils/custom_avatar_widget.dart';
 import 'package:al_ukhuwah/utils/extension/typography.dart';
 import 'package:al_ukhuwah/utils/extension/ui.dart';
@@ -18,6 +17,7 @@ import 'package:skeletonizer/skeletonizer.dart';
 
 import '../../di/providers.dart';
 import '../../models/meeting/meeting.dart';
+import '../qr/scan_barcode_screen.dart';
 import 'meeting_controller.dart';
 
 class DetailMeetingScreen extends HookConsumerWidget {
@@ -83,39 +83,37 @@ class DetailMeetingScreen extends HookConsumerWidget {
           ),
           IconButton(
             onPressed: () async {
-              try {
-                final position = await ref.read(
-                  getCurrentLocationProvider.future,
-                );
-                if (!context.mounted) return;
-
-                QrBarCodeScannerDialog().getScannedQrBarCode(
-                  context: context,
-                  onCode: (scanTextId) async {
-                    final isEmpty = scanTextId == '-1' || scanTextId == null;
-                    if (isEmpty || !context.mounted) {
-                      return;
+              showModalBottomSheet(
+                context: context,
+                builder: (context) => ScanBarcodeScreen(
+                  isSingleCapture: true,
+                  onCapture: (scanTextId) async {
+                    try {
+                      final position = await ref.read(
+                        getCurrentLocationProvider.future,
+                      );
+                      if (!context.mounted) return;
+                      final location =
+                          '${position.latitude},${position.longitude}';
+                      final result = await ref
+                          .read(meetingControllerProvider.notifier)
+                          .meetingPresence(
+                        key: key,
+                        meetingId: scanTextId,
+                        location: location,
+                        meetingFor: '${position.isMocked}',
+                      );
+                      if (result == null || !context.mounted) return;
+                      context.showSuccessMessage(result.msg);
+                      ref.invalidate(fetchMeetingParticipantProvider);
+                    } catch (error) {
+                      context.showErrorMessage(
+                        'Lokasi diperlukan untuk absensi QR Code kehadiran',
+                      );
                     }
-                    final location =
-                        '${position.latitude},${position.longitude}';
-                    final result = await ref
-                        .read(meetingControllerProvider.notifier)
-                        .meetingPresence(
-                          key: key,
-                          meetingId: scanTextId,
-                          location: location,
-                          meetingFor: '${position.isMocked}',
-                        );
-                    if (result == null || !context.mounted) return;
-                    context.showSuccessMessage(result.msg);
-                    ref.invalidate(fetchMeetingParticipantProvider);
                   },
-                );
-              } catch (error) {
-                context.showErrorMessage(
-                  'Lokasi diperlukan untuk absensi QR Code kehadiran',
-                );
-              }
+                ),
+              );
             },
             icon: const Icon(Icons.qr_code_scanner),
           ),

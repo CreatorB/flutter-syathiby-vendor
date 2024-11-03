@@ -195,7 +195,7 @@ class SettingScreen extends HookConsumerWidget {
                   ),
                 ),
               ),
-              Container(
+              SizedBox(
                 width: double.infinity,
                 child: Text(
                   'v1.0',

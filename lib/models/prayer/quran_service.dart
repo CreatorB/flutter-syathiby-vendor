@@ -1,6 +1,5 @@
 import 'package:dio/dio.dart';
 import 'package:al_ukhuwah/models/prayer/ayah/ayah_response.dart';
-import 'package:al_ukhuwah/models/prayer/surah/surah.dart';
 import 'package:retrofit/retrofit.dart';
 
 part 'quran_service.g.dart';

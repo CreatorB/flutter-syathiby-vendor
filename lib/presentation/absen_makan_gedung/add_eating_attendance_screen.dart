@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:form_builder_validators/form_builder_validators.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:qr_bar_code_scanner_dialog/qr_bar_code_scanner_dialog.dart';
 import 'package:al_ukhuwah/presentation/absen_makan_gedung/eating_controller.dart';
 import 'package:al_ukhuwah/presentation/pelanggaran/violation_controller.dart';
 import 'package:al_ukhuwah/utils/extension/typography.dart';
@@ -15,6 +14,7 @@ import 'package:speech_to_text/speech_to_text.dart';
 import '../../di/providers.dart';
 import '../../models/student/siswa.dart';
 import '../../utils/custom_avatar_widget.dart';
+import '../qr/scan_barcode_screen.dart';
 
 class AddEatingAttendanceScreen extends HookConsumerWidget {
   final String? date, time;
@@ -100,21 +100,20 @@ class AddEatingAttendanceScreen extends HookConsumerWidget {
           ),
           IconButton(
             onPressed: () async {
-              QrBarCodeScannerDialog().getScannedQrBarCode(
+              showModalBottomSheet(
                 context: context,
-                onCode: (scanTextId) async {
-                  final isEmpty = scanTextId == '-1' || scanTextId == null;
-                  if (isEmpty || !context.mounted) {
-                    return;
-                  }
-                  _addAttendance(
-                    context,
-                    ref,
-                    key,
-                    scanTextId,
-                    '$time',
-                  );
-                },
+                builder: (context) => ScanBarcodeScreen(
+                  isSingleCapture: false,
+                  onCapture: (scanTextId) {
+                    _addAttendance(
+                      context,
+                      ref,
+                      key,
+                      scanTextId,
+                      '$time',
+                    );
+                  },
+                ),
               );
             },
             icon: const Icon(Icons.qr_code_scanner),

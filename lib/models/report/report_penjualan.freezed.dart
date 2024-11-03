@@ -23,8 +23,12 @@ mixin _$ReportPenjualan {
   Info? get info => throw _privateConstructorUsedError;
   List<Penjualan>? get salesReport => throw _privateConstructorUsedError;
 
+  /// Serializes this ReportPenjualan to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ReportPenjualan
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ReportPenjualanCopyWith<ReportPenjualan> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$ReportPenjualanCopyWithImpl<$Res, $Val extends ReportPenjualan>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ReportPenjualan
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -68,6 +74,8 @@ class _$ReportPenjualanCopyWithImpl<$Res, $Val extends ReportPenjualan>
     ) as $Val);
   }
 
+  /// Create a copy of ReportPenjualan
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $InfoCopyWith<$Res>? get info {
@@ -103,6 +111,8 @@ class __$$ReportPenjualanImplCopyWithImpl<$Res>
       _$ReportPenjualanImpl _value, $Res Function(_$ReportPenjualanImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ReportPenjualan
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -158,12 +168,14 @@ class _$ReportPenjualanImpl implements _ReportPenjualan {
                 .equals(other._salesReport, _salesReport));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, info, const DeepCollectionEquality().hash(_salesReport));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ReportPenjualan
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ReportPenjualanImplCopyWith<_$ReportPenjualanImpl> get copyWith =>
@@ -190,8 +202,11 @@ abstract class _ReportPenjualan implements ReportPenjualan {
   Info? get info;
   @override
   List<Penjualan>? get salesReport;
+
+  /// Create a copy of ReportPenjualan
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ReportPenjualanImplCopyWith<_$ReportPenjualanImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -212,8 +227,12 @@ mixin _$Info {
   @JsonKey(name: 'name_store')
   String? get nameStore => throw _privateConstructorUsedError;
 
+  /// Serializes this Info to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Info
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $InfoCopyWith<Info> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -241,6 +260,8 @@ class _$InfoCopyWithImpl<$Res, $Val extends Info>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Info
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -303,6 +324,8 @@ class __$$InfoImplCopyWithImpl<$Res>
   __$$InfoImplCopyWithImpl(_$InfoImpl _value, $Res Function(_$InfoImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Info
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -394,12 +417,14 @@ class _$InfoImpl implements _Info {
                 other.nameStore == nameStore));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, totalSales, average,
       numberTransaction, date, operator, nameStore);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Info
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InfoImplCopyWith<_$InfoImpl> get copyWith =>
@@ -439,8 +464,11 @@ abstract class _Info implements Info {
   @override
   @JsonKey(name: 'name_store')
   String? get nameStore;
+
+  /// Create a copy of Info
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InfoImplCopyWith<_$InfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -461,8 +489,12 @@ mixin _$Penjualan {
   String? get sellingPrice => throw _privateConstructorUsedError;
   String? get unit => throw _privateConstructorUsedError;
 
+  /// Serializes this Penjualan to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Penjualan
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PenjualanCopyWith<Penjualan> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -491,6 +523,8 @@ class _$PenjualanCopyWithImpl<$Res, $Val extends Penjualan>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Penjualan
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -555,6 +589,8 @@ class __$$PenjualanImplCopyWithImpl<$Res>
       _$PenjualanImpl _value, $Res Function(_$PenjualanImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Penjualan
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -646,12 +682,14 @@ class _$PenjualanImpl implements _Penjualan {
             (identical(other.unit, unit) || other.unit == unit));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, idProduct, nameProduct, amount,
       totalprice, sellingPrice, unit);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Penjualan
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PenjualanImplCopyWith<_$PenjualanImpl> get copyWith =>
@@ -692,8 +730,11 @@ abstract class _Penjualan implements Penjualan {
   String? get sellingPrice;
   @override
   String? get unit;
+
+  /// Create a copy of Penjualan
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PenjualanImplCopyWith<_$PenjualanImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

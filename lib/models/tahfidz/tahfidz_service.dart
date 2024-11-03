@@ -165,12 +165,12 @@ abstract class TahfidzRestInterface {
   @MultiPart()
   Future<Message> addSantri(
     @Part(name: "key") String key,
-    @Part(name: "id_jenis") String id_jenis,
-    @Part(name: "waktu_hafalan") String? waktu_hafalan,
+    @Part(name: "id_jenis") String idJenis,
+    @Part(name: "waktu_hafalan") String? waktuHafalan,
     @Part(name: "halaman") String halaman,
-    @Part(name: "halaman_end") String halaman_end,
+    @Part(name: "halaman_end") String halamanEnd,
     @Part(name: "nis") String nis,
-    @Part(name: "id_kelas") String id_kelas,
+    @Part(name: "id_kelas") String idKelas,
     @Part(name: "detail") String? detail,
     @Part(name: "jumlah") String jumlah,
   );
@@ -180,10 +180,10 @@ abstract class TahfidzRestInterface {
   Future<Message> editSantri(
     @Part(name: "key") String key,
     @Part(name: "id") String id,
-    @Part(name: "id_jenis") String id_jenis,
-    @Part(name: "waktu_hafalan") String? waktu_hafalan,
+    @Part(name: "id_jenis") String idJenis,
+    @Part(name: "waktu_hafalan") String? waktuHafalan,
     @Part(name: "halaman") String halaman,
-    @Part(name: "halaman_end") String halaman_end,
+    @Part(name: "halaman_end") String halamanEnd,
     @Part(name: "detail") String? detail,
     @Part(name: "jumlah") String jumlah,
   );
@@ -192,10 +192,10 @@ abstract class TahfidzRestInterface {
   @MultiPart()
   Future<Message> addPenilaianSantri(
     @Part(name: "key") String key,
-    @Part(name: "id_jenis") String id_jenis,
+    @Part(name: "id_jenis") String idJenis,
     @Part(name: "nilai") String nilai,
     @Part(name: "nis") String nis,
-    @Part(name: "id_kelas") String id_kelas,
+    @Part(name: "id_kelas") String idKelas,
     @Part(name: "detail") String? detail,
   );
 
@@ -203,10 +203,10 @@ abstract class TahfidzRestInterface {
   @MultiPart()
   Future<Message> addPenilaianKepengasuhan(
     @Part(name: "key") String key,
-    @Part(name: "id_jenis") String id_jenis,
+    @Part(name: "id_jenis") String idJenis,
     @Part(name: "nilai") String nilai,
     @Part(name: "nis") String nis,
-    @Part(name: "id_kelas") String id_kelas,
+    @Part(name: "id_kelas") String idKelas,
     @Part(name: "detail") String? detail,
   );
 
@@ -215,7 +215,7 @@ abstract class TahfidzRestInterface {
   Future<Message> editPenilaianSantri(
     @Part(name: "key") String key,
     @Part(name: "id") String id,
-    @Part(name: "id_jenis") String id_jenis,
+    @Part(name: "id_jenis") String idJenis,
     @Part(name: "nilai") String nilai,
     @Part(name: "detail") String? detail,
   );
@@ -225,7 +225,7 @@ abstract class TahfidzRestInterface {
   Future<Message> editPenilaianKepengasuhan(
     @Part(name: "key") String key,
     @Part(name: "id") String id,
-    @Part(name: "id_jenis") String id_jenis,
+    @Part(name: "id_jenis") String idJenis,
     @Part(name: "nilai") String nilai,
     @Part(name: "detail") String? detail,
   );

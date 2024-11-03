@@ -57,8 +57,12 @@ mixin _$Rpp {
   @JsonKey(name: 'tahun_ajaran')
   String? get tahunAjaran => throw _privateConstructorUsedError;
 
+  /// Serializes this Rpp to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Rpp
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RppCopyWith<Rpp> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -97,6 +101,8 @@ class _$RppCopyWithImpl<$Res, $Val extends Rpp> implements $RppCopyWith<$Res> {
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Rpp
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -229,6 +235,8 @@ class __$$RppImplCopyWithImpl<$Res> extends _$RppCopyWithImpl<$Res, _$RppImpl>
   __$$RppImplCopyWithImpl(_$RppImpl _value, $Res Function(_$RppImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Rpp
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -452,7 +460,7 @@ class _$RppImpl implements _Rpp {
                 other.tahunAjaran == tahunAjaran));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -475,7 +483,9 @@ class _$RppImpl implements _Rpp {
       penilaian,
       tahunAjaran);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Rpp
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RppImplCopyWith<_$RppImpl> get copyWith =>
@@ -566,8 +576,11 @@ abstract class _Rpp implements Rpp {
   @override
   @JsonKey(name: 'tahun_ajaran')
   String? get tahunAjaran;
+
+  /// Create a copy of Rpp
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RppImplCopyWith<_$RppImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

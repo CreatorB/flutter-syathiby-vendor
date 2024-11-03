@@ -43,9 +43,9 @@ abstract class SiswaRestInterface {
   @GET('siswa/jadwalkelas.php')
   Future<List<Siswa>> getJadwal(
     @Query('key') String key,
-    @Query('id_kelas') String id_kelas,
-    @Query('id_mapel') String id_mapel,
-    @Query('id_timetable') String id_timetable,
+    @Query('id_kelas') String idKelas,
+    @Query('id_mapel') String idMapel,
+    @Query('id_timetable') String idTimetable,
   );
 
   @GET('siswa/jadwaltahfidz.php')
@@ -85,27 +85,27 @@ abstract class SiswaRestInterface {
   @GET('asrama/dataasrama.php')
   Future<List<Siswa>> getAsrama(
     @Query('key') String key,
-    @Query('id_asrama') String id_kelas,
+    @Query('id_asrama') String idKelas,
   );
 
   @GET('asrama/datatabungan.php')
   Future<List<Siswa>> getTabunganAsrama(
     @Query('key') String key,
-    @Query('id_asrama') String id_kelas,
+    @Query('id_asrama') String idKelas,
   );
 
   @GET('siswa/datarapor.php')
   Future<List<Rapor>> getSiswaKelas(
     @Query('key') String key,
-    @Query('id_kelas') String id_kelas,
+    @Query('id_kelas') String idKelas,
     @Query('nis') String nis,
   );
 
   @GET('siswa/nilai.php')
   Future<List<Siswa>> getNilai(
     @Query('key') String key,
-    @Query('id_kelas') String id_kelas,
-    @Query('id_mapel') String id_mapel,
+    @Query('id_kelas') String idKelas,
+    @Query('id_mapel') String idMapel,
   );
 
   @POST('siswa/absen.php')
@@ -113,8 +113,8 @@ abstract class SiswaRestInterface {
   Future<Message> getAbsen(
     @Field('key') String key,
     @Field('nis') String nis,
-    @Field('id_kelas') String id_kelas,
-    @Field('id_mapel') String id_mapel,
+    @Field('id_kelas') String idKelas,
+    @Field('id_mapel') String idMapel,
     @Field('status') String status,
   );
 
@@ -123,7 +123,7 @@ abstract class SiswaRestInterface {
   Future<Message> getAbsenTahfidz(
     @Field('key') String key,
     @Field('nis') String nis,
-    @Field('id_kelas') String id_kelas,
+    @Field('id_kelas') String idKelas,
     @Field('status') String status,
     @Field('date') String date,
     @Field('waktu') String waktu,
@@ -144,14 +144,14 @@ abstract class SiswaRestInterface {
   Future<Message> getSantriTahfidz(
     @Field('key') String key,
     @Field('nis') String nis,
-    @Field('id_kelas') String id_kelas,
+    @Field('id_kelas') String idKelas,
   );
 
   @POST('siswa/insertmakan.php')
   @FormUrlEncoded()
   Future<Message> getSantriMakan(
     @Field('key') String key,
-    @Field('id_siswa') String id_siswa,
+    @Field('id_siswa') String idSiswa,
     @Field('jenis') String jenis,
   );
 
@@ -159,7 +159,7 @@ abstract class SiswaRestInterface {
   @FormUrlEncoded()
   Future<Message> getTransaksiSantri(
     @Field('key') String key,
-    @Field('id_siswa') String id_siswa,
+    @Field('id_siswa') String idSiswa,
     @Field('jenis') String jenis,
     @Field('nominal') String nominal,
     @Field('catatan') String catatan,
@@ -169,7 +169,7 @@ abstract class SiswaRestInterface {
   @FormUrlEncoded()
   Future<Message> getSantriKegiatan(
     @Field('key') String key,
-    @Field('id_siswa') String id_siswa,
+    @Field('id_siswa') String idSiswa,
     @Field('jenis') String jenis,
   );
 
@@ -202,7 +202,7 @@ abstract class SiswaRestInterface {
   Future<Message> getDeleteHalaqah(
     @Field('key') String key,
     @Field('nis') String nis,
-    @Field('id_kelas') String id_kelas,
+    @Field('id_kelas') String idKelas,
   );
 
   @POST('asrama/absen.php')
@@ -210,7 +210,7 @@ abstract class SiswaRestInterface {
   Future<Message> getAbsenAsrama(
     @Field('key') String key,
     @Field('nis') String nis,
-    @Field('id_asrama') String id_asrama,
+    @Field('id_asrama') String idAsrama,
     @Field('status') String status,
   );
 
@@ -218,9 +218,9 @@ abstract class SiswaRestInterface {
   @FormUrlEncoded()
   Future<Message> getAbsenGuru(
     @Field('key') String key,
-    @Field('id_kelas') String id_kelas,
-    @Field('id_mapel') String id_mapel,
-    @Field('id_timetable') String id_timetable,
+    @Field('id_kelas') String idKelas,
+    @Field('id_mapel') String idMapel,
+    @Field('id_timetable') String idTimetable,
   );
 
   @POST('siswa/absenpengampu.php')
@@ -235,7 +235,7 @@ abstract class SiswaRestInterface {
   @FormUrlEncoded()
   Future<Message> getAbsenKeamanan(
     @Field('key') String key,
-    @Field('id_asrama') String id_asrama,
+    @Field('id_asrama') String idAsrama,
   );
 
   @GET('siswa/searchsiswa.php')

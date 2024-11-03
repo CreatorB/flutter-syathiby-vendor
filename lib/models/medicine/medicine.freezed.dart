@@ -30,8 +30,12 @@ mixin _$DataObat {
   String? get description => throw _privateConstructorUsedError;
   bool? get posisi => throw _privateConstructorUsedError;
 
+  /// Serializes this DataObat to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DataObat
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DataObatCopyWith<DataObat> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -63,6 +67,8 @@ class _$DataObatCopyWithImpl<$Res, $Val extends DataObat>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DataObat
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -145,6 +151,8 @@ class __$$DataObatImplCopyWithImpl<$Res>
       _$DataObatImpl _value, $Res Function(_$DataObatImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DataObat
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -258,12 +266,14 @@ class _$DataObatImpl implements _DataObat {
             (identical(other.posisi, posisi) || other.posisi == posisi));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id_data_obat, name, unit, img,
       active, price, stock, description, posisi);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DataObat
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DataObatImplCopyWith<_$DataObatImpl> get copyWith =>
@@ -310,8 +320,11 @@ abstract class _DataObat implements DataObat {
   String? get description;
   @override
   bool? get posisi;
+
+  /// Create a copy of DataObat
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DataObatImplCopyWith<_$DataObatImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

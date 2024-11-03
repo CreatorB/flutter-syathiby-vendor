@@ -22,8 +22,12 @@ PrayResponse _$PrayResponseFromJson(Map<String, dynamic> json) {
 mixin _$PrayResponse {
   List<Pray> get data => throw _privateConstructorUsedError;
 
+  /// Serializes this PrayResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PrayResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PrayResponseCopyWith<PrayResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$PrayResponseCopyWithImpl<$Res, $Val extends PrayResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PrayResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,6 +86,8 @@ class __$$PrayResponseImplCopyWithImpl<$Res>
       _$PrayResponseImpl _value, $Res Function(_$PrayResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PrayResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -123,12 +131,14 @@ class _$PrayResponseImpl implements _PrayResponse {
             const DeepCollectionEquality().equals(other._data, _data));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_data));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PrayResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PrayResponseImplCopyWith<_$PrayResponseImpl> get copyWith =>
@@ -151,8 +161,11 @@ abstract class _PrayResponse implements PrayResponse {
 
   @override
   List<Pray> get data;
+
+  /// Create a copy of PrayResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PrayResponseImplCopyWith<_$PrayResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

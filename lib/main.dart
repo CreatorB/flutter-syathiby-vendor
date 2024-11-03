@@ -7,10 +7,10 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:just_audio_background/just_audio_background.dart';
 import 'package:al_ukhuwah/app.dart';
-import 'package:al_ukhuwah/utils/firebase_options.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'di/providers.dart';
+import 'firebase_options.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -30,9 +30,7 @@ Future<void> main() async {
 Future<void> _initFirebase() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
-    name: 'al-ukhuwah'
   );
-
   FlutterError.onError = (errorDetails) {
     FirebaseCrashlytics.instance.recordFlutterFatalError(errorDetails);
   };

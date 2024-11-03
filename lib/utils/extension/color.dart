@@ -35,7 +35,7 @@ extension M3Colors on BuildContext {
 
   Color get colorSurfaceTint => colorScheme.surfaceTint;
 
-  Color get colorSurfaceVariant => colorScheme.surfaceVariant;
+  Color get colorSurfaceVariant => colorScheme.surfaceContainerHighest;
 
   Color get colorOnSurfaceVariant => colorScheme.onSurfaceVariant;
 
@@ -43,9 +43,9 @@ extension M3Colors on BuildContext {
 
   Color get colorOnInverseSurface => colorScheme.onInverseSurface;
 
-  Color get colorBackground => colorScheme.background;
+  Color get colorBackground => colorScheme.surface;
 
-  Color get colorOnBackground => colorScheme.onBackground;
+  Color get colorOnBackground => colorScheme.onSurface;
 
   Color get colorError => colorScheme.error;
 
