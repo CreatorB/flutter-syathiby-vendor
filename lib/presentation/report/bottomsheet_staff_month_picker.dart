@@ -120,7 +120,6 @@ class BottomSheetStaffMonthPicker extends HookConsumerWidget {
                 context.showErrorMessage('Silahkan pilih pegawai dahulu');
                 return;
               }
-              debugPrint('CHECKPINDAH: ${staffSelected.value?.key}');
               context.goNamed(
                 routeName!,
                 queryParameters: {

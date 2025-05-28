@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:easy_image_viewer/easy_image_viewer.dart';
 import 'package:file_saver/file_saver.dart';
@@ -14,6 +16,7 @@ import 'package:al_ukhuwah/utils/extension/ui.dart';
 import 'package:screenshot/screenshot.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:skeletonizer/skeletonizer.dart';
+import 'package:path_provider/path_provider.dart';
 
 import '../../di/providers.dart';
 
@@ -87,12 +90,18 @@ class DetailTrackingStockScreen extends HookConsumerWidget {
                     context.showErrorMessage('Gagal menyimpan screenshot');
                     return;
                   }
+                  // Save the image temporarily in the device's temp directory
+                  final tempDir = await getTemporaryDirectory();
+                  final file =
+                  await File('${tempDir.path}/screenshot.png').create();
+                  await file.writeAsBytes(result);
+
                   await Share.shareXFiles(
                     [
-                      XFile.fromData(
-                        result,
-                        name: 'Screenshot',
-                        mimeType: MimeType.jpeg.name,
+                      XFile(
+                        file.path,
+                        name: 'screenshot.png',
+                        mimeType: 'image/png',
                       ),
                     ],
                   );

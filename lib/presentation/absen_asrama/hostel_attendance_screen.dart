@@ -58,15 +58,22 @@ class HostelAttendanceScreen extends HookConsumerWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            const Text('Jumlah Santri/Murid: '),
-                            Text('${hostel?.jumlahSantri} santri/murid'),
+                            const Text('Jumlah Santri: '),
+                            Text('${hostel?.jumlahSantri} santri'),
                           ],
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            const Text('Jumlah Kelas: '),
-                            Text('${hostel?.dijemput} kelas'),
+                            const Text('Santri di kamar: '),
+                            Text('${hostel?.dijemput}'),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text('Santri tidak di kamar: '),
+                            Text('${hostel?.dikembalikan}'),
                           ],
                         ),
                       ],

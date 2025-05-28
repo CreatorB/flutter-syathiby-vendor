@@ -102,6 +102,7 @@ class AddEatingAttendanceScreen extends HookConsumerWidget {
             onPressed: () async {
               showModalBottomSheet(
                 context: context,
+                isScrollControlled: true,
                 builder: (context) => ScanBarcodeScreen(
                   isSingleCapture: false,
                   onCapture: (scanTextId) {
@@ -186,7 +187,7 @@ class AddEatingAttendanceScreen extends HookConsumerWidget {
                       '${index + 1}. ${student?.namaLengkap}',
                       style: context.bodyMediumBold,
                     ),
-                    subtitle: Text('NIS: ${student?.nis}'),
+                    subtitle: Text('Kelas: ${student?.kelas}'),
                     trailing: Transform.translate(
                       offset: const Offset(12, 0),
                       child: IntrinsicWidth(
@@ -266,7 +267,7 @@ class AddEatingAttendanceScreen extends HookConsumerWidget {
           if (student == null) {
             return;
           }
-          _addAttendance(context, ref, key, '${student.idSiswa}', '$time');
+          _addAttendance(context, ref, key, '${student.nis}', '$time');
         },
       ),
     );

@@ -1,6 +1,8 @@
+import 'dart:io';
+
 import 'package:adaptive_dialog/adaptive_dialog.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:file_saver/file_saver.dart';
+import 'package:path_provider/path_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced_avatar/flutter_advanced_avatar.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
@@ -50,12 +52,18 @@ class DetailJobScreen extends HookConsumerWidget {
                     context.showErrorMessage('Gagal menyimpan screenshot');
                     return;
                   }
+                  // Save the image temporarily in the device's temp directory
+                  final tempDir = await getTemporaryDirectory();
+                  final file =
+                  await File('${tempDir.path}/screenshot.png').create();
+                  await file.writeAsBytes(result);
+
                   await Share.shareXFiles(
                     [
-                      XFile.fromData(
-                        result,
-                        name: 'Screenshot',
-                        mimeType: MimeType.jpeg.name,
+                      XFile(
+                        file.path,
+                        name: 'screenshot.png',
+                        mimeType: 'image/png',
                       ),
                     ],
                   );

@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:file_saver/file_saver.dart';
 import 'package:flutter/material.dart';
@@ -15,6 +17,7 @@ import 'package:skeletonizer/skeletonizer.dart';
 
 import '../../di/providers.dart';
 import '../../models/store/store.dart';
+import 'package:path_provider/path_provider.dart';
 
 class RecapPresenceScreen extends HookConsumerWidget {
   const RecapPresenceScreen({super.key});
@@ -70,12 +73,18 @@ class RecapPresenceScreen extends HookConsumerWidget {
                     context.showErrorMessage('Gagal menyimpan screenshot');
                     return;
                   }
+                  // Save the image temporarily in the device's temp directory
+                  final tempDir = await getTemporaryDirectory();
+                  final file =
+                  await File('${tempDir.path}/screenshot.png').create();
+                  await file.writeAsBytes(result);
+
                   await Share.shareXFiles(
                     [
-                      XFile.fromData(
-                        result,
-                        name: 'Screenshot',
-                        mimeType: MimeType.jpeg.name,
+                      XFile(
+                        file.path,
+                        name: 'screenshot.png',
+                        mimeType: 'image/png',
                       ),
                     ],
                   );
@@ -84,7 +93,7 @@ class RecapPresenceScreen extends HookConsumerWidget {
                 }
               },
               icon: const Icon(Icons.share),
-            )
+            ),
           ],
         ),
         body: Skeletonizer(

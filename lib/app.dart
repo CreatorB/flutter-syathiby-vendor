@@ -26,12 +26,12 @@ class MyApp extends HookConsumerWidget {
     return AdaptiveTheme(
       light: FlexThemeData.light(
         useMaterial3: true,
-        scheme: FlexScheme.orangeM3,
+        scheme: FlexScheme.greenM3,
         transparentStatusBar: true,
       ),
       dark: FlexThemeData.dark(
         useMaterial3: true,
-        scheme: FlexScheme.orangeM3,
+        scheme: FlexScheme.greenM3,
         transparentStatusBar: true,
       ),
       initial: adaptiveThemeMode ?? AdaptiveThemeMode.light,

@@ -33,7 +33,9 @@ class AttendanceReportMonthScreen extends HookConsumerWidget {
     final key = '${currentUser?.key}';
     final month = useTextEditingController();
     final currentMonth = DateFormat('MMMM', 'id').format(DateTime.now());
-    final startDate = DateFormat('yyyy-MM-dd').format(DateTime.now());
+    final startDate = DateFormat('yyyy-MM-dd').format(
+      DateTime.now().copyWith(day: 1),
+    );
     final endDayOfMonth = DateTime.now().copyWith(
       month: DateTime.now().month + 1,
       day: 0,
@@ -67,8 +69,11 @@ class AttendanceReportMonthScreen extends HookConsumerWidget {
       ),
     );
     final attendance = fetchAttendanceRecap.valueOrNull?.firstOrNull;
-    final fetchUserProfile =
-        ref.watch(fetchProfileProvider(key: '${staffSelected.value?.key}'));
+    final fetchUserProfile = ref.watch(
+      fetchProfileProvider(
+        key: '${staffSelected.value?.key}',
+      ),
+    );
     final workHour = fetchUserProfile.valueOrNull?.absensi;
 
     final itemCount = fetchDetailPresenceReport.isLoading
@@ -105,17 +110,18 @@ class AttendanceReportMonthScreen extends HookConsumerWidget {
                   // Save the image temporarily in the device's temp directory
                   final tempDir = await getTemporaryDirectory();
                   final file =
-                      await File('${tempDir.path}/xfiles_image.png').create();
+                      await File('${tempDir.path}/screenshot.png').create();
                   await file.writeAsBytes(result);
 
                   await Share.shareXFiles(
                     [
                       XFile(
                         file.path,
-                        name: 'Screenshot.jpeg',
-                        mimeType: MimeType.jpeg.name,
+                        name: 'screenshot.png',
+                        mimeType: 'image/png',
                       ),
                     ],
+                    text: 'Rekap Absensi Bulanan',
                   );
                 } catch (error) {
                   context.showErrorMessage('Gagal membagikan screenshot');

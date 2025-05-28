@@ -25,7 +25,9 @@ import '../setting/presence_type.dart';
 import 'menu_home.dart';
 
 class HomeScreen extends HookConsumerWidget {
-  const HomeScreen({super.key});
+  HomeScreen({super.key});
+
+  final refreshKey = GlobalKey<RefreshIndicatorState>();
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -349,10 +351,8 @@ class HomeScreen extends HookConsumerWidget {
                         visible: !isHoliday,
                         child: FilledButton(
                           onPressed: () async {
-                            final isFaceId = await ref
-                                .read(isBiometricsFaceIdProvider.future);
                             if (isClockIn) {
-                              _showMethodPresence(context, isFaceId);
+                              _showPresenceIn(context, ref, key);
                               return;
                             }
                             _showPresenceOut(
@@ -518,6 +518,7 @@ class HomeScreen extends HookConsumerWidget {
 
     return Scaffold(
       body: RefreshIndicator(
+        key: refreshKey,
         onRefresh: () => Future.wait(
           [
             ref.refresh(fetchPresenceProvider(key: key).future),
@@ -812,13 +813,12 @@ class HomeScreen extends HookConsumerWidget {
                 enabled: fetchPresence.valueOrNull?.unitusaha == 1,
                 menus: [
                   MenuGrid(
-                    title: 'Laporan Kerja',
-                    iconData: Icons.report,
-                    goToRouteName: AppRoute.activityReport.name,
-                    queryParameters: {
-                      'type': 'unit_usaha',
-                    }
-                  ),
+                      title: 'Laporan Kerja',
+                      iconData: Icons.report,
+                      goToRouteName: AppRoute.activityReport.name,
+                      queryParameters: {
+                        'type': 'unit_usaha',
+                      }),
                   // MenuGrid(
                   //   title: 'Loundry',
                   //   iconData: Icons.water_drop,
@@ -931,7 +931,7 @@ class HomeScreen extends HookConsumerWidget {
                         clipBehavior: Clip.antiAliasWithSaveLayer,
                         builder: (context) => BottomSheetStaffMonthPicker(
                           title: 'Laporan Absensi',
-                          routeName: AppRoute.recapAttendance.name,
+                          routeName: AppRoute.reportAttendance.name,
                         ),
                       );
                     },
@@ -950,96 +950,177 @@ class HomeScreen extends HookConsumerWidget {
     );
   }
 
-  void _showMethodPresence(BuildContext context, bool isFaceId) {
-    showModalBottomSheet(
-      context: context,
-      builder: (context) => Padding(
-        padding: const EdgeInsets.only(bottom: 16.0),
-        child: Wrap(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: ListTile(
-                title: Text(
-                  'Metode Presensi',
-                  style: context.titleLarge,
-                ),
-                trailing: Transform.translate(
-                  offset: const Offset(16, 0),
-                  child: IconButton(
-                    onPressed: () => context.pop(),
-                    icon: const Icon(Icons.close),
-                  ),
-                ),
-              ),
-            ),
-            Row(
-              children: [
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      ElevatedButton(
-                        onPressed: () {
-                          context.goNamed(
-                            AppRoute.presence.name,
-                            extra: PresenceType.biometric,
-                          );
-                        },
-                        style: ElevatedButton.styleFrom(
-                          shape: const CircleBorder(),
-                          padding: const EdgeInsets.all(20),
-                          backgroundColor: context.colorPrimaryContainer,
-                        ),
-                        child: Icon(
-                          isFaceId ? Icons.face : Icons.fingerprint,
-                          color: context.colorPrimary,
-                        ),
-                      ),
-                      const SizedBox(height: 4),
-                      Text(
-                        isFaceId ? 'Face ID' : 'Fingerpint',
-                        style: context.titleMedium,
-                        textAlign: TextAlign.center,
-                      ),
-                    ],
-                  ),
-                ),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      ElevatedButton(
-                        onPressed: () {
-                          context.goNamed(
-                            AppRoute.presence.name,
-                            extra: PresenceType.normal,
-                          );
-                        },
-                        style: ElevatedButton.styleFrom(
-                          shape: const CircleBorder(),
-                          padding: const EdgeInsets.all(20),
-                          backgroundColor: context.colorErrorContainer,
-                        ),
-                        child: Icon(
-                          Icons.download,
-                          color: context.colorError,
-                        ),
-                      ),
-                      const SizedBox(height: 4),
-                      Text(
-                        'Tombol',
-                        style: context.titleMedium,
-                      ),
-                    ],
-                  ),
-                ),
-              ],
+  // void _showMethodPresence(BuildContext context, bool isFaceId) {
+  //   showModalBottomSheet(
+  //     context: context,
+  //     builder: (context) => Padding(
+  //       padding: const EdgeInsets.only(bottom: 16.0),
+  //       child: Wrap(
+  //         children: [
+  //           Padding(
+  //             padding: const EdgeInsets.all(8.0),
+  //             child: ListTile(
+  //               title: Text(
+  //                 'Metode Presensi',
+  //                 style: context.titleLarge,
+  //               ),
+  //               trailing: Transform.translate(
+  //                 offset: const Offset(16, 0),
+  //                 child: IconButton(
+  //                   onPressed: () => context.pop(),
+  //                   icon: const Icon(Icons.close),
+  //                 ),
+  //               ),
+  //             ),
+  //           ),
+  //           Row(
+  //             children: [
+  //               Expanded(
+  //                 child: Column(
+  //                   crossAxisAlignment: CrossAxisAlignment.center,
+  //                   children: [
+  //                     ElevatedButton(
+  //                       onPressed: () {
+  //                         context.goNamed(
+  //                           AppRoute.presence.name,
+  //                           extra: PresenceType.biometric,
+  //                         );
+  //                       },
+  //                       style: ElevatedButton.styleFrom(
+  //                         shape: const CircleBorder(),
+  //                         padding: const EdgeInsets.all(20),
+  //                         backgroundColor: context.colorPrimaryContainer,
+  //                       ),
+  //                       child: Icon(
+  //                         isFaceId ? Icons.face : Icons.fingerprint,
+  //                         color: context.colorPrimary,
+  //                       ),
+  //                     ),
+  //                     const SizedBox(height: 4),
+  //                     Text(
+  //                       isFaceId ? 'Face ID' : 'Fingerpint',
+  //                       style: context.titleMedium,
+  //                       textAlign: TextAlign.center,
+  //                     ),
+  //                   ],
+  //                 ),
+  //               ),
+  //               Expanded(
+  //                 child: Column(
+  //                   crossAxisAlignment: CrossAxisAlignment.center,
+  //                   children: [
+  //                     ElevatedButton(
+  //                       onPressed: () {
+  //                         context.goNamed(
+  //                           AppRoute.presence.name,
+  //                           extra: PresenceType.normal,
+  //                         );
+  //                       },
+  //                       style: ElevatedButton.styleFrom(
+  //                         shape: const CircleBorder(),
+  //                         padding: const EdgeInsets.all(20),
+  //                         backgroundColor: context.colorErrorContainer,
+  //                       ),
+  //                       child: Icon(
+  //                         Icons.download,
+  //                         color: context.colorError,
+  //                       ),
+  //                     ),
+  //                     const SizedBox(height: 4),
+  //                     Text(
+  //                       'Tombol',
+  //                       style: context.titleMedium,
+  //                     ),
+  //                   ],
+  //                 ),
+  //               ),
+  //             ],
+  //           ),
+  //         ],
+  //       ),
+  //     ),
+  //   );
+  // }
+
+  Future<void> _showPresenceIn(
+    BuildContext context,
+    WidgetRef ref,
+    String key,
+  ) async {
+    try {
+      final locations = await ref.watch(
+        fetchListHostelProvider(key: key).future,
+      );
+      if (!context.mounted) return;
+      final selected = await showConfirmationDialog<Asrama>(
+        context: context,
+        title: 'Lokasi Presensi',
+        actions: locations
+            .map(
+              (e) => AlertDialogAction(key: e, label: '${e.namaAsrama}'),
+        )
+            .toList(),
+      );
+      if(selected == null) {
+        return;
+      }
+
+      final position = await ref.read(getCurrentLocationProvider.future);
+      final result = await ref.read(accountControllerProvider.notifier).presence(
+        key: key,
+        presenceType: PresenceType.normal,
+        latitude: position.latitude,
+        longitude: position.longitude,
+        locationPresenceName: '${selected.idAsrama}',
+        mock: position.isMocked,
+      );
+
+      if (result == null || !context.mounted) return;
+      final status = result.status;
+
+      if (result.status == 'late') {
+        String message =
+            '“Setiap muslim harus menyesuaikan diri dengan kesepakatan yang dia setujui. Kecuali kesepakatan yang mengharamkan yang halal atau menghalalkan yang haram.” (HR. at-Thabrani dalam al-Mu’jam al-Kabir).\n\n\n" Anda $status Silahkan isi Alasan Anda';
+        final reasonLate = await showTextInputDialog(
+          context: context,
+          title: 'Info',
+          message: message,
+          textFields: [
+            DialogTextField(
+              hintText: 'Alasan terlambat',
+              keyboardType: TextInputType.text,
+              validator: (value) {
+                if (value == null) return 'tidak boleh kosong';
+                return null;
+              },
+              autocorrect: true,
             ),
           ],
-        ),
-      ),
-    );
+        );
+
+        final value = reasonLate?.firstOrNull;
+        final result = await ref
+            .read(accountControllerProvider.notifier)
+            .reasonLate(key: key, reason: value ?? '', isClockIn: true);
+
+        ref.invalidate(fetchPresenceProvider);
+        ref.invalidate(fetchProfileProvider);
+
+        if (result == null || !context.mounted) return;
+
+        context.showSuccessMessage('Terimakasih, semoga besok lebih baik lagi');
+      } else {
+        final message =
+            'Success Anda ${result.status} Luar biasa, terus pertahankan';
+        context.showSuccessMessage(
+          message,
+        );
+        ref.invalidate(fetchPresenceProvider(key: key));
+        ref.invalidate(fetchProfileProvider(key: key));
+      }
+    }catch (error) {
+      context.showErrorMessage(error.toString());
+    }
   }
 
   Future<void> _showPresenceOut(
@@ -1051,9 +1132,10 @@ class HomeScreen extends HookConsumerWidget {
     try {
       final presenceLocation =
           await showChooseLocationDialog(context, ref, key);
-      if(presenceLocation == null) return;
+      if (presenceLocation == null) return;
 
       final position = await ref.read(getCurrentLocationProvider.future);
+
       final token = ref
           .watch(sharedPreferencesHelperProvider)
           .getString(AppConstant.keyDeviceToken);
@@ -1095,6 +1177,8 @@ class HomeScreen extends HookConsumerWidget {
         message: message,
       );
       ref.invalidate(fetchPresenceProvider(key: key));
+      ref.invalidate(fetchProfileProvider(key: key));
+      refreshKey.currentState?.show();
     } catch (error) {
       context.showErrorMessage(error.toString());
     }
@@ -1151,12 +1235,12 @@ class HomeScreen extends HookConsumerWidget {
         .reasonLate(key: key, reason: value ?? '', isClockIn: false);
     if (result == null || !context.mounted) return;
 
+    ref.invalidate(fetchPresenceProvider(key: key));
+    ref.invalidate(fetchProfileProvider(key: key));
+    refreshKey.currentState?.show();
+
     context.showSuccessMessage(
       'Terimakasih, semoga besok lebih baik lagi',
-      onComplete: () {
-        context.pop();
-        ref.invalidate(fetchPresenceProvider(key: key));
-      },
     );
   }
 }

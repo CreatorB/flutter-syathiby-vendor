@@ -85,6 +85,7 @@ class DetailMeetingScreen extends HookConsumerWidget {
             onPressed: () async {
               showModalBottomSheet(
                 context: context,
+                isScrollControlled: true,
                 builder: (context) => ScanBarcodeScreen(
                   isSingleCapture: true,
                   onCapture: (scanTextId) async {

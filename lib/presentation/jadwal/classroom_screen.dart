@@ -156,11 +156,11 @@ class ClassroomScreen extends HookConsumerWidget {
                               child: Text('Hadir'),
                             ),
                             DropdownMenuItem(
-                              value: "sakit",
+                              value: "izin",
                               child: Text('Izin'),
                             ),
                             DropdownMenuItem(
-                              value: "izin",
+                              value: "sakit",
                               child: Text('Sakit'),
                             ),
                             DropdownMenuItem(

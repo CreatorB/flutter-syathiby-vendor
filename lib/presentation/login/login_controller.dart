@@ -18,23 +18,26 @@ class LoginController extends _$LoginController {
     String? token,
   }) async {
     state = const AsyncLoading();
-    final token = await AsyncValue.guard(
-      () => ref.read(firebaseMessagingProvider).getToken(),
-    );
-    debugPrint('CHECKKTOKEN: $token');
     final loginResult = await AsyncValue.guard(
       () => ref.watch(userServiceProvider).login(phoneNumber, password),
     );
     state = loginResult;
     final login = loginResult.valueOrNull?.firstOrNull;
-    await _saveSession(login, token.valueOrNull);
+    saveSession(login);
     return login;
   }
 
-  Future<void> _saveSession(Login? login, String? token) async {
-    if (login == null || token == null) return;
+  Future<void> saveSession(Login? login,) async {
     final pref = ref.read(sharedPreferencesHelperProvider);
     await pref.setObject(AppConstant.keyLoginSession, login);
-    await pref.setString(AppConstant.keyDeviceToken, token);
+    try {
+      final token = await AsyncValue.guard(
+            () => ref.read(firebaseMessagingProvider).getToken(),
+      );
+      await pref.setString(AppConstant.keyDeviceToken, token.valueOrNull ?? '');
+    } catch(e){
+
+    }
   }
+
 }

@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:file_saver/file_saver.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
@@ -7,7 +9,7 @@ import 'package:al_ukhuwah/utils/extension/typography.dart';
 import 'package:al_ukhuwah/utils/extension/ui.dart';
 import 'package:screenshot/screenshot.dart';
 import 'package:share_plus/share_plus.dart';
-
+import 'package:path_provider/path_provider.dart';
 import '../../models/meeting/meeting.dart';
 
 class MeetingQrCodeScreen extends HookConsumerWidget {
@@ -33,14 +35,21 @@ class MeetingQrCodeScreen extends HookConsumerWidget {
                     context.showErrorMessage('Gagal menyimpan screenshot');
                     return;
                   }
+                  // Save the image temporarily in the device's temp directory
+                  final tempDir = await getTemporaryDirectory();
+                  final file =
+                  await File('${tempDir.path}/screenshot.png').create();
+                  await file.writeAsBytes(result);
+
                   await Share.shareXFiles(
                     [
-                      XFile.fromData(
-                        result,
+                      XFile(
+                        file.path,
                         name: 'QR Code ${meeting?.nameMeeting}',
-                        mimeType: MimeType.jpeg.name,
+                        mimeType: 'image/png',
                       ),
                     ],
+                    text: 'Rekap Absensi Bulanan',
                   );
                 } catch (error) {
                   context.showErrorMessage('Gagal membagikan screenshot');

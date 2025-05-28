@@ -358,15 +358,19 @@ GoRouter goRouter(GoRouterRef ref) {
     navigatorKey: _rootNavigatorKey,
     // errorBuilder: (context, state) => const NotFoundScreen(),
     redirect: (context, state) async {
-      final session = ref
-          .read(sharedPreferencesHelperProvider)
-          .getObject<Map<String, dynamic>>(AppConstant.keyLoginSession);
+      try {
+        final session = ref
+            .read(sharedPreferencesHelperProvider)
+            .getObject<Map<String, dynamic>>(AppConstant.keyLoginSession);
 
-      final goingToLogin = state.matchedLocation.contains('/login');
-      if (session == null && !goingToLogin) {
-        return '/login';
+        final goingToLogin = state.matchedLocation.contains('/login');
+        if (session == null && !goingToLogin) {
+          return '/login';
+        }
+        return null;
+      }catch(e){
+       return '/login';
       }
-      return null;
     },
     routes: [
       StatefulShellRoute.indexedStack(
@@ -379,7 +383,7 @@ GoRouter goRouter(GoRouterRef ref) {
               GoRoute(
                 path: '/',
                 name: AppRoute.home.name,
-                builder: (context, state) => const HomeScreen(),
+                builder: (context, state) => HomeScreen(),
                 routes: [
                   GoRoute(
                     path: 'presence',

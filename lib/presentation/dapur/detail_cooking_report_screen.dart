@@ -1,4 +1,6 @@
-import 'package:file_saver/file_saver.dart';
+import 'dart:io';
+
+import 'package:path_provider/path_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -60,12 +62,18 @@ class DetailCookingReportScreen extends HookConsumerWidget {
                     context.showErrorMessage('Gagal menyimpan screenshot');
                     return;
                   }
+                  // Save the image temporarily in the device's temp directory
+                  final tempDir = await getTemporaryDirectory();
+                  final file =
+                  await File('${tempDir.path}/screenshot.png').create();
+                  await file.writeAsBytes(result);
+
                   await Share.shareXFiles(
                     [
-                      XFile.fromData(
-                        result,
-                        name: 'Screenshot',
-                        mimeType: MimeType.jpeg.name,
+                      XFile(
+                        file.path,
+                        name: 'screenshot.png',
+                        mimeType: 'image/png',
                       ),
                     ],
                   );

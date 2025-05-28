@@ -158,7 +158,7 @@ class AddStudentHealthScreen extends HookConsumerWidget {
                             ),
                           ),
                         ),
-                        itemAsString: (item) => '${item.namaLengkap}',
+                        itemAsString: (item) => '${item.namaLengkap} - ${item.kelas}',
                         dropdownDecoratorProps: const DropDownDecoratorProps(
                           dropdownSearchDecoration: InputDecoration(
                             hintText: 'Nama Siswa',

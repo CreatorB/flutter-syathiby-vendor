@@ -12,7 +12,11 @@ extension AsyncValueUI on AsyncValue {
     if (!isLoading && hasError) {
       toastification.show(
         context: context,
-        title: Text(_errorMessage(error)),
+        title: Text(
+          _errorMessage(error),
+          maxLines: 5,
+          overflow: TextOverflow.ellipsis,
+        ),
         autoCloseDuration: const Duration(seconds: 3),
         type: ToastificationType.error,
         style: ToastificationStyle.fillColored,
