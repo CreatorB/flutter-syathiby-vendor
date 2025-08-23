@@ -1,2 +1,52 @@
-# al_ukhuwah
- 
+# Syathiby App
+
+Handover existing vendor flutter app for managing the system at Ma'had Tahfizh al-Qur'an al-Imam as-Syathiby, cileungsi, bogor, Indonesia.
+
+#pondok #jabodetabek #ma'had #tahfizh #al-Qur'an #sunnah #manhaj #salaf #cileungsi #bogor #indonesia #syathiby
+
+## Development
+
+Build source code :
+
+```sh
+flutter clean ; flutter pub get ; flutter packages pub run build_runner build
+```
+
+Rename App and Package name (change build.gradle to build.gradle.kts) :
+
+```sh
+dart run flutter_application_id:main -f flutter_application_id.yaml
+```
+
+Rename app name :
+
+```sh
+flutter pub global activate rename
+
+dart pub global run rename:rename setAppName --targets ios,android --value "Syathiby"
+```
+
+Change icon :
+
+```sh
+dart run flutter_launcher_icons:generate --override
+```
+
+Change splash screen :
+
+```sh
+dart run flutter_native_splash:create
+```
+
+Build apk :
+
+```sh
+flutter clean ; flutter pub get ; flutter build apk --release
+```
+
+## License
+
+Copyright IT Sragen & IT Syathiby 2024
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.

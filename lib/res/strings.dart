@@ -1,10 +1,10 @@
 import 'package:al_ukhuwah/res/env.dart';
 
 abstract class AppConstant {
-  //    rename setAppName --targets ios,android --value "Al Ukhuwah"
-  static const String appName = 'Al Ukhuwah';
-  static const String youtubeChannelName = 'Al Ukhuwah TV';
-  static const String teachingPlannerUrl = 'https://app.alukhuwah.com/rpp/';
+  //    rename setAppName --targets ios,android --value "Syathiby"
+  static const String appName = 'Syathiby';
+  static const String youtubeChannelName = 'Syathiby';
+  static const String teachingPlannerUrl = 'https://app.syathiby.id/rpp/';
   static const String keyLoginSession = 'login_session';
   static const String keyUserSession = 'user_session';
   static const String keyDeviceToken = 'device_token';
