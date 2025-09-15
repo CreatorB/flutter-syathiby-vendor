@@ -50,6 +50,26 @@ Build apk :
 flutter clean ; flutter pub get ; flutter build apk --release
 ```
 
+Run app :
+
+```sh
+flutter clean ; flutter pub get ; flutter run -d 127.0.0.1:5555 -v
+```
+
+Clean repository :
+
+```sh
+#linux
+find . -name '*.g.dart' -type f -delete
+find . -name '*.freezed.dart' -type f -delete
+find . -name '*.riverpod.dart' -type f -delete
+
+#windows
+Get-ChildItem -Path . -Recurse -Include *.g.dart | Remove-Item -Force
+Get-ChildItem -Path . -Recurse -Include *.freezed.dart | Remove-Item -Force
+Get-ChildItem -Path . -Recurse -Include *.riverpod.dart | Remove-Item -Force
+```
+
 ## License
 
 Copyright IT Sragen & IT Syathiby 2024
