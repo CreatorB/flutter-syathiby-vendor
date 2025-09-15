@@ -850,7 +850,7 @@ class _FormatTimeFromDateProviderElement
 }
 
 String _$getCurrentLocationHash() =>
-    r'c1f7e07145daa404306731d58d95104f1b886702';
+    r'1ed91efb7fceb08a1717f7049e6f0ebaf1cb961e';
 
 /// See also [getCurrentLocation].
 @ProviderFor(getCurrentLocation)

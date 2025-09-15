@@ -44,47 +44,40 @@ _$RequestTransactionImpl _$$RequestTransactionImplFromJson(
     );
 
 Map<String, dynamic> _$$RequestTransactionImplToJson(
-    _$RequestTransactionImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('key', instance.key);
-  writeNotNull('payment_type', instance.paymentType);
-  writeNotNull('payment_amount', instance.paymentAmount);
-  writeNotNull('total_order', instance.totalOrder);
-  writeNotNull('id_customer', instance.idCustomer);
-  writeNotNull('kurir', instance.kurir);
-  writeNotNull('name_customer', instance.nameCustomer);
-  writeNotNull('name_store', instance.nameStore);
-  writeNotNull('email_store', instance.emailStore);
-  writeNotNull('nohp_store', instance.nohpStore);
-  writeNotNull('footer', instance.footer);
-  writeNotNull('address_store', instance.addressStore);
-  writeNotNull('id_supplier', instance.idSupplier);
-  writeNotNull('name_supplier', instance.nameSupplier);
-  writeNotNull('point', instance.point);
-  writeNotNull('id_discount', instance.idDiscount);
-  writeNotNull('card', instance.card);
-  writeNotNull('note', instance.note);
-  writeNotNull('waktu', instance.waktu);
-  writeNotNull('due_date', instance.dueDate);
-  writeNotNull('product', instance.product?.map((e) => e.toJson()).toList());
-  writeNotNull('latitude', instance.latitude);
-  writeNotNull('longitude', instance.longitude);
-  writeNotNull('id_table', instance.idTable);
-  writeNotNull('id', instance.id);
-  writeNotNull('complaint', instance.complaint);
-  writeNotNull('advice', instance.advice);
-  writeNotNull('name_kegiatan', instance.nameKegiatan);
-  writeNotNull('name_subkegiatan', instance.nameSubkegiatan);
-  writeNotNull('jeniskegiatan', instance.jenisKegiatan);
-  return val;
-}
+        _$RequestTransactionImpl instance) =>
+    <String, dynamic>{
+      if (instance.key case final value?) 'key': value,
+      if (instance.paymentType case final value?) 'payment_type': value,
+      if (instance.paymentAmount case final value?) 'payment_amount': value,
+      if (instance.totalOrder case final value?) 'total_order': value,
+      if (instance.idCustomer case final value?) 'id_customer': value,
+      if (instance.kurir case final value?) 'kurir': value,
+      if (instance.nameCustomer case final value?) 'name_customer': value,
+      if (instance.nameStore case final value?) 'name_store': value,
+      if (instance.emailStore case final value?) 'email_store': value,
+      if (instance.nohpStore case final value?) 'nohp_store': value,
+      if (instance.footer case final value?) 'footer': value,
+      if (instance.addressStore case final value?) 'address_store': value,
+      if (instance.idSupplier case final value?) 'id_supplier': value,
+      if (instance.nameSupplier case final value?) 'name_supplier': value,
+      if (instance.point case final value?) 'point': value,
+      if (instance.idDiscount case final value?) 'id_discount': value,
+      if (instance.card case final value?) 'card': value,
+      if (instance.note case final value?) 'note': value,
+      if (instance.waktu case final value?) 'waktu': value,
+      if (instance.dueDate case final value?) 'due_date': value,
+      if (instance.product?.map((e) => e.toJson()).toList() case final value?)
+        'product': value,
+      if (instance.latitude case final value?) 'latitude': value,
+      if (instance.longitude case final value?) 'longitude': value,
+      if (instance.idTable case final value?) 'id_table': value,
+      if (instance.id case final value?) 'id': value,
+      if (instance.complaint case final value?) 'complaint': value,
+      if (instance.advice case final value?) 'advice': value,
+      if (instance.nameKegiatan case final value?) 'name_kegiatan': value,
+      if (instance.nameSubkegiatan case final value?) 'name_subkegiatan': value,
+      if (instance.jenisKegiatan case final value?) 'jeniskegiatan': value,
+    };
 
 _$BarangImpl _$$BarangImplFromJson(Map<String, dynamic> json) => _$BarangImpl(
       idProduct: json['id_product'] as String?,
@@ -93,18 +86,10 @@ _$BarangImpl _$$BarangImplFromJson(Map<String, dynamic> json) => _$BarangImpl(
       notes: json['notes'] as String?,
     );
 
-Map<String, dynamic> _$$BarangImplToJson(_$BarangImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id_product', instance.idProduct);
-  writeNotNull('amount_product', instance.amountProduct);
-  writeNotNull('new_price', instance.newPrice);
-  writeNotNull('notes', instance.notes);
-  return val;
-}
+Map<String, dynamic> _$$BarangImplToJson(_$BarangImpl instance) =>
+    <String, dynamic>{
+      if (instance.idProduct case final value?) 'id_product': value,
+      if (instance.amountProduct case final value?) 'amount_product': value,
+      if (instance.newPrice case final value?) 'new_price': value,
+      if (instance.notes case final value?) 'notes': value,
+    };

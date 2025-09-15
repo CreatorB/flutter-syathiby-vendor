@@ -18,21 +18,14 @@ _$RequestRawMaterialImpl _$$RequestRawMaterialImplFromJson(
     );
 
 Map<String, dynamic> _$$RequestRawMaterialImplToJson(
-    _$RequestRawMaterialImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('key', instance.key);
-  writeNotNull('payment_type', instance.paymentType);
-  writeNotNull('total_order', instance.totalOrder);
-  writeNotNull('product', instance.product?.map((e) => e.toJson()).toList());
-  return val;
-}
+        _$RequestRawMaterialImpl instance) =>
+    <String, dynamic>{
+      if (instance.key case final value?) 'key': value,
+      if (instance.paymentType case final value?) 'payment_type': value,
+      if (instance.totalOrder case final value?) 'total_order': value,
+      if (instance.product?.map((e) => e.toJson()).toList() case final value?)
+        'product': value,
+    };
 
 _$BarangRawImpl _$$BarangRawImplFromJson(Map<String, dynamic> json) =>
     _$BarangRawImpl(
@@ -40,16 +33,8 @@ _$BarangRawImpl _$$BarangRawImplFromJson(Map<String, dynamic> json) =>
       amountProduct: (json['amount_product'] as num?)?.toDouble(),
     );
 
-Map<String, dynamic> _$$BarangRawImplToJson(_$BarangRawImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id_product', instance.idProduct);
-  writeNotNull('amount_product', instance.amountProduct);
-  return val;
-}
+Map<String, dynamic> _$$BarangRawImplToJson(_$BarangRawImpl instance) =>
+    <String, dynamic>{
+      if (instance.idProduct case final value?) 'id_product': value,
+      if (instance.amountProduct case final value?) 'amount_product': value,
+    };

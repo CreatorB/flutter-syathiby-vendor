@@ -4,7 +4,7 @@ abstract class AppConstant {
   //    rename setAppName --targets ios,android --value "Syathiby"
   static const String appName = 'Syathiby';
   static const String youtubeChannelName = 'Syathiby';
-  static const String teachingPlannerUrl = 'https://app.syathiby.id/rpp/';
+  static const String teachingPlannerUrl = 'https://aplikasi.syathiby.id/rpp/';
   static const String keyLoginSession = 'login_session';
   static const String keyUserSession = 'user_session';
   static const String keyDeviceToken = 'device_token';

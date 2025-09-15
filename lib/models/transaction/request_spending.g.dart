@@ -19,22 +19,15 @@ _$RequestSpendingImpl _$$RequestSpendingImplFromJson(
     );
 
 Map<String, dynamic> _$$RequestSpendingImplToJson(
-    _$RequestSpendingImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('key', instance.key);
-  writeNotNull('amount', instance.amount);
-  writeNotNull('date', instance.date);
-  writeNotNull('img', instance.img);
-  writeNotNull('spending', instance.spending?.map((e) => e.toJson()).toList());
-  return val;
-}
+        _$RequestSpendingImpl instance) =>
+    <String, dynamic>{
+      if (instance.key case final value?) 'key': value,
+      if (instance.amount case final value?) 'amount': value,
+      if (instance.date case final value?) 'date': value,
+      if (instance.img case final value?) 'img': value,
+      if (instance.spending?.map((e) => e.toJson()).toList() case final value?)
+        'spending': value,
+    };
 
 _$BarangSpendingImpl _$$BarangSpendingImplFromJson(Map<String, dynamic> json) =>
     _$BarangSpendingImpl(

@@ -12,6 +12,12 @@ Build source code :
 flutter clean ; flutter pub get ; flutter packages pub run build_runner build
 ```
 
+Rebuild model and url env
+
+```sh
+flutter pub run build_runner build --delete-conflicting-outputs
+```
+
 Rename App and Package name (change build.gradle to build.gradle.kts) :
 
 ```sh

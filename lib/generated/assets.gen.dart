@@ -39,7 +39,7 @@ class $AssetsImagesGen {
 }
 
 class Assets {
-  Assets._();
+  const Assets._();
 
   static const String aEnv = '.env';
   static const $AssetsFontsGen fonts = $AssetsFontsGen();
@@ -82,7 +82,7 @@ class AssetGenImage {
     bool gaplessPlayback = true,
     bool isAntiAlias = false,
     String? package,
-    FilterQuality filterQuality = FilterQuality.low,
+    FilterQuality filterQuality = FilterQuality.medium,
     int? cacheWidth,
     int? cacheHeight,
   }) {
